@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
+
 
 
 @Component({
@@ -13,5 +14,5 @@ import { FooterComponent } from './shared/footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'portfolio';
+   
 }
