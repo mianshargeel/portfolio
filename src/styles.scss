@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden; // Prevents horizontal scrolling
+  background-color: black; // Sets the entire background to black
+  color: white; // Ensures text is visible
+}
+/* Ensure that all sections maintain the required width */
+section {
+  width: 1214px;
+  max-width: 100%;
+  margin: 0 auto; // Centers sections
+  background-color: #262e34;
+}
