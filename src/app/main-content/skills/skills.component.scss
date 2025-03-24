@@ -1,0 +1,82 @@
+.contailner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .skills-Info{
+    width: 869px;
+    height: 556px;
+    display: flex;
+    flex-direction: column;
+    h2{
+      font-family: "Anta", sans-serif;
+        color: #89BCD9;
+        font-weight: 400;
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 79px;
+    }
+    .skills-container{
+      display: flex;
+      flex: 1;
+      .skills-details {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-content: flex-start; // Align items to the top
+          gap: 36px;
+          padding: 20px 0px;
+          overflow-y: auto; // Add scroll if needed
+      
+          .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80px; // Fixed width for each item
+      
+            img {
+              width: 55.8px;
+              height: 60px;
+              object-fit: contain;
+              margin-bottom: 5px;
+            }
+          }
+        }
+      
+        .current-lerning {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          height: 100%;
+          background-image: url('./../../../assets/img/3-skils/currently-lerning.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 380px 390px;
+          font-family: "Josefin Sans", sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          .lerning-details{
+            text-align: center;
+            width: 307px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            div{
+              display: flex;
+              gap: 36px;
+              img {
+                  width: 52px;
+                }
+            }
+            p {
+              margin: 0; 
+              line-height: 1.5;
+            }
+          }
+        }
+    }
+  }
+}

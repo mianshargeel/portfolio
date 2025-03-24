@@ -1,1 +1,18 @@
-<p>testimonials works!</p>
+<section>
+  <div class="teamplayer">
+    <h3>Need a teamplayer? Here what my colleagues said about me </h3>
+    <div class="teams-member">
+      @for(team of teamPlayers; track team.name) {
+          <div class="my-colleages">
+          <div class="bg-img" style="background-image: url('{{team.bgImg}}');"></div>
+           <div class="view-content">
+              <h3>{{team.name}}</h3>
+              <p class="project">Project: {{team.project}}</p>
+              <p class="quote">“{{team.views}}”</p>
+              <a href="{{team.link}}" target="_blank">Linked In Profile</a>
+           </div>   
+          </div>
+      }
+    </div>
+  </div>
+</section>

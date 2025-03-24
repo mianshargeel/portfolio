@@ -1,0 +1,68 @@
+body{
+  // background-color: #262e34;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  margin-top: 120px;
+  .whyme-info {
+      width: 860px;
+      height: 307px;
+      // border: 2px dotted lightblue;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        text-align: center;
+        font-family: "Anta", sans-serif;
+        color: #89BCD9;
+        font-weight: 400;
+        font-size: 60px;
+      }
+      .my-details{
+        display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 56px;
+          margin-top: 51px;
+          font-family: "Josefin Sans", sans-serif;
+          padding: 0 5px;
+        .location{
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          img{
+            width: 60px;
+            border-radius: 20px;
+          }
+          p{
+            font-size: 30px;
+            font-weight: 700;
+            span{
+              color: #89BCD9;
+            }
+          }
+        }
+        .aboutme-details {
+          width: 50%;
+        }
+      }
+      .talk-btn {
+            background-color: #262e34;
+            border: 1px solid #89BCD9;
+            color: #89BCD9;
+            padding: 12px 30px;
+            border-radius: 24px;
+            width: 124px;
+            align-self: flex-end; //to get at right end
+            &:hover{
+              cursor: pointer;
+              background-color: #3f4244;
+          }
+      }
+    }
+}
