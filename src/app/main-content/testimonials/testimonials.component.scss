@@ -1,7 +1,7 @@
 .teamplayer{
   width: 1209px;
   height: 470px;
-  border: 2px dotted lightblue;
+  // border: 2px dotted lightblue;
   display: flex;
   flex-direction: column;
     h3{
@@ -26,7 +26,7 @@
               text-align: center;
               color: white;
               font-family: "Josefin Sans", sans-serif;
-              border: 2px solid #89BCD9;
+              // border: 2px solid #89BCD9;
               padding: 30px 20px;
               box-sizing: border-box;
               overflow: hidden;
@@ -62,20 +62,24 @@
                 font-size: 20px;
                 font-weight: 600;
                 margin-bottom: 5px;
+                color: white;
               }
           
               .project {
                 font-size: 16px;
-                color: #9cd4f3;
+                color: white;
                 margin-bottom: 10px;
+                span{
+                  color: #89BCD9;
+                }
               }
           
               .quote {
-                font-style: italic;
-                font-size: 14px;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 18px;
                 margin: 15px 0;
                 line-height: 1.5;
-                color: #cfeeff;
+                color: white;
               }
           
               a {

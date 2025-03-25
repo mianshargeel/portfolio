@@ -22,21 +22,21 @@ export class TestimonialsComponent {
     bgImg: './../../../assets/img/5-refferences/bg-img.png',
     project: 'Pokedex',
     views: 'Shardzhil had to develop, format and liver content in collaboration with the team members. He is a reliable and friendly person.',
-    link: ''
+    link: 'https://www.linkedin.com/in/mukhammad-shardzhil-a2565213a/'
     },
     {
-    name: 'Sahre Mullar',
+    name: 'Sahre Mueller',
     bgImg: './../../../assets/img/5-refferences/bg-img.png',
     project: 'El Pollo Loco',
     views: 'Shardzhil had to develop, format and liver content in collaboration with the team members. He is a reliable and friendly person.',
-    link: ''
+    link: 'https://www.linkedin.com/in/mukhammad-shardzhil-a2565213a/'
     },
     {
     name: 'Adeel Khan',
     bgImg: './../../../assets/img/5-refferences/bg-img.png',
     project: 'Join',
     views: 'Shardzhil had to develop, format and liver content in collaboration with the team members. He is a reliable and friendly person.',
-    link: ''
+    link: 'https://www.linkedin.com/in/mukhammad-shardzhil-a2565213a/'
     }
   ];
 }
