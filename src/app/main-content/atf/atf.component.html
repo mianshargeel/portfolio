@@ -10,7 +10,7 @@
     <!-- Media Icons (Top Right) -->
     <div class="media-icons">
       @for(link of medialinks; track link.name) {
-        <a href="{{link.url}}" target="_blank"><img src="{{link.img}}" alt="{{link.name}}"></a>
+        <a [routerLink]="link.url" target="_blank"><img src="{{link.img}}" alt="{{link.name}}"></a>
       }
     </div>
 

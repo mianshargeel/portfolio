@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 interface Media{
   name: string;
   img: string;
@@ -7,7 +8,7 @@ interface Media{
 @Component({
   selector: 'app-atf',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './atf.component.html',
   styleUrl: './atf.component.scss'
 })
@@ -16,7 +17,7 @@ export class AtfComponent {
     {
       name: 'Email', 
       img: './../../../assets/img/1-hero/email.png',
-      url: 'https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox'
+      url: '/contact'
     },
     {
       name: 'Github', 

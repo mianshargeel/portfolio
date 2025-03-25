@@ -3,60 +3,63 @@
       <div class="contact-container">
     <h2>Contact me</h2>
     <div class="contact-info">
-      <div class="text">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam itaque 
-          amet consectetur, adipisicing elit. Aperiam itaque   tempore nihil ipsa mollitia, deleniti sint rem, quae quod!</p>
-      </div>
-      <div class="mail-num">
-        <p class="mail"><img src="./../../../assets/img/contact/email.png" alt="">Email: Shardzhilgmail.com</p> 
-        <p class="phone"><img src="./../../../assets/img/contact/phone.png" alt="">Tel: 0152 639 248 39</p>
-      </div>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam itaque 
+            amet consectetur, adipisicing elit. Aperiam itaque   tempore nihil ipsa mollitia, deleniti sint rem, quae quod!</p>
+        </div>
+        <div class="mail-num">
+          <p class="mail"><img src="./../../../assets/img/contact/email.png" alt="">Email: Shardzhilgmail.com</p> 
+          <p class="phone"><img src="./../../../assets/img/contact/phone.png" alt="">Tel: 0152 639 248 39</p>
+        </div>
     </div>
 
     <!-- contact-form -->
     <div class="contact-form">
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <div class="input-fields">
-      <div class="field">
-        <label for="name">Your name</label><br>
-        <input #name="ngModel" [(ngModel)] = "contactData.name" type="text" id="name" name="name" required>
-        @if(!name.valid && name.touched) {
-          <span class="red-color">Name is required</span>
-        }
-      </div>
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+          <div class="input-fields">
+            <div class="field">
+              <label for="name">Your name</label><br>
+              <input #name="ngModel" [(ngModel)] = "contactData.name" type="text" id="name" name="name" required>
+              @if(!name.valid && name.touched) {
+                <span class="red-color">Name is required</span>
+              }
+            </div>
 
-      <div class="field">
-        <label for="email">Your Email</label><br>
-        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-        <!-- using pattern to validate email -->
-         @if(!email.valid && email.touched) {
-          <span class="red-color">Email is required</span>
-         }
-      </div>
-    </div>
+            <div class="field">
+              <label for="email">Your Email</label><br>
+              <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+              <!-- using pattern to validate email -->
+              @if(!email.valid && email.touched) {
+                <span class="red-color">Email is required</span>
+              }
+            </div>
+          </div>
 
-    <div class="message-field">
-      <label for="message">Your Message</label><br>
-      <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" rows="6" required></textarea>
-      @if(!message.valid && message.touched && !message.disabled) {
-        <span class="red-color">Please enter a message (min 4 characters)</span>
+          <div class="message-field">
+            <label for="message">Your Message</label><br>
+            <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" rows="6" required></textarea>
+            @if(!message.valid && message.touched && !message.disabled) {
+              <span class="red-color">Please enter a message (min 4 characters)</span>
+            }
+          </div>
+
+          <div class="privacy">
+            <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
+            <label for="privacy" >
+              <img  class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp; 
+              I've read the <a href="#">&nbsp;privacy policy&nbsp;</a> and agree to the processing of my data as outlined. 
+
+              @if((isPrivacyChecked.invalid && (isPrivacyChecked.touched || isPrivacyChecked.dirty)) ||  isPrivacyChecked.invalid) {
+        <span class="red-color">Please accept our Privacy Policy</span>
       }
+            </label>
+          </div>
+
+          <div class="submit-button" >
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
     </div>
-
-    <div class="privacy">
-      <!-- <input type="checkbox" id="privacy" name="privacy" required> -->
-      <label for="privacy">
-        <img src="./../../../assets/img/contact/check-box.png" alt="">I've read the  <a href="#">&nbsp; privacy policy &nbsp;</a> and agree to the processing of my data as outlined.
-      </label>
-    </div>
-
-    <div class="submit-button">
-      <button type="submit">Send</button>
-    </div>
-  </form>
-</div>
-
-
-  </div>
   </div>
 </section>

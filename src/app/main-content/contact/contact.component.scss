@@ -75,9 +75,9 @@
                  }
                }
              }
-        .red-color {
-          color: red;
-        }
+            .red-color {
+              color: red;
+            }
              .message-field {
                display: flex;
                flex-direction: column;
@@ -105,10 +105,9 @@
                   font-size: 14px;
                }
     
-              //  input[type="checkbox"] {
-              //    margin-top: 4px;
-              //    accent-color: #00bfff;
-              //  }
+              input[type="checkbox"] {
+                display: none;
+              }
     
                label a {
                  color: #89BDC9;
