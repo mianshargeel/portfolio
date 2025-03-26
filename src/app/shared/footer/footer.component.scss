@@ -1,8 +1,51 @@
+@import './../../../styles.scss';
+
 footer{
-  height: 100px;
+  height: 214px;
   width: 100%;
-  background-color: black;
+  background-color: #89bcd9;
+  // @include flex-center();
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+
+  .legal-notice{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    a{
+      text-decoration: none;
+    }
+    .copyright{
+      width: 16px;
+    }
+  }
+  .footer-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 24px;
+    }
+    .name{
+      font-family: "Anta", sans-serif;
+      font-size: 14px;
+      color: #F8F5EC;
+    }
+    .dev{
+      color: #262e34;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 14px;
+    }
+  }
+  .media-links{
+    display: flex;
+    gap: 16px;
+  }
 }

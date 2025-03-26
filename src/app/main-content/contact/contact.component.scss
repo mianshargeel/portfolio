@@ -1,3 +1,7 @@
+.contact-and-arrow{
+  position: relative;
+}
+
 .contact-section{
   display: flex;
   justify-content: center;
@@ -138,4 +142,34 @@
          }
       
     }
+}
+//Up-Arrow scss
+.up-arrow {
+  position: absolute;
+  top: 0px; // Pull it up above the contact box
+  right: 30px; // Align with the right edge of contact box (adjust as needed)
+  z-index: 10;
+
+  img {
+    width: 40px; // Or whatever fits your style
+    height: auto;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    &:hover{
+      filter: brightness(0.9);
+       background-color: #2d3840;   
+    }
+  }
+}
+/* Animation for the Down Arrow */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
 }

@@ -29,5 +29,12 @@ export class AtfComponent {
       img: './../../../assets/img/1-hero/linkedIn.png',
       url: 'https://www.linkedin.com/in/mukhammad-shardzhil-a2565213a/'
     }
-  ];
+  ]; 
+
+  scrollToDown() {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

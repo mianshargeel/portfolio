@@ -5,7 +5,7 @@
   padding: 50px;
   padding-bottom: 29px;
   height: 705px;
-  width: 1214px; // Fix width for centering
+  width: 100%; // Fix width for centering
   max-width: 100%;
   margin: 0 auto; // Centering horizontally
   position: relative;
@@ -96,6 +96,10 @@
         width: 40px;
         cursor: pointer;
         animation: bounce 2s infinite;
+        &:hover {
+            filter: brightness(0.9);
+            background-color: #2d3840;
+          }
       }
     }
   }

@@ -1,3 +1,18 @@
-<footer>
-  <h3>Portfolio footer</h3>
-</footer>
+<section>
+  <footer>
+    <div class="legal-notice">
+        <p><a href="">Legal notice</a></p>
+        <p><img class="copyright" src="./../../../assets/img/footer/copy-right.png" alt="">&nbsp;Shardzhil Mukhammad</p>
+    </div>
+    <div class="footer-logo">
+        <img src="./../../../assets/img/1-hero/logo.png" alt="">
+       <p class="name"> S.Mukhammad</p>
+       <p class="dev">Developer</p>
+    </div>
+    <div class="media-links">
+      @for(link of medialinks; track link.name) {
+        <a [routerLink]="link.url" target="_blank"><img src="{{link.img}}" alt="{{link.name}}"></a>
+      }
+    </div>
+  </footer>
+</section>

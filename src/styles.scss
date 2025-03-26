@@ -12,14 +12,20 @@ html{
 
 body {
   width: 100%;
-  overflow-x: hidden; // Prevents horizontal scrolling
+  // overflow-x: hidden; // Prevents horizontal scrolling
   background-color: #262e34; // Sets the entire background to black
   color: white; // Ensures text is visible
+  // position: relative;
 }
 /* Ensure that all sections maintain the required width */
 section {
-  width: 1214px;
+  width: 1440px;
   max-width: 100%;
   margin: 0 auto; // Centers sections
   background-color: #262e34;
+}
+@mixin flex-center() {
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
