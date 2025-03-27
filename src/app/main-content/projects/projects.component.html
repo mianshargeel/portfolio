@@ -1,2 +1,24 @@
-<p>projects works!</p>
-<app-project-list></app-project-list>
+<section>
+  <div class="project-container">
+    <nav>
+      @for (project of projects; track project.title; let i = $index) {
+        <button (click)="selectedIndex = i">{{ i + 1 }}. {{ project.title }}</button>
+      }
+    </nav>
+    <div>
+      <h2>{{ projects[selectedIndex].title }}</h2>
+        <p>{{ projects[selectedIndex].about }}</p>
+        <p>{{ projects[selectedIndex].duration }}</p>
+        <p>{{ projects[selectedIndex].description }}</p>
+        <p>{{ projects[selectedIndex].workProcess }}</p>
+        <img [src]="projects[selectedIndex].image" alt="Project screenshot" />
+        <p>{{ projects[selectedIndex].github }}</p>
+        <strong>Technologies:</strong>
+        @for(tech of projects[selectedIndex].technologies; track $index) {
+          <p>{{tech}}</p>
+        }
+    </div>
+    
+
+  </div>
+</section>

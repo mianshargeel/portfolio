@@ -1,11 +1,11 @@
 export interface Project {
-    id: number;
-    title: string;
-    durration: string;
-    description: string;
-    technologies: string[];
-    links: {
-    github: string,
-    live?: string
-  };
-}
+  title: string;
+  duration: string; 
+  description: string;
+  about: string;
+  workProcess: string;
+  technologies: string[];
+  image: string;
+  github: string;
+  live: string;
+  }
