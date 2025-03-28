@@ -3,17 +3,30 @@
     <h2>My Projects</h2>
     <nav>
       @for (project of projects; track project.title; let i = $index) {
-         <button (click)="selectedIndex = i">{{ i + 1 }}. {{ project.title }}</button>
+         <button  [class.active]="selectedIndex === i" 
+         (click)="selectedIndex = i">{{ i + 1 }}. {{ project.title }}</button>
       }
     </nav>
     <div class="project-content">
         <div class="right-content">
-          <p><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ projects[selectedIndex].about }}</p>
-        <p>{{ projects[selectedIndex].duration }}</p>
-        <p>{{ projects[selectedIndex].description }}</p>
-        <p>{{ projects[selectedIndex].workProcess }}</p>
+          <div class="about-text">
+            <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">About the project <span>Duration: {{ projects[selectedIndex].duration }}</span></h3> 
+            <p>{{ projects[selectedIndex].about }}</p>
+          </div>
         
-        <p>{{ projects[selectedIndex].github }}</p>
+          <div class="work-process">
+              <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">How I have organised my work process </h3> 
+              <p>{{ projects[selectedIndex].workProcess }}</p>
+          </div>
+
+          <div class="team-work">
+              <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">My group work experience </h3> 
+              <p>{{ projects[selectedIndex].team }}</p>
+          </div>
+        <!-- <p>{{ projects[selectedIndex].team }}</p> 
+        <p>{{ projects[selectedIndex].description }}</p>
+        
+        <p>{{ projects[selectedIndex].github }}</p> -->
         
         </div>
         <div class="left-content">
@@ -26,7 +39,7 @@
           <img class="project-screen-short" [src]="projects[selectedIndex].image" alt="Project screenshot" />
           <div class="links-btn">
             <button class="live-test-btn">Live Test</button>
-            <button class="github-btn">Github</button>
+            <a class="github-btn" href="https://github.com/mianshargeel">Github</a>
           </div>
         </div>
     </div>

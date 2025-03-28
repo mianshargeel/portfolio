@@ -13,12 +13,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 40px;
       // border: 2px dotted lightblue;
       h2{
         font-family: "Anta", sans-serif;
         font-weight: 400;
         font-size: 54px;
         margin-bottom: 53px;
+        color: #89bdc9;
       }
       .contact-info{
         font-family: "Josefin Sans", sans-serif;
@@ -148,7 +150,7 @@
 .up-arrow {
   position: absolute;
   top: 0px; // Pull it up above the contact box
-  right: 30px; // Align with the right edge of contact box (adjust as needed)
+  right: 90px; // Align with the right edge of contact box (adjust as needed)
   z-index: 10;
 
   img {

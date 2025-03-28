@@ -9,9 +9,21 @@ nav{
   height: 104px;
   background-color: #89BCD9;
   font-family: "Josefin Sans", sans-serif;
-  img{
+  .navbar-logo{
     width: 58px;
     height: 72px;
+    &:hover{
+      cursor: pointer;
+    }
+    p{
+      font-size: 14px;
+      font-family: "Anta", sans-serif;
+      span{
+        font-size: 14px;
+        color: #262e34;
+        font-family: "Josefin Sans", sans-serif;
+      }
+    }
   }
   .nav-menu-list{
       display: flex;
