@@ -1,24 +1,35 @@
 <section>
   <div class="project-container">
+    <h2>My Projects</h2>
     <nav>
       @for (project of projects; track project.title; let i = $index) {
-        <button (click)="selectedIndex = i">{{ i + 1 }}. {{ project.title }}</button>
+         <button (click)="selectedIndex = i">{{ i + 1 }}. {{ project.title }}</button>
       }
     </nav>
-    <div>
-      <h2>{{ projects[selectedIndex].title }}</h2>
-        <p>{{ projects[selectedIndex].about }}</p>
+    <div class="project-content">
+        <div class="right-content">
+          <p><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ projects[selectedIndex].about }}</p>
         <p>{{ projects[selectedIndex].duration }}</p>
         <p>{{ projects[selectedIndex].description }}</p>
         <p>{{ projects[selectedIndex].workProcess }}</p>
-        <img [src]="projects[selectedIndex].image" alt="Project screenshot" />
+        
         <p>{{ projects[selectedIndex].github }}</p>
-        <strong>Technologies:</strong>
-        @for(tech of projects[selectedIndex].technologies; track $index) {
-          <p>{{tech}}</p>
-        }
+        
+        </div>
+        <div class="left-content">
+          <strong>Technologies</strong>
+          <div class="tech-stack">
+            @for(tech of projects[selectedIndex].technologies; track $index) {
+              <img class="tech-links" src="{{tech}}" alt="">
+            }
+          </div>
+          <img class="project-screen-short" [src]="projects[selectedIndex].image" alt="Project screenshot" />
+          <div class="links-btn">
+            <button class="live-test-btn">Live Test</button>
+            <button class="github-btn">Github</button>
+          </div>
+        </div>
     </div>
-    
 
   </div>
 </section>

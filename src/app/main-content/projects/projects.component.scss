@@ -1,8 +1,110 @@
+
+@mixin btn-style() {
+  padding: 0px 30px;
+  border-radius: 44px;
+  font-family: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  &:hover{
+    cursor: pointer;
+    filter: brightness(1.9);
+    -webkit-filter: brightness(1.9);
+}
+}
 .project-container{
   width: 100%;
   height: 645px;
   border: 2px dotted lightblue;
   display: flex;
-  // justify-content: center;
-  // align-items: center;
+  flex-direction: column;
+  margin-bottom: 123px;
+  h2{
+    font-family: "Anta", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: #89BCD9;
+    text-align: center;
+    // margin-bottom: 70px;
+  }
+  nav{ 
+      display: flex;
+      justify-content: center;
+      align-items: anchor-center;
+      gap: 44px;
+      // border: 2px dotted lightblue;
+      height: 97px;
+      width: 981px;
+      button{
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        background-color: #262e34;
+        border: none;
+        color: #89BDC9;
+        &:hover{
+          color: #F8F5Ec;
+          background-color: #2d3840;
+          border: 1px solid #2d3840;
+          padding: 35px 17px;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          cursor: pointer;
+        }
+      }
+  }
+  .project-content{
+    background-color: #2d3840;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .right-content{
+
+    }
+    .left-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 20px 0px;
+      strong{
+        font-family: 18px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+      .tech-links{
+        width: 36px;
+        display: flex;
+      }
+      // tech icons container
+      .tech-stack {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .project-screen-short{
+        width: 453.43px;
+        height: 312px;
+      }
+      .links-btn{
+        width: 292px;
+        height: 48px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+
+        .live-test-btn{
+          background-color: #89BCD9;
+          color: black;
+          @include btn-style();
+          border: none;
+        }
+        .github-btn{
+          background-color: #262e34;
+          color: #89BCD9;
+          @include btn-style();
+          border: 1px solid #89BCD9;;
+        }
+      }
+    
+    }
+  }
 }
