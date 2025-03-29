@@ -12,12 +12,12 @@ html{
 
 body {
   width: 100%;
-  overflow-x: hidden; // Prevents horizontal scrolling
-  background-color: #262e34; // Sets the entire background to black
-  color: white; // Ensures text is visible
+  overflow-x: hidden; 
+  background-color: #262e34; 
+  color: white; 
   // position: relative;
 }
-/* Ensure that all sections maintain the required width */
+
 section {
   width: 1440px;
   max-width: 100%;

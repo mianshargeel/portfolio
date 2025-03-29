@@ -1,99 +1,220 @@
-.teamplayer{
+.teamplayer {
   width: 100%;
-  height: 550px;
-  // border: 2px dotted lightblue;
+  height: auto; // Changed from fixed height to auto for better responsiveness
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
-    h3{
-      font-family: "Josefin Sans", sans-serif;
-      font-size: 32px;
-      font-weight: 400;
-      color: #89BCD9;
+  padding: 60px 20px 40px; // Added horizontal padding for mobile
+  box-sizing: border-box;
+
+  h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #89BCD9;
+    text-align: center;
+    margin-bottom: 38px;
+  }
+
+  // background-images and Content
+  .teams-member {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1005; // Added max-width for larger screens
+    margin: 0 auto; // Center the container
+
+    .my-colleages {
+      position: relative;
+      width: 360px;
+      height: 400px;
       text-align: center;
-      margin-bottom: 38px;
-    }
-    // background=images and Content
-        .teams-member {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 20px;
-    
-          .my-colleages {
-              position: relative;
-              width: 360px;
-              height: 400px;
-              text-align: center;
-              color: white;
-              font-family: "Josefin Sans", sans-serif;
-              // border: 2px solid #89BCD9;
-              padding: 30px 20px;
-              box-sizing: border-box;
-              overflow: hidden;
-          
-              // Background as a div
-              .bg-img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 97%;
-                height: 100%;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                &:hover {
-                    transform: rotate(-65deg);
-                    filter: brightness(2.9);
-                    -webkit-filter: brightness(2.9);
-}
-              }
-              .view-content{
-                display: flex;
-                  flex-direction: column;
-                  gap: 10px;
-                  margin-top: 50px;
-              }
-          
-              // Text content above background
-              h3,
-              .project,
-              .quote,
-              a {
-                position: relative;
-                z-index: 1;
-              }
-          
-              h3 {
-                font-size: 20px;
-                font-weight: 600;
-                margin-bottom: 5px;
-                color: white;
-              }
-          
-              .project {
-                font-size: 16px;
-                color: white;
-                margin-bottom: 10px;
-                span{
-                  color: #89BCD9;
-                }
-              }
-          
-              .quote {
-                font-family: "Josefin Sans", sans-serif;
-                font-size: 18px;
-                margin: 15px 0;
-                line-height: 1.5;
-                color: white;
-              }
-          
-              a {
-                font-size: 14px;
-                text-decoration: underline;
-                color: #89BCD9;
-              }
-            }
+      color: white;
+      font-family: "Josefin Sans", sans-serif;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+      margin-bottom: 20px; // Added for mobile spacing
+
+      // Background as a div
+      .bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; // Changed from 97% to 100%
+        height: 91%;
+        background-size: cover; // Changed from contain to cover
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0;
+        transition: all 0.3s ease; // Added smooth transition
+
+        &:hover {
+          transform: rotate(-65deg);
+          filter: brightness(2.9);
+          -webkit-filter: brightness(2.9);
         }
-  
+      }
+
+      .view-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: -19px;
+        position: relative;
+        z-index: 1;
+        height: 100%; // Ensure content takes full height
+        justify-content: center; // Center content vertically
+      }
+
+      // Text content above background
+      h3,
+      .project,
+      .quote,
+      a {
+        position: relative;
+        z-index: 1;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: white;
+      }
+
+      .project {
+        font-size: 16px;
+        color: white;
+        margin-bottom: 10px;
+
+        span {
+          color: #89BCD9;
+        }
+      }
+
+      .quote {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 18px;
+        margin: 15px 0;
+        line-height: 1.5;
+        color: white;
+      }
+
+      a {
+        font-size: 14px;
+        text-decoration: underline;
+        color: #89BCD9;
+      }
+    }
+  }
+}
+
+// @media (max-width: 1180px){
+
+// }
+@media (max-width: 1180px) {
+  .teamplayer {
+    padding-top: 40px;
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .teams-member {
+      gap: 15px;
+
+      .my-colleages {
+        width: 320px;
+        height: 380px;
+        padding: 25px 15px;
+
+        .bg-img{
+          height: 85%;
+        }
+
+        .view-content {
+          margin-top: -17px;
+          gap: 8px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+
+        .project {
+          font-size: 15px;
+        }
+
+        .quote {
+          font-size: 16px;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1052px) {
+  .teamplayer {
+    .teams-member {
+      .my-colleages {
+        width: 300px;
+        height: 360px;
+
+        .view-content {
+          margin-top: -22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .teamplayer {
+    padding: 30px 15px;
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+
+    .teams-member {
+      gap: 15px 10px;
+
+      .my-colleages {
+        width: calc(50% - 10px); // Two columns
+        height: 320px;
+        padding: 20px 15px;
+
+        .view-content {
+          margin-top: 20px;
+          gap: 5px;
+        }
+
+        .quote {
+          font-size: 15px;
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .teamplayer {
+    .teams-member {
+      .my-colleages {
+        width: 100%; // Single column on small screens
+        max-width: 360px;
+        height: 300px;
+        margin: 0 auto 15px;
+
+        .view-content {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
 }
