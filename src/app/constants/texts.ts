@@ -2,6 +2,7 @@
 interface TranslationKeys {
   //atf component
   frontendDeveloper: string;
+  developer: string;
   //navbar component
   welcome: string;
   whyMe: string;
@@ -51,6 +52,7 @@ interface TranslationKeys {
 export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
   en: {
     //atf component
+    developer: 'Eeveloper',
     frontendDeveloper: 'FRONTEND DEVELOPER',
     //navbar component
     welcome: "Welcome",
@@ -97,6 +99,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
   },
   de: {
     //atf component
+    developer: 'ENTWICKLER',
     frontendDeveloper: 'FRONTEND-ENTWICKLER',
     //navbar component
     welcome: "Willkommen",
