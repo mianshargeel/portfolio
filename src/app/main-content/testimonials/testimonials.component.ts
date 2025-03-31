@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
+import { TEXTS } from '../../constants/texts';
 
 interface Teamplayer{
   name: string;
@@ -16,6 +18,17 @@ interface Teamplayer{
   styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
+
+  texts = TEXTS;
+  
+  constructor(public languageService: LanguageService) {}
+
+  // Updated getter with type safety
+  get currentTexts() {
+    const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
+    return this.texts[lang];
+  }
+
   teamPlayers: Teamplayer[] = [
     {
     name: 'James Rugman',

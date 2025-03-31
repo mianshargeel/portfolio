@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
+import { TEXTS } from '../../constants/texts';
 
 interface Skills {
   name: string;
@@ -13,6 +15,17 @@ interface Skills {
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  texts = TEXTS;
+  
+  constructor(public languageService: LanguageService) {}
+
+  // Updated getter with type safety
+  get currentTexts() {
+    const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
+    return this.texts[lang];
+  }
+
   skills: Skills[] = [
     {
     name: 'Angular',

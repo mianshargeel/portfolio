@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { LanguageService } from '../../services/language.service';
+import { TEXTS } from '../../constants/texts';
 
 
 interface FormDate{
@@ -19,7 +21,17 @@ interface FormDate{
 })
 export class ContactComponent {
 
-  constructor(private http: HttpClient) {} // <-- Correct injection
+  texts = TEXTS;
+  
+  constructor(public languageService: LanguageService, private http: HttpClient) {}
+
+  // Updated getter with type safety
+  get currentTexts() {
+    const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
+    return this.texts[lang];
+  }
+
+  // constructor(private http: HttpClient) {} // <-- Correct injection
 
   contactData: FormDate = {
     name: '',

@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { LanguageService } from '../../services/language.service';
+import { TEXTS } from '../../constants/texts';
+
+
 interface Media{
   name: string;
   img: string;
@@ -13,11 +17,22 @@ interface Media{
   styleUrl: './atf.component.scss'
 })
 export class AtfComponent {
+
+  texts = TEXTS;
+    
+    constructor(public languageService: LanguageService) {}
+  
+    // Updated getter with type safety
+    get currentTexts() {
+      const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
+      return this.texts[lang];
+    }
+
   medialinks: Media[] = [
     {
       name: 'Email', 
       img: './../../../assets/img/1-hero/email.png',
-      url: '/contact'
+      url: '#contact'
     },
     {
       name: 'Github', 

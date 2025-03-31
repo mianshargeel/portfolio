@@ -1,15 +1,15 @@
 <section>
   <div class="teamplayer">
-    <h3>Need a teamplayer? Here what my colleagues said about me </h3>
+    <h3>{{ currentTexts['teamplayerTitle'] }} </h3>
     <div class="teams-member">
       @for(team of teamPlayers; track team.name) {
           <div class="my-colleages">
           <div class="bg-img" style="background-image: url('{{team.bgImg}}');"></div>
            <div class="view-content">
               <h3>{{team.name}}</h3>
-              <p class="project">Project: <span>{{team.project}}</span></p>
-              <p class="quote">“{{team.views}}”</p>
-              <a href="{{team.link}}" target="_blank">Linked In Profile</a>
+              <p class="project">{{ currentTexts['projectLabel'] }}: <span>{{team.project}}</span></p>
+              <p class="quote">“{{ currentTexts['views'] }}”</p>
+              <a href="{{team.link}}" target="_blank">{{ currentTexts['linkedinProfile'] }}</a>
            </div>   
           </div>
       }

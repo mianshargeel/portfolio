@@ -1,7 +1,7 @@
 <section>
   <div class="contailner">
     <div class="skills-Info">
-      <h2>My Skills</h2>
+      <h2>{{ currentTexts['mySkillsTitle'] }}</h2>
       <div class="skills-container">
         <div class="skills-details">
             @for(skill of skills; track skill.name) {
@@ -12,12 +12,12 @@
         </div>
         <div class="current-lerning">
           <div class="lerning-details">
-            <p>I am currently lerning</p>
+            <p>{{currentTexts['currentlyLearning']}}</p>
             <div>
                 <img src="./../../../assets/img/3-skils/angular.png" alt="">
                 <img src="./../../../assets/img/3-skils/typescript.png" alt="">
             </div>
-            <p>Show that you are motivated to continually  improve your skills, implement innovative solutions and stay abreast of new Technologies.</p>
+            <p>{{currentTexts['learningDescription']}}</p>
           </div>
         </div>
       </div>

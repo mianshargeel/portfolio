@@ -1,6 +1,6 @@
-<section>
+<section id="project">
   <div class="project-container">
-    <h2>My Projects</h2>
+    <h2>{{ currentTexts['myProjectsTitle'] }}</h2>
     <nav>
       @for (project of projects; track project.title; let i = $index) {
          <button  [class.active]="selectedIndex === i" 
@@ -10,27 +10,23 @@
     <div class="project-content">
         <div class="right-content">
           <div class="about-text">
-            <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">About the project <span>Duration: {{ projects[selectedIndex].duration }}</span></h3> 
+            <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts['aboutProject'] }} <span>{{ currentTexts['projectDuration'] }}: {{ projects[selectedIndex].duration }}</span></h3> 
             <p>{{ projects[selectedIndex].about }}</p>
           </div>
         
           <div class="work-process">
-              <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">How I have organised my work process </h3> 
+              <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts['workProcess'] }} </h3> 
               <p>{{ projects[selectedIndex].workProcess }}</p>
           </div>
 
           <div class="team-work">
-              <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">My group work experience </h3> 
+              <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts['groupWorkExperience'] }} </h3> 
               <p>{{ projects[selectedIndex].team }}</p>
           </div>
-        <!-- <p>{{ projects[selectedIndex].team }}</p> 
-        <p>{{ projects[selectedIndex].description }}</p>
-        
-        <p>{{ projects[selectedIndex].github }}</p> -->
         
         </div>
         <div class="left-content">
-          <strong>Technologies</strong>
+          <strong>{{ currentTexts['technologiesLabel'] }}</strong>
           <div class="tech-stack">
             @for(tech of projects[selectedIndex].technologies; track $index) {
               <img class="tech-links" src="{{tech}}" alt="">
@@ -38,8 +34,8 @@
           </div>
           <img class="project-screen-short" [src]="projects[selectedIndex].image" alt="Project screenshot" />
           <div class="links-btn">
-            <button class="live-test-btn">Live Test</button>
-            <a class="github-btn" href="https://github.com/mianshargeel">Github</a>
+            <button class="live-test-btn">{{ currentTexts['liveTestButton'] }}</button>
+            <a class="github-btn" href="https://github.com/mianshargeel">{{ currentTexts['githubButton'] }}</a>
           </div>
         </div>
     </div>
