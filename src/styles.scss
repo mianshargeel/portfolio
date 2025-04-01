@@ -5,6 +5,12 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  // outline: 1px solid white !important;
+}
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
 }
 html{
   scroll-behavior: smooth;
@@ -12,8 +18,8 @@ html{
 
 body {
   width: 100%;
-  overflow-x: hidden; 
-  background-color: #262e34; 
+  overflow-x: hidden !important; 
+  background-color: black; 
   color: white; 
   // position: relative;
 }

@@ -22,6 +22,12 @@
     flex-direction: column;
     gap: 10px;
 }
+#project{
+  // border: 2px dotted lightblue;
+}
+.top-mobile-section {
+  display: none; //showing only for small screen
+}
 .project-container{
   width: 100%;
   height: 645px;
@@ -109,6 +115,9 @@
             margin-left: 45px;
           }
       }
+      .btn-small-screen{
+        display: none;
+      }
     }
 
     //Left side of Project component
@@ -173,5 +182,150 @@
     .links-btn{
       height: 44px !important;
     }
+    
   }
  }
+
+  // @media (max-width: 900px) {
+  //   nav{
+  //         width: 100% !important;
+  //   }
+  // }
+    /* Small screen (mobile) */
+    @media (max-width: 899px) {
+      .project-container{
+        margin-bottom: 0px;
+        height: auto;
+      }
+      .project-content {
+        flex-direction: column-reverse;
+        height: auto;
+        /* so right-content (text) comes after image */
+        .project-duration{
+          display: none !important;
+        }
+                .btn-small-screen {
+                  display: block !important;
+                  width: 100%;
+                  height: 48px;
+                  
+                  .d-flex{
+                    display: flex;
+                      gap: 14px;
+                      justify-content: center;
+                      align-items: center;
+                    .live-test-btn {
+                        background-color: #89BCD9;
+                        color: black;
+                        @include btn-style();
+                        border: none;
+                      }
+                    
+                      .github-btn {
+                        text-decoration: none;
+                        background-color: #262e34;
+                        color: #89BCD9;
+                        @include btn-style();
+                        border: 1px solid #89BCD9;
+                        ;
+                      }
+                  }
+                  
+                }
+      }
+      .project-header1{
+        display: block !important;
+      }
+      .project-header2{
+        display: none !important;
+      }
+      // styling START for small screen-content
+            h2 {
+              font-family: "Anta", sans-serif;
+              font-size: 32px;
+              font-weight: 400;
+              color: #89BCD9;
+              text-align: center;
+              margin-bottom: 56px;
+            }
+            nav{ 
+                display: flex;
+                justify-content: center;
+                align-items: anchor-center;
+                gap: 44px;
+                // border: 2px dotted lightblue;
+                height: 97px;
+                width: 100%;
+                margin-bottom: 16px;
+                button{
+                  font-family: "Josefin Sans", sans-serif;
+                  font-size: 20px;
+                  font-weight: 500;
+                  background-color: #262e34;
+                  border: none;
+                  color: #89BDC9;
+                  transition: all 0.3s ease;
+                  &:hover{
+                    color: #F8F5Ec;
+                    cursor: pointer;
+                  }
+                  &:active{
+                    
+                  }
+                }
+            }
+            .mobile-project-info{
+              font-family: "Josefin Sans", sans-serif;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              h3{
+                font-size: 24px;
+                color: #89BCD9;
+                
+              }
+            }
+            .project-screen-short{
+              width: 80% !important;
+              margin: 1rem 0;
+            }
+
+
+      // styling ENDS for small screen-content      
+  
+      .left-content {
+        display: none !important;
+        /* hide left content for mobile */
+      }
+  
+      .top-mobile-section {
+        display: block !important;
+        text-align: center;
+        padding: 1rem 0;
+      }
+  
+      .top-mobile-section .tech-stack {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+  
+      // .project-screen-short {
+      //   width: 100%;
+      //   max-width: 100%;
+      //   height: auto;
+      //   margin: 1rem 0;
+      // }
+  
+      .project-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+      .project-duration {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-style: italic;
+      }
+    }

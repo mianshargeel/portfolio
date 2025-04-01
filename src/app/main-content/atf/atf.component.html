@@ -1,35 +1,41 @@
 <section id="header">
   <div class="hero-section">
-         <!-- Left Side: Image with Background -->
+
+    <!-- Top: Logo Left + Burger Right (mobile) -->
+    <div class="top-bar">
+      <div class="logo">
+        <img src="./../../../assets/img/1-hero/logo.png" alt="Logo" />
+        <p>C.Fohrer <br><span>{{currentTexts['developer']}}</span></p>
+      </div>
+
+      <div class="burger-menu">
+        <img src="./../../../assets/img/1-hero/burger-menu.png" alt="Menu" />
+      </div>
+    </div>
+
+    <!-- Hero Layout: Left (Image), Right (Content) for large screen -->
+    <div class="hero-content">
       <div class="image-container">
         <img src="./../../../assets/img/1-hero/blue-bg2.png" class="blue-bg" alt="Background">
         <img src="./../../../assets/img/1-hero/subject 3.png" class="person-img" alt="Claudia Fohrer">
       </div>
 
-      <!-- Right Side: Content -->
       <div class="right-container">
-        <!-- Media Icons (Top Right) -->
         <div class="media-icons">
           @for(link of medialinks; track link.name) {
             <a href="{{link.url}}" target="_blank"><img src="{{link.img}}" alt="{{link.name}}"></a>
           }
         </div>
 
-        <!-- Logo and Text -->
         <div class="text-content">
-          <div class="logo">
-            <img src="./../../../assets/img/1-hero/logo.png" alt="Logo">
-            <p>C.Fohrer <br><span>{{currentTexts['developer']}}</span> </p>
-          </div>
-
           <h1>Claudia Fohrer</h1>
           <h2>{{currentTexts['frontendDeveloper']}}</h2>
         </div>
 
-        <!-- Down Arrow -->
         <div class="down-arrow">
           <img (click)="scrollToDown()" src="./../../../assets/img/1-hero/Arrow down.png" alt="Scroll Down">
         </div>
       </div>
+    </div>
   </div>
 </section>
