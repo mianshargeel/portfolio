@@ -97,9 +97,9 @@
       }
 
       h2 {
-        font-family: "Josefin Sans", sans-serif;
         font-size: 34px;
         font-weight: 400;
+        font-family: "Josefin Sans", sans-serif;
         color: #ccc;
       }
     }
@@ -119,6 +119,42 @@
           }
       }
     }
+  }
+}
+//burger-menu scss
+.menu-image-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  justify-content: center;
+  align-items: flex-start;
+
+  img {
+    position: relative;
+      top: 116px; 
+        width: 380px; 
+        height: auto;
+        z-index: 10000;
+}
+
+  &.show {
+    display: flex;
+  }
+}
+
+.burger-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  img {
+    width: 32px;
+    cursor: pointer;
   }
 }
 
@@ -192,6 +228,9 @@
       }
  }
 @media (max-width: 830px) {
+  #header{
+    padding-bottom: 50px;
+  }
   .hero-section {
     flex-direction: column;
     align-items: center;
@@ -207,18 +246,20 @@
       .logo {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         gap: 10px;
 
         img {
-          width: 36px;
+          width: 56px;
         }
 
         p {
           font-size: 15px;
+          font-family: "Anta", sans-serif;
           margin: 0;
 
           span {
+            font-family: "Josefin Sans", sans-serif;
             font-size: 13px;
             color: #89bcd9;
           }

@@ -85,3 +85,8 @@ nav{
         }
 
 }
+@media (max-width: 830px) {
+  #navbar-section{
+    display: none;
+  }
+}

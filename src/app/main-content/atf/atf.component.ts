@@ -19,6 +19,7 @@ interface Media{
 export class AtfComponent {
 
   texts = TEXTS;
+  isMenuOpen = false;
     
     constructor(public languageService: LanguageService) {}
   
@@ -26,7 +27,15 @@ export class AtfComponent {
     get currentTexts() {
       const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
       return this.texts[lang];
-    }
+  }
+  // switchLanguage(lang: 'de' | 'en') {
+  //   this.languageService.setLanguage(lang); 
+  // }
+  
+  
+toggleMenu() {
+  this.isMenuOpen = !this.isMenuOpen;
+}
 
   medialinks: Media[] = [
     {
