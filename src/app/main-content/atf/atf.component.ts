@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 
 interface Media{
@@ -12,7 +13,7 @@ interface Media{
 @Component({
   selector: 'app-atf',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, NavbarComponent],
   templateUrl: './atf.component.html',
   styleUrl: './atf.component.scss'
 })
@@ -20,7 +21,17 @@ export class AtfComponent {
 
   texts = TEXTS;
   isMenuOpen = false;
-    
+  isMobileView = false;
+
+    ngOnInit() {
+    this.checkScreenSize();
+  }
+  checkScreenSize() {
+    this.isMobileView = window.innerWidth <= 830; // Your breakpoint
+    if (!this.isMobileView) {
+      this.isMenuOpen = false; // Close menu if resizing to desktop
+    }
+  }
     constructor(public languageService: LanguageService) {}
   
     // Updated getter with type safety
@@ -31,6 +42,12 @@ export class AtfComponent {
   // switchLanguage(lang: 'de' | 'en') {
   //   this.languageService.setLanguage(lang); 
   // }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    if (window.innerWidth > 830 && this.isMenuOpen) {
+      this.isMenuOpen = false;
+    }
+  }
   
   
 toggleMenu() {

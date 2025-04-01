@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input,Output, EventEmitter } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
 
@@ -11,8 +11,23 @@ import { TEXTS } from '../../constants/texts';
 })
 export class NavbarComponent {
   texts = TEXTS;
+  @Input() isMobileView: boolean = false;
+   @Output() menuClosed = new EventEmitter<void>(); // Add this line
 
-  constructor(public languageService: LanguageService) {} 
+  constructor(public languageService: LanguageService) { } 
+  
+  handleNavClick(event: Event) {
+    if (this.isMobileView) {  // Now matches the @Input name
+      event.preventDefault();
+      this.menuClosed.emit();
+    }
+  }
+  closeMenu() {
+  if (this.isMobileView) {
+    // Emit event to header to close menu
+    this.menuClosed.emit();
+  }
+}
 
   get currentTexts() {
     return this.texts[this.languageService.getCurrentLanguage() as 'en' | 'de'];

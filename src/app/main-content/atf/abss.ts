@@ -1,3 +1,64 @@
+// <section id="header">
+//   <div class="hero-section">
+
+//    <!-- ✅ Top bar with logo and burger icon -->
+//     <div class="top-bar">
+//         <div class="logo">
+//           <img src="./../../../assets/img/1-hero/logo.png" alt="Logo" />
+//           <p>C.Fohrer <br><span>{{ currentTexts['developer'] }}</span></p>
+//         </div>
+
+//         <div class="burger-menu" (click)="toggleMenu()">
+//           <img src="./../../../assets/img/1-hero/burger-menu.png" alt="Menu" />
+//         </div>
+//     </div>
+
+//       <!-- ✅ Burger Menu Overlay -->
+//       <div class="menu-image-overlay" [class.show]="isMenuOpen">
+//         <img src="./../../../assets/img/1-hero/burger-bg.png" alt="Navigation Menu" />
+
+//         <!-- Mobile Navbar rendered inside the overlay -->
+//         <div class="navbar-overlay">
+//          <app-navbar
+//       [isMobileView]="true"
+//       (menuClosed)="isMenuOpen = false"> <!-- Add this event binding -->
+//     </app-navbar>
+//         </div>
+//       </div>
+
+
+//     <!-- Hero Layout: Left (Image), Right (Content) for large screen -->
+//     <div class="hero-content">
+//       <div class="image-container">
+//         <img src="./../../../assets/img/1-hero/blue-bg2.png" class="blue-bg" alt="Background">
+//         <img src="./../../../assets/img/1-hero/subject 3.png" class="person-img" alt="Claudia Fohrer">
+//       </div>
+
+//       <div class="right-container">
+//         <div class="media-icons">
+//           @for(link of medialinks; track link.name) {
+//             <a href="{{link.url}}" target="_blank"><img src="{{link.img}}" alt="{{link.name}}"></a>
+//           }
+//         </div>
+
+//         <div class="text-content">
+//           <h1>Claudia Fohrer</h1>
+//           <h2>{{currentTexts['frontendDeveloper']}}</h2>
+//         </div>
+
+//         <div class="down-arrow">
+//           <img (click)="scrollToDown()" src="./../../../assets/img/1-hero/Arrow down.png" alt="Scroll Down">
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+
+//   <!-- Desktop Navbar: shown only on large screens -->
+//   <div class="navbar-desktop">
+//     <app-navbar [isMobileView]="false"></app-navbar>
+//   </div>
+// </section>
+//--------------------------------scss--------------------------------
 .hero-section {
   display: flex;
   align-items: center;
@@ -61,7 +122,7 @@
 
     .media-icons {
       position: absolute;
-      top: 44px;
+      top: -40px;
       right: 20px;
       display: flex;
       flex-direction: column;
@@ -150,7 +211,7 @@
   img {
     position: absolute;
       top: 100px;
-      left: 211px;
+      left: 233px;
       width: 394px;
       height: auto;
       object-fit: cover;
@@ -159,13 +220,11 @@
 
     /* Menu container */
     .navbar-overlay {
-      position: absolute;
-        top: 114px;
-          left: 217px;
-        z-index: 2;
-        width: 394px;
-        max-width: 400px;
-        padding: 2rem;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
   
       /* Vertical menu list */
       #navbar-section {
@@ -331,106 +390,103 @@
 }
 
 // ========== UPDATED MOBILE STYLES ========== //
-@media (max-width: 830px) {
-  section{
-    // background-color: #89bcd9 !important;
-  }
-  #header {
-    padding-bottom: 50px;
-  }
+// @media (max-width: 830px) {
+//   #header {
+//     padding-bottom: 50px;
+//   }
 
-  // Hide desktop navbar
-  .navbar-desktop {
-    display: none;
-  }
+//   // Hide desktop navbar
+//   .navbar-desktop {
+//     display: none;
+//   }
 
-  // Show burger menu
-  .burger-menu {
-    display: block;
-  }
+//   // Show burger menu
+//   .burger-menu {
+//     display: block;
+//   }
 
-  // Hero section mobile styles
-  .hero-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+//   // Hero section mobile styles
+//   .hero-section {
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 20px;
 
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 20px;
+//     .top-bar {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       width: 100%;
+//       margin-bottom: 20px;
 
-      .logo {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+//       .logo {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 10px;
 
-        img {
-          width: 56px;
-        }
+//         img {
+//           width: 56px;
+//         }
 
-        p {
-          font-size: 15px;
-          font-family: "Anta", sans-serif;
-          margin: 0;
+//         p {
+//           font-size: 15px;
+//           font-family: "Anta", sans-serif;
+//           margin: 0;
 
-          span {
-            font-family: "Josefin Sans", sans-serif;
-            font-size: 13px;
-            color: #89bcd9;
-          }
-        }
-      }
-    }
+//           span {
+//             font-family: "Josefin Sans", sans-serif;
+//             font-size: 13px;
+//             color: #89bcd9;
+//           }
+//         }
+//       }
+//     }
 
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+//     .hero-content {
+//       flex-direction: column;
+//       align-items: center;
+//       text-align: center;
+//     }
 
-    .image-container {
-      .blue-bg {
-        width: 260px !important;
-        height: 280px !important;
-        position: absolute;
-        transform: none;
-      }
+//     .image-container {
+//       .blue-bg {
+//         width: 260px !important;
+//         height: 280px !important;
+//         position: absolute;
+//         transform: none;
+//       }
 
-      .person-img {
-        width: 280px !important;
-        height: 370px !important;
-        position: relative;
-      }
-    }
+//       .person-img {
+//         width: 280px !important;
+//         height: 370px !important;
+//         position: relative;
+//       }
+//     }
 
-    .right-container {
-      width: 100%;
+//     .right-container {
+//       width: 100%;
 
-      .media-icons {
-        display: none;
-      }
+//       .media-icons {
+//         display: none;
+//       }
 
-      .text-content {
-        margin-top: 20px;
+//       .text-content {
+//         margin-top: 20px;
 
-        h1 {
-          font-size: 34px !important;
-        }
+//         h1 {
+//           font-size: 34px !important;
+//         }
 
-        h2 {
-          font-size: 20px !important;
-        }
-      }
+//         h2 {
+//           font-size: 20px !important;
+//         }
+//       }
 
-      .down-arrow img {
-        width: 30px;
-      }
-    }
-  }
-}
+//       .down-arrow img {
+//         width: 30px;
+//       }
+//     }
+//   }
+// }
 
 // Additional mobile-specific styles for smaller screens
 @media (max-width: 480px) {

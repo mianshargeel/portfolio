@@ -1,92 +1,379 @@
-nav{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+/* ========== HEADER COMPONENT STYLES ========== */
+#header {
+  position: relative;
   width: 100%;
-  height: 104px;
-  background-color: #89BCD9;
-  font-family: "Josefin Sans", sans-serif;
-  .navbar-logo{
-    width: 58px;
-    height: 72px;
-    &:hover{
-      cursor: pointer;
-    }
-    p{
-      font-size: 14px;
-      font-family: "Anta", sans-serif;
-      span{
+}
+
+.hero-section {
+  position: relative;
+  padding: 20px;
+
+  /* Top Bar - Mobile Only */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    z-index: 100;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 40px;
+        height: auto;
+      }
+
+      p {
+        margin: 0;
+        font-family: "Anta", sans-serif;
         font-size: 14px;
-        color: #262e34;
-        font-family: "Josefin Sans", sans-serif;
+        line-height: 1.2;
+
+        span {
+          font-family: "Josefin Sans", sans-serif;
+          font-size: 12px;
+          color: #262e34;
+        }
       }
     }
   }
-  .nav-menu-list{
+
+  /* Burger Menu - Mobile Only */
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 101;
+
+    span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: #262e34;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  /* Mobile Menu Overlay */
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgba(0, 0, 0, 0.9);
+    z-index: 99;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.active {
+      display: flex;
+      opacity: 1;
+    }
+  }
+
+  /* Hero Content */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+
+      .blue-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 250px;
+        height: 250px;
+        z-index: -1;
+      }
+
+      .person-img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+      }
+    }
+
+    .text-content {
+      text-align: center;
+      margin: 30px 0;
+
+      h1 {
+        font-family: "Anta", sans-serif;
+        font-size: 2rem;
+        margin: 0;
+        color: #262e34;
+      }
+
+      h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.2rem;
+        color: #89BCD9;
+        margin: 5px 0 0;
+        font-weight: 400;
+      }
+    }
+
+    .down-arrow {
+      margin-top: 20px;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+        height: auto;
+        animation: bounce 2s infinite;
+      }
+    }
+  }
+
+  /* Desktop Navbar Container */
+  .navbar-desktop {
+    display: none;
+  }
+}
+
+/* ========== NAVBAR COMPONENT STYLES ========== */
+#navbar-section {
+  background-color: #89b9d900;
+  /* Desktop Navbar */
+  .desktop-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 104px;
+    background-color: #89BCD9;
+    font-family: "Josefin Sans", sans-serif;
+
+    .navbar-logo {
+      width: 58px;
+      height: 72px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 14px;
+        font-family: "Anta", sans-serif;
+
+        span {
+          font-size: 14px;
+          color: #262e34;
+          font-family: "Josefin Sans", sans-serif;
+        }
+      }
+    }
+
+    .nav-menu-list {
       display: flex;
       gap: 50px;
-      a{
+
+      a {
         text-decoration: none;
         color: black;
         font-size: 26px;
         font-weight: 500;
-        &:hover{
+
+        &:hover {
           color: white;
         }
       }
     }
-  // toggle de/en btns
+
+    /* Language Toggle */
     .language-toggle {
       display: flex;
-      // background-color: #91b9d3; // Light blue container background
       padding: 5px 15px;
-      // border-radius: 20px;
       align-items: center;
       gap: 0px;
       position: relative;
+
+      .toggle-btn {
+        display: none;
+      }
+
+      .toggle-label {
+        font-size: 20px;
+        cursor: pointer;
+        padding: 5px 15px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        color: black;
+      }
+
+      #de-desktop:checked+label,
+      #en-desktop:checked+label {
+        background-color: #7dabc5;
+        color: white;
+      }
+
+      .toggle-label:hover {
+        color: white;
+      }
     }
-  
-    /* Hide default radio buttons */
-    .toggle-btn {
+  }
+
+  /* Mobile Navbar */
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+
+    .navbar-logo {
       display: none;
+      /* Hidden in mobile since it's in header */
     }
-  
-    /* Default button styles */
-    .toggle-label {
-      font-size: 20px;
-      cursor: pointer;
-      padding: 5px 15px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      color: black;
-      
-    }
-  
-    /* EN selected by default */
-    #en:checked+label {
-      background-color: #7dabc5;
-      color: white;
-    }
-        #de:checked+label {
-          background-color: #7dabc5;
-          color: white;
+
+    .mobile-menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+
+      li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 500;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #89BCD9;
         }
-    /* When hovering over DE:
-     - DE turns white
-     - EN turns black */
-    #de:hover+label {
-      color: white;
+      }
     }
-        #en:hover+label {
-          color: white;
+
+    .language-toggle.mobile {
+      margin-top: 30px;
+
+      .toggle-label {
+        color: white;
+
+        &:hover {
+          color: #89BCD9;
+        }
+      }
+
+      #de-mobile:checked+label,
+      #en-mobile:checked+label {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+@media (min-width: 831px) {
+
+  /* Hide mobile elements on desktop */
+  .hero-section {
+
+    .top-bar,
+    .burger-menu,
+    .mobile-menu-overlay {
+      display: none !important;
+    }
+
+    .navbar-desktop {
+      display: block;
+    }
+
+    .hero-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 50px;
+
+      .image-container {
+        width: 50%;
+        max-width: none;
+
+        .blue-bg {
+          width: 400px;
+          height: 400px;
         }
 
+        .person-img {
+          max-height: 600px;
+        }
+      }
+
+      .text-content {
+        width: 50%;
+        text-align: left;
+        padding-left: 50px;
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
 }
+
 @media (max-width: 830px) {
-  #navbar-section{
-    display: none;
+
+  /* Hide desktop navbar on mobile */
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
+/* Bounce animation for down arrow */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
   }
 }

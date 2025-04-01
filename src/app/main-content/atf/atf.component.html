@@ -1,23 +1,31 @@
 <section id="header">
   <div class="hero-section">
 
-    <!-- Top: Logo Left + Burger Right (mobile) -->
+   <!-- ✅ Top bar with logo and burger icon -->
     <div class="top-bar">
-      <div class="logo">
-        <img src="./../../../assets/img/1-hero/logo.png" alt="Logo" />
-        <p>C.Fohrer <br><span>{{currentTexts['developer']}}</span></p>
-      </div>
+        <div class="logo">
+          <img src="./../../../assets/img/1-hero/logo.png" alt="Logo" />
+          <p>C.Fohrer <br><span>{{ currentTexts['developer'] }}</span></p>
+        </div>
 
-      <div class="burger-menu" (click)="toggleMenu()">
-        <img src="./../../../assets/img/1-hero/burger-menu.png" alt="Menu" />
-      </div>
+        <div class="burger-menu" (click)="toggleMenu()">
+          <img src="./../../../assets/img/1-hero/burger-menu.png" alt="Menu" />
+        </div>
+    </div>
 
-      <!-- Fullscreen Nav Image (initially hidden) -->
+      <!-- ✅ Burger Menu Overlay -->
       <div class="menu-image-overlay" [class.show]="isMenuOpen">
         <img src="./../../../assets/img/1-hero/burger-bg.png" alt="Navigation Menu" />
+
+        <!-- Mobile Navbar rendered inside the overlay -->
+        <div class="navbar-overlay">
+         <app-navbar 
+      [isMobileView]="true" 
+      (menuClosed)="isMenuOpen = false"> <!-- Add this event binding -->
+    </app-navbar>
+        </div>
       </div>
-    </div>
-    
+
 
     <!-- Hero Layout: Left (Image), Right (Content) for large screen -->
     <div class="hero-content">
@@ -45,25 +53,8 @@
     </div>
   </div>
 
-  <!-- burger-menu for small screen -->
-   <!-- <div class="burger-overlay" [class.open]="isMenuOpen">
-    <div class="bubble-nav">
-      <a href="" (click)="toggleMenu()">{{ currentTexts['whyMe'] }}</a>
-      <a href="" (click)="toggleMenu()">{{ currentTexts['skills'] }}</a>
-      <a href="#project" (click)="toggleMenu()">{{ currentTexts['projects'] }}</a>
-      <a href="#contact" (click)="toggleMenu()">{{ currentTexts['contact'] }}</a>
-
-      <div class="language-toggle">
-        <input type="radio" id="de" name="language" class="toggle-btn"
-          [checked]="languageService.getCurrentLanguage() === 'de'"
-          (click)="switchLanguage('de')">
-        <label for="de" class="toggle-label">DE</label>
-
-        <input type="radio" id="en" name="language" class="toggle-btn"
-          [checked]="languageService.getCurrentLanguage() === 'en'"
-          (click)="switchLanguage('en')">
-        <label for="en" class="toggle-label">EN</label>
-      </div>
-    </div>
-  </div> -->
+  <!-- Desktop Navbar: shown only on large screens -->
+  <div class="navbar-desktop">
+    <app-navbar [isMobileView]="false"></app-navbar>
+  </div>
 </section>
