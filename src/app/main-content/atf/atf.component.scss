@@ -354,15 +354,7 @@
     display: block;
   }
 
-    // menu-image-overlay {
-    //   img {
-    //     max-width: 280px; // ✅ Match mobile person-img width
-    //   }
-  
-    //   .navbar-overlay {
-    //     max-width: 280px; // ✅ Match mobile person-img width
-    //   }
-    // }
+    
   // Hero section mobile styles
   .hero-section {
     flex-direction: column;
@@ -447,12 +439,24 @@
 }
 
 // Additional mobile-specific styles for smaller screens
-@media (max-width: 480px) {
+@media (max-width: 480px) and (min-width: 320px) {
+  .image-container{
+    .person-img {
+        height: 300px !important;
+      }
+  }
+  
   .menu-image-overlay {
+    img{
+      width: 324px;
+        height: 400px;
+        top: 57%;
+    }
     .navbar-overlay {
       width: 90%;
 
       #navbar-section {
+        width: 82% !important;
         .nav-menu-list a {
           font-size: 1.2rem;
         }

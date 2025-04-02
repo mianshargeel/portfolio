@@ -221,6 +221,14 @@
     display: none !important;
   }
 }
+@media (max-width: 480px){
+  .mobile-menu-list{
+    gap: 20px !important;
+  }
+    .mobile-nav{
+      width: 87% !important;
+    }
+}
 
 /* Bounce animation for down arrow */
 @keyframes bounce {
