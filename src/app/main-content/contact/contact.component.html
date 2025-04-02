@@ -49,15 +49,15 @@
 
             <div class="privacy">
               <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
-              <label for="privacy" >
-                <img  class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp; 
+              <label for="privacy">
+                <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
-                  <a href="#">&nbsp;{{ currentTexts['privacyLink'] }}&nbsp;</a>
-                  {{ currentTexts['privacyText'].split('privacy policy')[1] }} 
-
-                @if((isPrivacyChecked.invalid && (isPrivacyChecked.touched || isPrivacyChecked.dirty)) ||  isPrivacyChecked.invalid) {
-          <span class="red-color">{{ currentTexts['privacyError'] }}</span>
-        }
+                <a href="#">{{ currentTexts['privacyLink'] }}</a>
+                {{ currentTexts['privacyText'].split('privacy policy')[1] }}
+                
+                @if(isPrivacyChecked.invalid && (isPrivacyChecked.touched || isFormSubmitted)) {
+                  <span class="error-message">{{ currentTexts['privacyError'] }}</span>
+                }
               </label>
             </div>
 
@@ -66,13 +66,25 @@
             </div>
           </form>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="mobile-contact-form">
           <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <!-- <div class="input-fields"> -->
               <div class="field">
                 <input #name="ngModel" [(ngModel)] = "contactData.name" type="text" id="name" name="name" required placeholder="Your name">
                 @if(!name.valid && name.touched) {
-                  <span class="red-color">{{ currentTexts['formNameError'] }}</span>
+                  <span class="error-message">{{ currentTexts['formNameError'] }}</span>
                 }
               </div>
 
@@ -80,28 +92,28 @@
                 <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="Your Email">
                 <!-- using pattern to validate email -->
                 @if(!email.valid && email.touched) {
-                  <span class="red-color">{{ currentTexts['formEmailError'] }}</span>
+                  <span class="error-message">{{ currentTexts['formEmailError'] }}</span>
                 }
               </div>
            
             <div class="message-field">            
               <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" rows="6" required placeholder="Your message"></textarea>
               @if(!message.valid && message.touched && !message.disabled) {
-                <span class="red-color">{{ currentTexts['formMessageError'] }}</span>
+                <span class="error-message">{{ currentTexts['formMessageError'] }}</span>
               }
             </div>
 
             <div class="privacy">
               <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
-              <label for="privacy" >
-                <img  class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp; 
+              <label for="privacy">
+                <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
-                  <a href="#">&nbsp;{{ currentTexts['privacyLink'] }}&nbsp;</a>
-                  {{ currentTexts['privacyText'].split('privacy policy')[1] }} 
-
-                @if((isPrivacyChecked.invalid && (isPrivacyChecked.touched || isPrivacyChecked.dirty)) ||  isPrivacyChecked.invalid) {
-          <span class="red-color">{{ currentTexts['privacyError'] }}</span>
-        }
+                <a href="#">{{ currentTexts['privacyLink'] }}</a>
+                {{ currentTexts['privacyText'].split('privacy policy')[1] }}
+                
+                @if(isPrivacyChecked.invalid && (isPrivacyChecked.touched || isFormSubmitted)) {
+                  <span class="error-message">{{ currentTexts['privacyError'] }}</span>
+                }
               </label>
             </div>
 

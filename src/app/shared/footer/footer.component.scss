@@ -55,3 +55,48 @@ footer{
     gap: 16px;
   }
 }
+.mobile-footer{
+  display: none;
+}
+ @media (max-width: 830px) {
+  .desktop-footer{
+    display: none;
+  }
+  .mobile-footer {
+    height: 243px;
+    display: block;
+    padding: 20px 0px;
+    .mobile-footer-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      .footer-logo{
+
+        img{
+          width: 66px;
+        }
+        .name{
+          font-size: 16px;
+          font-family: "Anta", sans-serif;
+        }
+        .dev{
+          font-family: "Josefin Sans", sans-serif;
+          color: #262e34;
+        }
+      }
+      .legal-notice{
+        display: flex;
+        flex-direction: row;
+          gap: 20px;
+      }
+    }
+  }
+  
+ }
+ @media (max-width: 380px){
+    .legal-notice{
+      display: flex;
+      gap: 0px !important;
+    }
+ }

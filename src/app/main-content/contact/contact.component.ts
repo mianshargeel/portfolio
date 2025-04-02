@@ -22,6 +22,8 @@ interface FormDate{
 export class ContactComponent {
 
   texts = TEXTS;
+  isFormSubmitted = false;
+  mailTest = true;
   
   constructor(public languageService: LanguageService, private http: HttpClient) {}
 
@@ -39,9 +41,7 @@ export class ContactComponent {
     message: '',
     isPrivacyChecked: false
   };
-
-  // isPrivacyChecked = false;
-  mailTest = true;
+  
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -55,17 +55,22 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    this.isFormSubmitted = true;
     console.log(this.contactData);
     
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({ next: (response) => { ngForm.resetForm() },
-          error: (error) => { console.error(error) },
+          error: (error) => {
+            console.error(error);
+            this.isFormSubmitted = false; // Reset flag on error
+          },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
+      this.isFormSubmitted = false; // Reset flag on success
     }
   }
 
