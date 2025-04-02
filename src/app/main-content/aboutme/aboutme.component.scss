@@ -74,3 +74,18 @@
     padding-right: 36px;
   }
  }
+ @media (max-width: 830px){
+  .my-details{
+    flex-direction: column;
+    .location{
+      width: 100% !important;
+    }
+    .aboutme-details{
+      width: 100% !important;
+    }
+    
+  }
+    .talk-btn {
+      display: none !important;
+    }
+ }
