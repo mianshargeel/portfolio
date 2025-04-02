@@ -5,68 +5,117 @@
   </div>
 
   <div class="contact-section">
-      <div class="contact-container">
-    <h2>{{ currentTexts['contactTitle'] }}</h2>
-    <div class="contact-info">
-        <div class="text">
-          <p>{{ currentTexts['contactDescription'] }}</p>
+    <div class="contact-container">
+      <h2>{{ currentTexts['contactTitle'] }}</h2>
+        <div class="contact-info">
+          <div class="text">
+            <p>{{ currentTexts['contactDescription'] }}</p>
+          </div>
+          <div class="mail-num">
+            <p class="mail"><img src="./../../../assets/img/contact/email.png" alt="">Email: Shardzhilgmail.com</p> 
+            <p class="phone"><img src="./../../../assets/img/contact/phone.png" alt="">Tel: 0152 639 248 39</p>
+          </div>
         </div>
-        <div class="mail-num">
-          <p class="mail"><img src="./../../../assets/img/contact/email.png" alt="">Email: Shardzhilgmail.com</p> 
-          <p class="phone"><img src="./../../../assets/img/contact/phone.png" alt="">Tel: 0152 639 248 39</p>
-        </div>
-    </div>
 
-    <!-- contact-form -->
-    <div class="contact-form">
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-          <div class="input-fields">
-            <div class="field">
-              <label for="name">{{ currentTexts['formNameLabel'] }}</label><br>
-              <input #name="ngModel" [(ngModel)] = "contactData.name" type="text" id="name" name="name" required>
-              @if(!name.valid && name.touched) {
-                <span class="red-color">{{ currentTexts['formNameError'] }}</span>
+      <!-- contact-form -->
+        <div class="contact-form">
+          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <div class="input-fields">
+              <div class="field">
+                <label for="name">{{ currentTexts['formNameLabel'] }}</label><br>
+                <input #name="ngModel" [(ngModel)] = "contactData.name" type="text" id="name" name="name" required>
+                @if(!name.valid && name.touched) {
+                  <span class="red-color">{{ currentTexts['formNameError'] }}</span>
+                }
+              </div>
+
+              <div class="field">
+                <label for="email">{{ currentTexts['formEmailLabel'] }}</label><br>
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <!-- using pattern to validate email -->
+                @if(!email.valid && email.touched) {
+                  <span class="red-color">{{ currentTexts['formEmailError'] }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="message-field">
+              <label for="message">{{ currentTexts['formMessageLabel'] }}</label><br>
+              <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" rows="6" required></textarea>
+              @if(!message.valid && message.touched && !message.disabled) {
+                <span class="red-color">{{ currentTexts['formMessageError'] }}</span>
               }
             </div>
 
-            <div class="field">
-              <label for="email">{{ currentTexts['formEmailLabel'] }}</label><br>
-              <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-              <!-- using pattern to validate email -->
-              @if(!email.valid && email.touched) {
-                <span class="red-color">{{ currentTexts['formEmailError'] }}</span>
+            <div class="privacy">
+              <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
+              <label for="privacy" >
+                <img  class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp; 
+                {{ currentTexts['privacyText'].split('privacy policy')[0] }}
+                  <a href="#">&nbsp;{{ currentTexts['privacyLink'] }}&nbsp;</a>
+                  {{ currentTexts['privacyText'].split('privacy policy')[1] }} 
+
+                @if((isPrivacyChecked.invalid && (isPrivacyChecked.touched || isPrivacyChecked.dirty)) ||  isPrivacyChecked.invalid) {
+          <span class="red-color">{{ currentTexts['privacyError'] }}</span>
+        }
+              </label>
+            </div>
+
+            <div class="submit-button" >
+              <button type="submit">{{ currentTexts['submitButton'] }}</button>
+            </div>
+          </form>
+        </div>
+        <div class="mobile-contact-form">
+          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <!-- <div class="input-fields"> -->
+              <div class="field">
+                <input #name="ngModel" [(ngModel)] = "contactData.name" type="text" id="name" name="name" required placeholder="Your name">
+                @if(!name.valid && name.touched) {
+                  <span class="red-color">{{ currentTexts['formNameError'] }}</span>
+                }
+              </div>
+
+              <div class="field">               
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="Your Email">
+                <!-- using pattern to validate email -->
+                @if(!email.valid && email.touched) {
+                  <span class="red-color">{{ currentTexts['formEmailError'] }}</span>
+                }
+              </div>
+           
+            <div class="message-field">            
+              <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" rows="6" required placeholder="Your message"></textarea>
+              @if(!message.valid && message.touched && !message.disabled) {
+                <span class="red-color">{{ currentTexts['formMessageError'] }}</span>
               }
             </div>
-          </div>
 
-          <div class="message-field">
-            <label for="message">{{ currentTexts['formMessageLabel'] }}</label><br>
-            <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" rows="6" required></textarea>
-            @if(!message.valid && message.touched && !message.disabled) {
-              <span class="red-color">{{ currentTexts['formMessageError'] }}</span>
-            }
-          </div>
+            <div class="privacy">
+              <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
+              <label for="privacy" >
+                <img  class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp; 
+                {{ currentTexts['privacyText'].split('privacy policy')[0] }}
+                  <a href="#">&nbsp;{{ currentTexts['privacyLink'] }}&nbsp;</a>
+                  {{ currentTexts['privacyText'].split('privacy policy')[1] }} 
 
-          <div class="privacy">
-            <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
-            <label for="privacy" >
-              <img  class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp; 
-              {{ currentTexts['privacyText'].split('privacy policy')[0] }}
-                <a href="#">&nbsp;{{ currentTexts['privacyLink'] }}&nbsp;</a>
-                {{ currentTexts['privacyText'].split('privacy policy')[1] }} 
+                @if((isPrivacyChecked.invalid && (isPrivacyChecked.touched || isPrivacyChecked.dirty)) ||  isPrivacyChecked.invalid) {
+          <span class="red-color">{{ currentTexts['privacyError'] }}</span>
+        }
+              </label>
+            </div>
 
-              @if((isPrivacyChecked.invalid && (isPrivacyChecked.touched || isPrivacyChecked.dirty)) ||  isPrivacyChecked.invalid) {
-        <span class="red-color">{{ currentTexts['privacyError'] }}</span>
-      }
-            </label>
-          </div>
-
-          <div class="submit-button" >
-            <button type="submit">{{ currentTexts['submitButton'] }}</button>
-          </div>
-        </form>
-      </div>
+            <div class="submit-button" >
+              <button type="submit">{{ currentTexts['submitButton'] }}</button>
+            </div>
+          </form>
+        </div>
     </div>
-  </div>
+   </div>
+
+   <div class="mobile-up-arrow">
+      <img (click)="scrollToTop()" src="./../../../assets/img/contact/arrow-up.png" alt="Scroll Down">
+    </div>
+
   </div>
 </section>

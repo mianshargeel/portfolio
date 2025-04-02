@@ -1,6 +1,12 @@
 <section>
   <div class="teamplayer">
-    <h3>{{ currentTexts['teamplayerTitle'] }} </h3>
+
+    <div class="mobile-screen-teamplayer">
+        <h2>Need a teamplayer?</h2>
+        <p>Hear what my colleagues said about me</p>
+    </div>
+
+    <h3 class="desktop-teamplayer">{{ currentTexts['teamplayerTitle'] }} </h3>
     <div class="teams-member">
       @for(team of teamPlayers; track team.name) {
           <div class="my-colleages">
@@ -14,5 +20,6 @@
           </div>
       }
     </div>
+    
   </div>
 </section>

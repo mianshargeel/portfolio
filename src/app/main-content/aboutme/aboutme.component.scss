@@ -77,6 +77,11 @@
  @media (max-width: 830px){
   .container{
     padding: 36px 36px 80px;
+    .whyme-info{
+      h2{
+        font-size: 36px;
+      }
+    }
   }
   .my-details{
     flex-direction: column;

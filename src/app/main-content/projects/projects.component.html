@@ -7,7 +7,7 @@
         <nav>
             @for (project of projects; track project.title; let i = $index) {
               <button  [class.active]="selectedIndex === i" 
-              (click)="selectedIndex = i">{{ i + 1 }}. {{ project.title }}</button>
+              (click)="selectedIndex = i">{{ i + 1 }}. Project</button>
             }
         </nav>
       </div>
@@ -54,7 +54,7 @@
 
           <div class="btn-small-screen">
             <div class="d-flex">
-              <button class="live-test-btn">{{ currentTexts['liveTestButton'] }}</button>
+              <a class="live-test-btn">{{ currentTexts['liveTestButton'] }}</a>
             <a class="github-btn" href="https://github.com/mianshargeel">{{ currentTexts['githubButton'] }}</a>
             </div>
           </div>

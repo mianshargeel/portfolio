@@ -109,6 +109,9 @@
     }
   }
 }
+.mobile-screen-teamplayer{
+  display: none;
+}
 
 @media (max-width: 1180px) {
   .teamplayer {
@@ -185,45 +188,73 @@
   }
 }
 
-@media (max-width: 480px) {
-  .teams-member {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
-    scroll-padding-left: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-  }
+@media (max-width: 830px){
+  .teamplayer{
+    padding-top: 30px !important;
 
-  .teams-member::-webkit-scrollbar {
-    display: none;
-  }
-
-  .my-colleages {
-    flex: 0 0 auto !important;
-    // min-width: 280px !important;
-    // max-width: 280px;
-    scroll-snap-align: start;
-    margin: 0 8px 0 0; // right spacing only
-  }
-
-  .my-colleages:first-child {
-    margin-left: 0 !important;
-  }
-
-  .my-colleages:last-child {
-    margin-right: 8px;
-  }
-
-  .teamplayer {
-    padding: 0 !important;
-    margin: 0 !important;
+    .desktop-teamplayer{
+      display: none;
+    }
+  
+    .mobile-screen-teamplayer {
+      display: block;
+      padding: 30px;
+      h2{
+        font-family: "Anta", sans-serif;
+          font-size: 32px;
+          font-weight: 400;
+          color: #89BCD9;
+          text-align: center;
+          margin-bottom: 8px;
+      }
+      p{
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
   }
 }
+
+// @media (max-width: 480px) {
+//   .teams-member {
+//     display: flex !important;
+//     flex-wrap: nowrap !important;
+//     overflow-x: auto !important;
+//     overflow-y: hidden !important;
+//     scroll-snap-type: x mandatory !important;
+//     scroll-padding-left: 0 !important;
+//     // padding: 0 !important;
+//     // margin: 0 !important;
+//     -webkit-overflow-scrolling: touch;
+//     width: 100%;
+//   }
+
+//   .teams-member::-webkit-scrollbar {
+//     display: none;
+//   }
+
+//   .my-colleages {
+//     flex: 0 0 auto !important;
+//     // min-width: 280px !important;
+//     // max-width: 280px;
+//     scroll-snap-align: start;
+//     margin: 0 8px 0 0; // right spacing only
+//   }
+
+//   .my-colleages:first-child {
+//     margin-left: 0 !important;
+//   }
+
+//   .my-colleages:last-child {
+//     margin-right: 8px;
+//   }
+
+//   .teamplayer {
+//     padding: 0 !important;
+//     margin: 0 !important;
+//   }
+// }
 
 
 
