@@ -75,6 +75,9 @@
   }
  }
  @media (max-width: 830px){
+  .container{
+    padding: 36px 36px 80px;
+  }
   .my-details{
     flex-direction: column;
     .location{

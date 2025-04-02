@@ -1,3 +1,7 @@
+section{
+  // border: 2px solid;
+  padding: 64px 0px;
+}
 .contailner{
   display: flex;
   justify-content: center;
@@ -91,9 +95,104 @@
     }
   }
 }
+.current-lerning-mobile{
+  display: none;
+}
 
  @media (max-width: 900px) {
   .skills-Info{
     padding: 0px 36px 0px 36px
+  }
+}
+
+@media (max-width: 830px){
+  .contailner{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .skills-Info{
+      height: auto;
+      h2{
+        font-size: 36px !important;
+      }
+    }
+    
+    .skills-container{
+      flex-direction: column;
+      align-items: center;
+    .skills-details{
+      width: 100%;
+        max-width: 1000px; // Optional cap for large screens
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap; // ✅ Important: allow wrapping
+        justify-content: center;
+        gap: 20px; // space between items
+        box-sizing: border-box;
+      }
+    }
+    .current-lerning{
+      display: none !important;
+    }
+    .current-lerning-mobile {
+      display: block !important;
+      width: 100%;
+      font-family: "Josefin Sans", sans-serif;
+      .mobile-container{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .current-lerning-text{
+          color: #89BCD9;
+          text-align: center;
+          font-size: 24px;
+        }
+
+        .lerning-details-mobile{
+          display: flex;
+            align-items: center; // vertical alignment fix
+            justify-content: space-between; // better spacing
+            padding: 0 10px;
+          p{
+            width: 50%;
+            text-align: left;
+            line-height: 1.5;
+          }
+          .current-tech {
+            background-image: url('./../../../assets/img/3-skils/currently-lerning.png');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 140px;
+                height: 120px;
+              .tech{
+                width: 32px;
+                  margin: 0 4px;
+              }
+            }
+        }
+        
+      }
+    }
+    .talk-btn{
+      background-color: #89BCD9;
+        // border: 1px solid #89BCD9;
+        color: black;
+        padding: 15px 24px;
+        border-radius: 24px;
+        width: 150px;
+        text-decoration: none;
+        text-align: center;
+        align-self: center; //to get at right end
+      
+        &:hover {
+          cursor: pointer;
+          background-color: #3f4244;
+          color: #89BCD9;
+        }
+    }
   }
 }
