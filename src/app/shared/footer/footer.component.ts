@@ -1,5 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterLink, Router} from '@angular/router';
 
 
 interface Media{
@@ -11,11 +12,18 @@ interface Media{
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterModule, RouterLink],
+  imports: [RouterLink, CommonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  
+  constructor(private router: Router) {}
+
+testNavigation() {
+  this.router.navigate(['/privacy-policy']);
+  
+}
 
   medialinks: Media[] = [
     {

@@ -52,7 +52,7 @@
               <label for="privacy">
                 <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
-                <a href="#">{{ currentTexts['privacyLink'] }}</a>
+                <a href="/privacy-policy">{{ currentTexts['privacyLink'] }}</a>
                 {{ currentTexts['privacyText'].split('privacy policy')[1] }}
                 
                 @if(isPrivacyChecked.invalid && (isPrivacyChecked.touched || isFormSubmitted)) {

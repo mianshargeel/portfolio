@@ -1,3 +1,64 @@
+// <section id="header">
+//   <div class="hero-section">
+
+//    <!-- ✅ Top bar with logo and burger icon -->
+//     <div class="top-bar">
+//         <div class="logo">
+//           <img src="./../../../assets/img/1-hero/logo.png" alt="Logo" />
+//           <p>C.Fohrer <br><span>{{ currentTexts['developer'] }}</span></p>
+//         </div>
+
+//         <div class="burger-menu" (click)="toggleMenu()">
+//           <img src="./../../../assets/img/1-hero/burger-menu.png" alt="Menu" />
+//         </div>
+//     </div>
+
+//       <!-- ✅ Burger Menu Overlay -->
+//       <div class="menu-image-overlay" [class.show]="isMenuOpen">
+//         <img src="./../../../assets/img/1-hero/burger-bg.png" alt="Navigation Menu" />
+
+//         <!-- Mobile Navbar rendered inside the overlay -->
+//         <div class="navbar-overlay">
+//          <app-navbar
+//       [isMobileView]="true"
+//       (menuClosed)="isMenuOpen = false"> <!-- Add this event binding -->
+//     </app-navbar>
+//         </div>
+//       </div>
+
+
+//     <!-- Hero Layout: Left (Image), Right (Content) for large screen -->
+//     <div class="hero-content">
+//       <div class="image-container">
+//         <img src="./../../../assets/img/1-hero/blue-bg2.png" class="blue-bg" alt="Background">
+//         <img src="./../../../assets/img/1-hero/subject 3.png" class="person-img" alt="Claudia Fohrer">
+//       </div>
+
+//       <div class="right-container">
+//         <div class="media-icons">
+//           @for(link of medialinks; track link.name) {
+//             <a href="{{link.url}}" target="_blank"><img src="{{link.img}}" alt="{{link.name}}"></a>
+//           }
+//         </div>
+
+//         <div class="text-content">
+//           <h1>Claudia Fohrer</h1>
+//           <h2>{{currentTexts['frontendDeveloper']}}</h2>
+//         </div>
+
+//         <div class="down-arrow">
+//           <img (click)="scrollToDown()" src="./../../../assets/img/1-hero/Arrow down.png" alt="Scroll Down">
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+
+//   <!-- Desktop Navbar: shown only on large screens -->
+//   <div class="navbar-desktop">
+//     <app-navbar [isMobileView]="false"></app-navbar>
+//   </div>
+// </section>
+//--------------------------------scss--------------------------------
 .hero-section {
   display: flex;
   align-items: center;
@@ -61,7 +122,7 @@
 
     .media-icons {
       position: absolute;
-      top: 44px;
+      top: -40px;
       right: 20px;
       display: flex;
       flex-direction: column;
@@ -79,7 +140,7 @@
         width: 40px;
         cursor: pointer;
         transition: transform 0.3s;
-        padding-bottom: 34px;
+        padding-bottom: 20px;
 
         &:hover {
           transform: scale(1.2);
@@ -138,35 +199,32 @@
 // Mobile menu overlay styles - UPDATED
 .menu-image-overlay {
   display: none;
-  position: absolute; 
+  position: absolute; // Changed from absolute to fixed
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   // z-index: 999;
   justify-content: center;
   align-items: center; // Changed from flex-start to center
 
-  img { //blue-bg-image
+  img {
     position: absolute;
-      top: 55%; // ✅ Center vertically
-      left: 50%; // ✅ Center horizontally
-      transform: translate(-50%, -50%); // ✅ Perfect centering
-      width: 380px;
-      max-width: 535px; // ✅ Match person-img max-width
+      top: 100px;
+      left: 233px;
+      width: 394px;
       height: auto;
-      z-index: 2;
+      object-fit: cover;
+      z-index: 1;
   }
 
-    /* Menu-list container  */
+    /* Menu container */
     .navbar-overlay {
-      position: absolute;
-        top: 50%; // ✅ Center vertically
-        left: 56%;
-        transform: translate(-50%, -50%); // ✅ Perfect centering
-        width: 80%; // ✅ Responsive width
-        max-width: 394px; // ✅ Keep your max-width
-        z-index: 2;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
   
       /* Vertical menu list */
       #navbar-section {
@@ -182,12 +240,11 @@
           align-items: center;
           gap: 1.5rem;
           width: 100%;
-          font-family: "Josefin Sans", sans-serif;
   
           a {
             color: white;
             font-size: 1.4rem;
-            
+            font-family: "Josefin Sans", sans-serif;
             text-decoration: none;
             transition: all 0.3s ease;
             position: relative;
@@ -333,118 +390,111 @@
 }
 
 // ========== UPDATED MOBILE STYLES ========== //
-@media (max-width: 830px) {
-  .navbar-desktop {
-    display: none;
-  }
-  .logo{
-    display: none;
-  }
-  .burger-menu {
-    display: block;
-  }
-  .hero-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    height: 800px;
+// @media (max-width: 830px) {
+//   #header {
+//     padding-bottom: 50px;
+//   }
 
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 20px;
+//   // Hide desktop navbar
+//   .navbar-desktop {
+//     display: none;
+//   }
 
-      .logo-mobile {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+//   // Show burger menu
+//   .burger-menu {
+//     display: block;
+//   }
 
-        img {
-          width: 56px;
-        }
+//   // Hero section mobile styles
+//   .hero-section {
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 20px;
 
-        p {
-          font-size: 15px;
-          font-family: "Anta", sans-serif;
-          margin: 0;
+//     .top-bar {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       width: 100%;
+//       margin-bottom: 20px;
 
-          span {
-            font-family: "Josefin Sans", sans-serif;
-            font-size: 13px;
-            color: #89bcd9;
-          }
-        }
-      }
-    }
+//       .logo {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 10px;
 
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+//         img {
+//           width: 56px;
+//         }
 
-    .image-container {
-      .blue-bg {
-        width: 260px !important;
-        height: 280px !important;
-        position: absolute;
-        transform: none;
-      }
+//         p {
+//           font-size: 15px;
+//           font-family: "Anta", sans-serif;
+//           margin: 0;
 
-      .person-img {
-        width: 280px !important;
-        height: 370px !important;
-        position: relative;
-      }
-    }
+//           span {
+//             font-family: "Josefin Sans", sans-serif;
+//             font-size: 13px;
+//             color: #89bcd9;
+//           }
+//         }
+//       }
+//     }
 
-    .right-container {
-      width: 100%;
+//     .hero-content {
+//       flex-direction: column;
+//       align-items: center;
+//       text-align: center;
+//     }
 
-      .media-icons {
-        display: none;
-      }
+//     .image-container {
+//       .blue-bg {
+//         width: 260px !important;
+//         height: 280px !important;
+//         position: absolute;
+//         transform: none;
+//       }
 
-      .text-content {
-        margin-top: 20px;
+//       .person-img {
+//         width: 280px !important;
+//         height: 370px !important;
+//         position: relative;
+//       }
+//     }
 
-        h1 {
-          font-size: 34px !important;
-        }
+//     .right-container {
+//       width: 100%;
 
-        h2 {
-          font-size: 20px !important;
-        }
-      }
+//       .media-icons {
+//         display: none;
+//       }
 
-      .down-arrow img {
-        width: 30px;
-      }
-    }
-  }
-}
+//       .text-content {
+//         margin-top: 20px;
+
+//         h1 {
+//           font-size: 34px !important;
+//         }
+
+//         h2 {
+//           font-size: 20px !important;
+//         }
+//       }
+
+//       .down-arrow img {
+//         width: 30px;
+//       }
+//     }
+//   }
+// }
 
 // Additional mobile-specific styles for smaller screens
-@media (max-width: 480px) and (min-width: 320px) {
-  .image-container{
-    .person-img {
-        height: 300px !important;
-      }
-  }
-  
+@media (max-width: 480px) {
   .menu-image-overlay {
-    img{
-      width: 324px;
-        height: 400px;
-        top: 57%;
-    }
     .navbar-overlay {
       width: 90%;
 
       #navbar-section {
-        width: 82% !important;
         .nav-menu-list a {
           font-size: 1.2rem;
         }
