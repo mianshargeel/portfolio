@@ -27,15 +27,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 2s ease-in;
-
+    transition: transform 0.3ms ease-in-out;
+    -webkit-transition: transform 0.3ms ease-in-out;
+      -moz-transition: transform 0.3ms ease-in-out;
+      -ms-transition: transform 0.3ms ease-in-out;
+      -o-transition: transform 0.3ms ease-in-out;
     .blue-bg {
       width: 525px;
       height: 571px;
       position: absolute;
       transform: rotate(-45deg);
-
-      // transition: transform 2s ease-in;
+      transition: transform 0.3ms ease-in-out;
+        -webkit-transition: transform 0.3ms ease-in-out;
+        -moz-transition: transform 0.3ms ease-in-out;
+        -ms-transition: transform 0.3ms ease-in-out;
+        -o-transition: transform 0.3ms ease-in-out;
       &:hover {
         transform: rotate(-65deg);
 

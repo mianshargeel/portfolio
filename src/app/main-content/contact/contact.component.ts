@@ -3,6 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
+import { RouterLink } from '@angular/router';
 
 
 interface FormDate{
@@ -15,7 +16,7 @@ interface FormDate{
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
