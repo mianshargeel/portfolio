@@ -39,7 +39,7 @@ export class ProjectsComponent {
       live: '#'
     },
     {
-      title: 'Sharkie',
+      title: 'Pokedex',
       duration: '2 weeks',
       team: 'Collaborated closely with a cross-functional team using Git and Agile methods, contributing to UI development, code reviews, and feature planning to ensure a smooth and efficient workflow.',
       description: 'Web Browser Objectoriented Programming App',
@@ -48,7 +48,7 @@ export class ProjectsComponent {
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
-      image: './../../../assets/img/4-projects/Screenshot project.png',
+      image: './../../../assets/img/4-projects/poke.jpeg',
       github: 'https://github.com/mianshargeel',
       live: '#'
     },

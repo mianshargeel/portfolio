@@ -22,11 +22,8 @@
     flex-direction: column;
     gap: 10px;
 }
-#project{
-  // border: 2px dotted lightblue;
-}
 .top-mobile-section {
-  display: none; //showing only for small screen
+  display: none; 
 }
 .project-container{
   width: 100%;
@@ -81,7 +78,6 @@
       display: flex;
       flex-direction: column;
       gap: 64px;
-      // border: 2px dotted lightblue;
       .about-text{
         @include d-flex-gap();
         h3{
@@ -119,8 +115,6 @@
         display: none;
       }
     }
-
-    //Left side of Project component
     .left-content{
       display: flex;
       flex-direction: column;
@@ -146,6 +140,7 @@
       .project-screen-short{
         width: 453.43px;
         height: 312px;
+        border-radius: 30px !important;
       }
       .links-btn{
         width: 292px;
