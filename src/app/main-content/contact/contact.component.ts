@@ -28,13 +28,10 @@ export class ContactComponent {
   
   constructor(public languageService: LanguageService, private http: HttpClient) {}
 
-  // Updated getter with type safety
   get currentTexts() {
     const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
     return this.texts[lang];
   }
-
-  // constructor(private http: HttpClient) {} // <-- Correct injection
 
   contactData: FormDate = {
     name: '',
@@ -43,7 +40,6 @@ export class ContactComponent {
     isPrivacyChecked: false
   };
   
-
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),

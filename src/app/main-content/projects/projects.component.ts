@@ -13,18 +13,16 @@ import { TEXTS } from '../../constants/texts';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-
   texts = TEXTS;
+  selectedIndex = 0;
   
   constructor(public languageService: LanguageService) {}
 
-  // Updated getter with type safety
   get currentTexts() {
     const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
     return this.texts[lang];
   }
 
-  selectedIndex = 0;
   projects: Project[] = [
     {
       title: 'DA Bubble',
@@ -83,6 +81,6 @@ export class ProjectsComponent {
       live: '#'
     }
   ];
-selected: any;
+// selected: any;
 
 }

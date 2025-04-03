@@ -20,7 +20,6 @@ export class SkillsComponent {
   
   constructor(public languageService: LanguageService) {}
 
-  // Updated getter with type safety
   get currentTexts() {
     const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
     return this.texts[lang];

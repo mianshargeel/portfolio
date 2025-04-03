@@ -26,8 +26,8 @@ export class NavbarComponent {
   if (this.isMobileView) {
     // Emit event to header to close menu
     this.menuClosed.emit();
+    }
   }
-}
 
   get currentTexts() {
     return this.texts[this.languageService.getCurrentLanguage() as 'en' | 'de'];
@@ -36,9 +36,5 @@ export class NavbarComponent {
   switchLanguage(lang: 'en' | 'de') {
     this.languageService.setLanguage(lang);
   }
-  // switchLanguage(lang: 'en' | 'de') {
-  //   this.languageService.setLanguage(lang);
-  //   window.location.reload(); // Forces all components to refresh
-  // }
 
 }

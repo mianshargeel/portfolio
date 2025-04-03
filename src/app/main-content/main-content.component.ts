@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AtfComponent } from './atf/atf.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -11,7 +10,6 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
   selector: 'app-main-content',
   standalone: true,
   imports: [AtfComponent,
-    NavbarComponent,
     AboutmeComponent,
     SkillsComponent,
     ProjectsComponent,

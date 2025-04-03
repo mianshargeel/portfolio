@@ -34,22 +34,18 @@ export class AtfComponent {
   }
     constructor(public languageService: LanguageService) {}
   
-    // Updated getter with type safety
     get currentTexts() {
       const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
       return this.texts[lang];
   }
-  // switchLanguage(lang: 'de' | 'en') {
-  //   this.languageService.setLanguage(lang); 
-  // }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     if (window.innerWidth > 830 && this.isMenuOpen) {
       this.isMenuOpen = false;
     }
   }
-  
-  
+   
 toggleMenu() {
   this.isMenuOpen = !this.isMenuOpen;
 }
