@@ -29,7 +29,7 @@ testNavigation() {
     {
       name: 'Email', 
       img: './../../../assets/img/footer/email.png',
-      url: '/contact'
+      url: '#contact'
     },
     {
       name: 'Github', 
