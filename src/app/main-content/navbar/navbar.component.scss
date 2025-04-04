@@ -1,15 +1,13 @@
 #navbar-section {
   background-color: #89b9d900;
-  position: relative;
-  /* Desktop Navbar */
+  // position: relative;
+ 
   .desktop-nav {
-    width: 100%;
+    position: absolute; 
+    left: 0;
+    right: 0;
     background-color: #89BCD9;
     font-family: "Josefin Sans", sans-serif;
-    width: 100%;
-
-    position: relative; // <- initially just part of the normal flow
-      width: 100%;
       z-index: 1000;
       transition: all 0.3s ease;
 
@@ -21,7 +19,7 @@
         }
     
       .navbar-container{
-        max-width: 1440px;
+        width: 1440px;
           margin: 0 auto;
           padding: 0 40px; // optional side padding
           display: flex;

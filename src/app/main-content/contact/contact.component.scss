@@ -84,6 +84,7 @@
              }
             .red-color {
               color: red;
+              margin-top: 5px;
             }
              .message-field {
                display: flex;
@@ -112,6 +113,11 @@
                             align-items: center;
                             font-size: 14px;
                             flex-wrap: wrap;
+                            .checkbox-img{
+                              &:hover{
+                                cursor: pointer;
+                              }
+                            }
                           }
             
                           input[type="checkbox"] {
@@ -162,7 +168,7 @@
     
                  &:hover {
                    background-color: #2d3840;
-                  filter: brightness(1.9);
+                  // filter: brightness(1.9);
                    color: #89BDC9;
                  }
                }

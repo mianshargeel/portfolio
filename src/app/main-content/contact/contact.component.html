@@ -12,7 +12,7 @@
             <p>{{ currentTexts['contactDescription'] }}</p>
           </div>
           <div class="mail-num">
-            <p class="mail"><img src="./../../../assets/img/contact/email.png" alt="">Email: Shardzhilgmail.com</p> 
+            <p class="mail"><img src="./../../../assets/img/contact/email.png" alt="">Email: Shardzhil&#64;gmail.com</p> 
             <p class="phone"><img src="./../../../assets/img/contact/phone.png" alt="">Tel: 0152 639 248 39</p>
           </div>
         </div>
@@ -52,7 +52,7 @@
               <label for="privacy">
                 <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
-                <a routerLink="/privacy-policy">{{ currentTexts['privacyLink'] }}</a>
+                <a  routerLink="/privacy-policy">&nbsp;{{ currentTexts['privacyLink'] }}</a>&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[1] }}
                 
                 @if(isPrivacyChecked.invalid && (isPrivacyChecked.touched || isFormSubmitted)) {
