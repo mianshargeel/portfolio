@@ -1,21 +1,28 @@
-import { Component,Input,Output, EventEmitter } from '@angular/core';
+import { Component,Input,Output, EventEmitter, HostListener } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
   texts = TEXTS;
   @Input() isMobileView: boolean = false;
-   @Output() menuClosed = new EventEmitter<void>(); // Add this line
-
-  constructor(public languageService: LanguageService) { } 
+  @Output() menuClosed = new EventEmitter<void>(); 
+  isAtTop: boolean = false;
   
+  constructor(public languageService: LanguageService) { } 
+
+@HostListener('window:scroll', [])
+onWindowScroll() {
+    this.isAtTop = window.scrollY > 10;
+  }
+
   handleNavClick(event: Event) {
     if (this.isMobileView) {  // Now matches the @Input name
       event.preventDefault();

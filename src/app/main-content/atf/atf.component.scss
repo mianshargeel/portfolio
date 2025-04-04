@@ -35,7 +35,7 @@
     }
    .person-img {
       width: 535px;
-      height: 700px;
+      height: 684px;
       position: relative;
     }
   }
@@ -107,6 +107,7 @@
 }
 .navbar-desktop {
   display: block !important;
+  
 }
 .menu-image-overlay {
   display: none;
@@ -266,6 +267,10 @@
   }
 }
 @media (max-width: 830px) {
+  .hero-section{
+    height: 100vh !important;
+   
+  }
   .navbar-desktop {
     display: none;
   }

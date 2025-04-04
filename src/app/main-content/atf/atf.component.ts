@@ -38,14 +38,15 @@ export class AtfComponent {
       const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
       return this.texts[lang];
   }
-
+ 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     if (window.innerWidth > 830 && this.isMenuOpen) {
       this.isMenuOpen = false;
     }
   }
-   
+  
+  
 toggleMenu() {
   this.isMenuOpen = !this.isMenuOpen;
 }

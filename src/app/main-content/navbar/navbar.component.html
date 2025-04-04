@@ -1,8 +1,9 @@
 <section id="navbar-section">
   <!-- Desktop Navbar -->
   @if (!isMobileView) {
-    <nav class="desktop-nav">
-      <div class="navbar-logo">
+    <nav class="desktop-nav" [ngClass]="{ 'top': isAtTop }">
+      <div class="navbar-container">
+        <div class="navbar-logo">
         <img src="./../../../assets/img/1-hero/navbar-logo.png" alt="Logo">
         <p>C.Fohrer <br><span>developer</span></p>
       </div>
@@ -22,6 +23,7 @@
               [checked]="languageService.getCurrentLanguage() === 'en'"
               (click)="switchLanguage('en')">
         <label for="en-desktop" class="toggle-label">EN</label>
+      </div>
       </div>
     </nav>
   }

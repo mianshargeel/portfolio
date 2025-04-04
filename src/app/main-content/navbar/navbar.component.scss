@@ -1,96 +1,90 @@
-
-
-  /* Desktop Navbar Container */
-  // .navbar-desktop {
-  //   display: none;
-  // }
-// }
-
-/* ========== NAVBAR COMPONENT STYLES ========== */
 #navbar-section {
   background-color: #89b9d900;
+  position: relative;
   /* Desktop Navbar */
   .desktop-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
-    height: 104px;
     background-color: #89BCD9;
     font-family: "Josefin Sans", sans-serif;
-
-    .navbar-logo {
-      width: 58px;
-      height: 72px;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      p {
-        font-size: 14px;
-        font-family: "Anta", sans-serif;
-
-        span {
-          font-size: 14px;
-          color: #262e34;
-          font-family: "Josefin Sans", sans-serif;
-        }
-      }
-    }
-
-    .nav-menu-list {
-      display: flex;
-      gap: 50px;
-
-      a {
-        text-decoration: none;
-        color: black;
-        font-size: 26px;
-        font-weight: 500;
-        font-family: "Josefin Sans", sans-serif;
-
-        &:hover {
-          color: white;
-        }
-      }
-    }
-
-    /* Language Toggle */
-    .language-toggle {
-      display: flex;
-      padding: 5px 15px;
-      align-items: center;
-      gap: 0px;
-      position: relative;
-
-      .toggle-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    z-index: 999;
+      .navbar-container{
+        max-width: 1440px;
+          margin: 0 auto;
+          padding: 0 40px; // optional side padding
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 104px;
+        .navbar-logo {
+            width: 58px;
+            height: 72px;
         
-        display: none;
+            &:hover {
+              cursor: pointer;
+            }
+            p {
+              font-size: 14px;
+              font-family: "Anta", sans-serif;
+              span {
+                font-size: 14px;
+                color: #262e34;
+                font-family: "Josefin Sans", sans-serif;
+              }
+            }
+          }
+          .nav-menu-list {
+            display: flex;
+            gap: 50px;
+            a {
+              text-decoration: none;
+              color: black;
+              font-size: 26px;
+              font-weight: 500;
+              font-family: "Josefin Sans", sans-serif;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+          .language-toggle {
+            display: flex;
+            padding: 5px 15px;
+            align-items: center;
+            gap: 0px;
+            position: relative;
+            .toggle-btn {
+              display: none;
+            }
+            .toggle-label {
+              font-size: 20px;
+              cursor: pointer;
+              padding: 5px 15px;
+              border-radius: 20px;
+              transition: all 0.3s ease;
+              color: black;
+            }
+            #de-desktop:checked+label,
+            #en-desktop:checked+label {
+              background-color: #7dabc5;
+              color: white;
+            }
+            .toggle-label:hover {
+              color: white;
+            }
+          }
       }
-
-      .toggle-label {
-        font-size: 20px;
-        cursor: pointer;
-        padding: 5px 15px;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        color: black;
-      }
-
-      #de-desktop:checked+label,
-      #en-desktop:checked+label {
-        background-color: #7dabc5;
-        color: white;
-      }
-
-      .toggle-label:hover {
-        color: white;
-      }
-    }
+   
   }
-
-  /* Mobile Navbar */
+    .desktop-nav.top {
+      top: 0 !important;
+      bottom: auto !important;
+    }
   .mobile-nav {
     display: flex;
     flex-direction: column;
@@ -101,9 +95,7 @@
     font-family: "Josefin Sans", sans-serif;
     .navbar-logo {
       display: none;
-      /* Hidden in mobile since it's in header */
     }
-
     .mobile-menu-list {
       list-style: none;
       padding: 0;
@@ -113,14 +105,12 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
-
       li a {
         text-decoration: none;
         color: black;
         font-size: 22px;
         font-weight: 500;
         transition: all 0.3s;
-        
         &:hover {
           color: #89BCD9;
         }
@@ -135,7 +125,6 @@
         appearance: none;
       }
     }
-
     .language-toggle.mobile {
       margin-top: 30px;
       .toggle-label {
@@ -150,7 +139,6 @@
               color: white;
           }
         }
-
       #de-mobile:checked+label,
       #en-mobile:checked+label {
         background-color: rgba(255, 255, 255, 0.2);
@@ -158,8 +146,6 @@
     }
   }
 }
-
-/* ========== RESPONSIVE BREAKPOINTS ========== */
 @media (min-width: 831px) {
 
   /* Hide mobile elements on desktop */
@@ -213,10 +199,8 @@
     }
   }
 }
-
 @media (max-width: 830px) {
 
-  /* Hide desktop navbar on mobile */
   .desktop-nav {
     display: none !important;
   }
@@ -229,15 +213,11 @@
       width: 87% !important;
     }
 }
-
-/* Bounce animation for down arrow */
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(10px);
   }

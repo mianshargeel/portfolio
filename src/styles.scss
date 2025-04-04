@@ -19,9 +19,10 @@ html{
 body {
   width: 100%;
   overflow-x: hidden !important; 
-  background-color: black; 
+  background-color: #262e34;
   color: white; 
-  // position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 section {
