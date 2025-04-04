@@ -1,7 +1,7 @@
 <section id="navbar-section">
   <!-- Desktop Navbar -->
   @if (!isMobileView) {
-    <nav class="desktop-nav" [ngClass]="{ 'top': isAtTop }">
+    <nav #navbar class="desktop-nav" [class.sticky]="isSticky">
       <div class="navbar-container">
         <div class="navbar-logo">
         <img src="./../../../assets/img/1-hero/navbar-logo.png" alt="Logo">

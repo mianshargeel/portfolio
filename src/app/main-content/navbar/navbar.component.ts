@@ -1,4 +1,4 @@
-import { Component,Input,Output, EventEmitter, HostListener } from '@angular/core';
+import { Component,Input,Output, EventEmitter, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
 import { CommonModule } from '@angular/common';
@@ -10,18 +10,29 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
+export class NavbarComponent implements AfterViewInit{
   texts = TEXTS;
   @Input() isMobileView: boolean = false;
   @Output() menuClosed = new EventEmitter<void>(); 
-  isAtTop: boolean = false;
+  isSticky: boolean = false;
+  @ViewChild('navbar', { static: false }) navbarElement!: ElementRef;
   
   constructor(public languageService: LanguageService) { } 
 
-@HostListener('window:scroll', [])
-onWindowScroll() {
-    this.isAtTop = window.scrollY > 10;
-  }
+ngAfterViewInit() {
+  window.addEventListener('scroll', () => {
+    const heroSection = document.querySelector('.hero-section');
+    const heroBottom = heroSection?.getBoundingClientRect().bottom || 0;
+
+    // ✅ If hero section is still visible, unstick navbar
+    if (heroBottom > 0) {
+      this.isSticky = false;
+    } else {
+      this.isSticky = true;
+    }
+  });
+}
+
 
   handleNavClick(event: Event) {
     if (this.isMobileView) {  // Now matches the @Input name

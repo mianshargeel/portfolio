@@ -1,14 +1,21 @@
 @import './../../../styles.scss';
 
 footer{
-  height: 214px;
+  
   width: 100%;
   background-color: #89bcd9;
-  // @include flex-center();
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 40px;
+  @include flex-center();
+    position: absolute;
+    left: 0;
+    right: 0;
+    .footer-container{
+      width: 1440px;
+      height: 214px;
+      display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 40px;
+    }
 
   .legal-notice{
     display: flex;
