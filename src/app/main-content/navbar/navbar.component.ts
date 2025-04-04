@@ -23,8 +23,7 @@ ngAfterViewInit() {
   window.addEventListener('scroll', () => {
     const heroSection = document.querySelector('.hero-section');
     const heroBottom = heroSection?.getBoundingClientRect().bottom || 0;
-
-    // ✅ If hero section is still visible, unstick navbar
+    
     if (heroBottom > 0) {
       this.isSticky = false;
     } else {
