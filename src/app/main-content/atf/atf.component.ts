@@ -55,7 +55,7 @@ toggleMenu() {
     {
       name: 'Email', 
       img: './../../../assets/img/1-hero/email.png',
-      url: '#contact'
+      url: '/contact'
     },
     {
       name: 'Github', 
