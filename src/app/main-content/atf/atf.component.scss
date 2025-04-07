@@ -67,6 +67,13 @@
         cursor: pointer;
         transition: transform 0.3s;
         padding-bottom: 34px;
+        position: relative;
+        img{
+        width: 201px;
+          position: absolute;
+          top: -323%;
+          right: -169%;
+        }
         &:hover {
           transform: scale(1.2);
         }
