@@ -4,12 +4,13 @@
 }
 .hero-section {
   height: calc(100vh - 104px);
+  padding-top: 104px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px;
   padding-bottom: 0px;
-// height: 100vh;
+  overflow-y: hidden;
   width: 100%; // Fix width for centering
   max-width: 100%;
   margin: 0 auto; 
@@ -74,11 +75,11 @@
         position: relative;
         transition: all 0.9s ease-in-out;
         img{
-        width: 201px;
-          position: absolute;
-          top: -323%;
-          right: -169%;
-          transform: scale(1.2);
+            width: 172px;
+              position: absolute;
+              top: -323%;
+              right: -109%;
+              transform: scale(1.2);
         }
         &:hover {
           transform: scale(1.2);
