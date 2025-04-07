@@ -29,10 +29,25 @@
         .navbar-logo {
             width: 58px;
             height: 72px;
-        
-            &:hover {
-              cursor: pointer;
+            position: relative;
+            img{
+                width: 186px;
+                position: absolute;
+                top: -75%;
+                left: -68%;
+                transition: all 0.9s ease-in-out;
+                -webkit-transition: all 0.9s ease-in-out;
+                -moz-transition: all 0.9s ease-in-out;
+                -ms-transition: all 0.9s ease-in-out;
+                -o-transition: all 0.9s ease-in-out;
+
+                
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
+                  }
             }
+            
             p {
               font-size: 14px;
               font-family: "Anta", sans-serif;

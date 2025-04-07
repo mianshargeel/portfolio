@@ -1,7 +1,9 @@
 #header{
   padding-bottom: 44px;
+ 
 }
 .hero-section {
+  height: calc(100vh - 104px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,6 +52,7 @@
     padding: 20px;
     position: relative;
     text-align: center;
+    gap: 36px;
     .media-icons {
       position: absolute;
       top: 44px;
@@ -62,17 +65,20 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 14px;
       .logo {
         width: 40px;
         cursor: pointer;
         transition: transform 0.3s;
         padding-bottom: 34px;
         position: relative;
+        transition: all 0.9s ease-in-out;
         img{
         width: 201px;
           position: absolute;
           top: -323%;
           right: -169%;
+          transform: scale(1.2);
         }
         &:hover {
           transform: scale(1.2);
@@ -88,12 +94,12 @@
         }
       }
       h1 {
-        font-size: 72px;
+        font-size: 58px;
         font-family: "Anta", sans-serif;
         font-weight: 400;
       }
       h2 {
-        font-size: 34px;
+        font-size: 30px;
         font-weight: 400;
         font-family: "Josefin Sans", sans-serif;
         color: #ccc;
