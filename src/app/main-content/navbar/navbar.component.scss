@@ -19,7 +19,7 @@
         }
     
       .navbar-container{
-        width: 1440px;
+        width: 1441px;
           margin: 0 auto;
           padding: 0 40px; // optional side padding
           display: flex;
@@ -163,6 +163,32 @@
       #en-mobile:checked+label {
         background-color: rgba(255, 255, 255, 0.2);
       }
+    }
+  }
+}
+@media (max-width: 1440px){
+  .navbar-container {
+      width: auto !important;
+    }
+}
+@media (max-width: 1024px){
+  .navbar-container{
+    width: auto !important;
+  }
+  .nav-menu-list{
+    padding-left: 44px;
+    display: flex;
+    gap: 36px !important;
+    a{
+      font-size: 20px !important;
+    }
+  }
+  .navbar-logo{
+    img{
+      width: 149px !important;
+        position: absolute;
+        top: -47% !important;
+        left: -21% !important;
     }
   }
 }

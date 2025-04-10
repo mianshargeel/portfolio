@@ -1,11 +1,11 @@
 <section id="header">
   <div class="hero-section">
 
-   <!-- ✅ Top bar with logo and burger icon -->
+   <!--  Top bar with logo and burger icon -->
     <div class="top-bar">
         <div class="logo-mobile">
           <img src="./../../../assets/img/1-hero/logo.png" alt="Logo" />
-          <p>C.Fohrer <br><span>{{ currentTexts['developer'] }}</span></p>
+          <!-- <p>C.Fohrer <br><span>{{ currentTexts['developer'] }}</span></p> -->
         </div>
 
         <div class="burger-menu" (click)="toggleMenu()">
@@ -13,7 +13,7 @@
         </div>
     </div>
 
-      <!-- ✅ Burger Menu Overlay -->
+      <!-- Burger Menu Overlay -->
       <div class="menu-image-overlay" [class.show]="isMenuOpen">
         <img src="./../../../assets/img/1-hero/burger-bg.png" alt="Navigation Menu" />
 

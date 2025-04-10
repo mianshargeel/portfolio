@@ -1,18 +1,20 @@
 #header{
   height: 100vh;
+  min-height: 715px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   margin-bottom: 150px;
+  
 }
 .hero-section {
-  // border: 2px solid;
+  // border: 3px solid yellow;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%; 
   max-width: 100%;
   margin: 0 auto; 
@@ -36,8 +38,8 @@
     align-items: center;
     transition: transform 0.3ms ease-in-out;
     .blue-bg {
-    width: 620px;
-      height: 640px;
+      width: 580px;
+      height: 616px;
       position: absolute;
       transform: rotate(-45deg);
       transition: transform 0.3ms ease-in-out;
@@ -47,7 +49,7 @@
     }
    .person-img {
       width: 579px;
-        height: 781px;
+      height: 767px;
       position: relative;
     }
   }
@@ -240,14 +242,20 @@
     transform: translateY(10px);
   }
 }
-@media (max-width: 1440px){
+
+@media (max-width: 1441px){
   #header {
-      height: 120vh !important;
+      height: 100vh !important;
+    }
+    .person-img{
+      width: 579px;
+      height: 768px !important;
     }
 }
-@media (max-width: 1160px) {
+@media (max-width: 1265px) {
   #header{
-    height: 120vh !important;
+    height: 100vh !important;
+    padding-left: 20px;
   }
   h1 {
     font-size: 50px !important;
@@ -255,6 +263,18 @@
   h2 {
     font-size: 22px !important;
   }
+  .blue-bg{
+    width: 546px;
+      height: 575px !important;
+  }
+  .person-img{
+    width: 548px !important;
+  }
+}
+@media (max-width: 1150px){
+  h1 {
+      font-size: 44px !important;
+    }
 }
 @media (max-width: 1080px) {
   .text-content {
@@ -270,39 +290,59 @@
 }
 @media (max-width: 1024px) {
   #header{
-    // padding: 84px 0px;
+    height: 100vh !important;
   }
   .hero-section {
     padding: 33px 33px 0px 33px;
     height: 582px;
   }
   .blue-bg {
-    width: 420px !important;
-    height: 440px !important;
+    width: 507px !important;
+      height: 536px !important;
   }
   .person-img {
-    width: 448px !important;
-    height: 550px !important;
+    width: 521px !important;
+      height: 718px !important;
   }
   h1 {
-    font-size: 50px !important;
+    font-size: 36px !important;
   }
   h2 {
-    font-size: 22px !important;
+    font-size: 20px !important;
+  }
+  .logo{
+       img{
+        width: 150px !important;
+          position: absolute;
+          top: -289% !important;
+          right: -109%;
+       }
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 899px) {
   .blue-bg {
-    width: 410px !important;
-    height: 435px !important;
+    width: 471px !important;
+      height: 494px !important;
   }
   .person-img {
-    width: 426px !important;
-    height: 551px !important;
+    width: 521px !important;
+      height: 715px !important;
   }
   h1 {
-    font-size: 46px !important;
+    font-size: 36px !important;
   }
+    h2 {
+      font-size: 18px !important;
+    }
+        .logo {
+          img {
+            width: 133px !important;
+              position: absolute;
+              top: -229% !important;
+            right: -91% !important;
+          }
+        }
+       
 }
 @media (max-width: 830px) {
   .hero-section{
