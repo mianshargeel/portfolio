@@ -2,7 +2,11 @@ section {
   font-family: "Josefin Sans", sans-serif;
   padding: 30px;
   margin-top: 150px;
+  height: calc(100vh - 204px) !important;
+  position: relative;
   .main-content {
-      flex: 1 0 auto; 
+        position: absolute;
+          top: 42%;
+          right: 50%;
     }
 }

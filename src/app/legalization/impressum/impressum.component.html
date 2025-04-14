@@ -1,39 +1,39 @@
 <app-navbar></app-navbar>
 <section>
-  <div class="impressum main-content">
+ <div class="impressum-content">
+     <div class=" main-content">
 
-    <!-- <app-contact></app-contact> -->
+        <h1>{{ currentTexts.impressumTitle }}</h1>
+        <p>{{ currentTexts.legalNotice }}</p>
+        
+        <p>
+          {{ currentTexts.addressName }}<br>
+          {{ currentTexts.addressStreet }}<br>
+          {{ currentTexts.addressCity }}<br>
+        </p>
 
-    <h1>{{ currentTexts.impressumTitle }}</h1>
-    <p>{{ currentTexts.legalNotice }}</p>
-    
-    <p>
-      {{ currentTexts.addressName }}<br>
-      {{ currentTexts.addressStreet }}<br>
-      {{ currentTexts.addressCity }}<br>
-    </p>
+        <p>
+          <strong>{{ currentTexts.representedBy }}</strong><br>
+          {{ currentTexts.representedName }}<br>
+        </p>
 
-    <p>
-      <strong>{{ currentTexts.representedBy }}</strong><br>
-      {{ currentTexts.representedName }}<br>
-    </p>
+        <p>
+          <strong>{{ currentTexts.contactTitle }}</strong><br>
+          {{ currentTexts.phone }}<br>
+          <span [innerHTML]="currentTexts.email"></span><br>
+        </p>
 
-    <p>
-      <strong>{{ currentTexts.contactTitle }}</strong><br>
-      {{ currentTexts.phone }}<br>
-      <span [innerHTML]="currentTexts.email"></span><br>
-    </p>
+        <p>
+          <strong>{{ currentTexts.vatTitle }}</strong><br>
+          {{ currentTexts.vatId }}<br><br>
 
-    <p>
-      <strong>{{ currentTexts.vatTitle }}</strong><br>
-      {{ currentTexts.vatId }}<br><br>
+          <strong>{{ currentTexts.economicIdTitle }}</strong><br>
+          {{ currentTexts.economicId }}<br>
+        </p>
 
-      <strong>{{ currentTexts.economicIdTitle }}</strong><br>
-      {{ currentTexts.economicId }}<br>
-    </p>
-
-    <br>
-    <p [innerHTML]="currentTexts.generatorNote"></p>
-  </div>
+        <br>
+        <p [innerHTML]="currentTexts.generatorNote"></p>
+      </div>
+ </div>
 </section>
 
