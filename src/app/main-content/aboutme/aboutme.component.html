@@ -4,8 +4,8 @@
       <h2>{{ currentTexts['whyMeTitle'] }}</h2>
       <div class="my-details">
         <div class="location">
-            <img src="./../../../assets/img/2-menu-bar/icon.png" alt="location">
-            <p><span>{{ currentTexts['iAmLocated'] }}</span></p>
+          <img [src]="currentImage" alt="icon" />
+            <p>I am<span>{{ typedText }}|</span></p>
         </div>
         <div class="aboutme-details">
               <p>{{currentTexts['aboutMeDescription']}}</p>
