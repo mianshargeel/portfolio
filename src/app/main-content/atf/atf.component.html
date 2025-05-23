@@ -28,7 +28,7 @@
 
 
     <!-- Hero Layout: Left (Image), Right (Content) for large screen -->
-    <div class="hero-content">
+    <div class="hero-content" [class.hide-on-mobile]="isMenuOpen">
       <div class="image-container">
         <img src="./../../../assets/img/1-hero/blue-bg2.png" class="blue-bg" alt="Background">
         <img src="./../../../assets/img/1-hero/subject 3.png" class="person-img" alt="Claudia Fohrer">

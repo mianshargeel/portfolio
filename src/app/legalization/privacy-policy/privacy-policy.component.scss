@@ -1,5 +1,17 @@
+
+:host {
+  display: block;
+  height: calc(100vh - 214px);
+
+}
 section{
   font-family: "Josefin Sans", sans-serif;
   padding: 30px;
   margin-top: 150px;
+}
+
+@media (max-width: 830px) {
+  // .mobile-nav {
+  //     display: block;
+  //   }
 }

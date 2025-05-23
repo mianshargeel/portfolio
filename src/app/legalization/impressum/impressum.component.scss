@@ -1,12 +1,43 @@
-section {
+:host {
+  display: block;
+  height: calc(100vh - 214px); 
+  
+}
+
+.impressum-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+ 
+}
+
+.impressum-body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.impressum-content {
+  margin-top: 50px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.main-content {
   font-family: "Josefin Sans", sans-serif;
-  padding: 30px;
-  margin-top: 150px;
-  height: calc(100vh - 204px) !important;
-  position: relative;
-  .main-content {
-        position: absolute;
-          top: 42%;
-          right: 50%;
-    }
+  padding: 20px;
+  text-align: center;
+  // border: 1px solid white;
+}
+
+app-footer {
+  flex-shrink: 0;
+}
+
+@media (max-width: 830px) {
+  
+  // .mobile-nav {
+  //     display: block;
+  //   }
 }

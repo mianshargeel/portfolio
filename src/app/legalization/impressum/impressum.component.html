@@ -1,11 +1,12 @@
-<app-navbar></app-navbar>
-<section>
- <div class="impressum-content">
-     <div class=" main-content">
+<main class="impressum-page">
+  <app-navbar></app-navbar>
 
+  <div class="impressum-body">
+    <div class="impressum-content">
+      <div class="main-content">
         <h1>{{ currentTexts.impressumTitle }}</h1>
         <p>{{ currentTexts.legalNotice }}</p>
-        
+
         <p>
           {{ currentTexts.addressName }}<br>
           {{ currentTexts.addressStreet }}<br>
@@ -34,6 +35,7 @@
         <br>
         <p [innerHTML]="currentTexts.generatorNote"></p>
       </div>
- </div>
-</section>
-
+    </div>
+  </div> 
+  <app-footer></app-footer>
+</main>

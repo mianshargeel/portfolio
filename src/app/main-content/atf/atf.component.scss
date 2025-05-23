@@ -1,6 +1,4 @@
 #header{
-  height: 100vh;
-  min-height: 715px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -8,10 +6,11 @@
   
 }
 .hero-section {
+  height: calc(100vh - 104px);
   // border: 3px solid yellow;
   flex: 1 1 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
@@ -29,8 +28,7 @@
     // padding: 0 2rem;
   }
   .image-container {
-  flex: 1;
-  max-height: 100%;
+    max-height: 100%;
     position: relative;
     width: 50%;
     display: flex;
@@ -38,8 +36,9 @@
     align-items: center;
     transition: transform 0.3ms ease-in-out;
     .blue-bg {
-      width: 580px;
-      height: 616px;
+      width: 40vw;
+      max-width: 580px;
+      height: auto;
       position: absolute;
       transform: rotate(-45deg);
       transition: transform 0.3ms ease-in-out;
@@ -48,9 +47,14 @@
       }
     }
    .person-img {
-      width: 579px;
-      height: 767px;
+     width: 35vw;
+      max-width: 580px;
+      height: auto;
       position: relative;
+      z-index: 2;
+      object-fit: contain;
+      margin-top: 0; // ensure flush top
+      display: block;
     }
   }
   .right-container {
@@ -152,7 +156,7 @@
       top: 48%;
       left: 50%; 
       transform: translate(-50%, -50%); 
-      width: 380px;
+      width: 38vh;
       max-width: 535px; 
       height: auto;
       z-index: 2;
@@ -243,38 +247,17 @@
   }
 }
 
-@media (max-width: 1441px){
-  #header {
-      height: 100vh !important;
-    }
-    .person-img{
-      width: 579px;
-      height: 768px !important;
-    }
-}
-@media (max-width: 1265px) {
-  #header{
-    height: 100vh !important;
-    padding-left: 20px;
-  }
-  h1 {
-    font-size: 50px !important;
-  }
-  h2 {
-    font-size: 22px !important;
-  }
-  .blue-bg{
-    width: 546px;
-      height: 575px !important;
-  }
-  .person-img{
-    width: 548px !important;
-  }
-}
 @media (max-width: 1150px){
   h1 {
       font-size: 44px !important;
     }
+    
+      .media-icons{
+        position: absolute;
+          top: -28px !important;
+          right: 60px !important;
+      }
+    
 }
 @media (max-width: 1080px) {
   .text-content {
@@ -289,21 +272,6 @@
   }
 }
 @media (max-width: 1024px) {
-  #header{
-    height: 100vh !important;
-  }
-  .hero-section {
-    padding: 33px 33px 0px 33px;
-    height: 582px;
-  }
-  .blue-bg {
-    width: 507px !important;
-      height: 536px !important;
-  }
-  .person-img {
-    width: 521px !important;
-      height: 718px !important;
-  }
   h1 {
     font-size: 36px !important;
   }
@@ -320,14 +288,6 @@
   }
 }
 @media (max-width: 899px) {
-  .blue-bg {
-    width: 471px !important;
-      height: 494px !important;
-  }
-  .person-img {
-    width: 521px !important;
-      height: 715px !important;
-  }
   h1 {
     font-size: 36px !important;
   }
@@ -342,6 +302,10 @@
             right: -91% !important;
           }
         }
+        .media-icons{
+          top: -31px !important;
+            right: 37px !important;
+        }
        
 }
 @media (max-width: 830px) {
@@ -349,6 +313,9 @@
     height: 100vh !important;
    
   }
+    .hide-on-mobile {
+      display: none !important;
+    }
   .navbar-desktop {
     display: none;
   }
@@ -357,6 +324,11 @@
   }
   .burger-menu {
     display: block;
+    img{
+      position: absolute;
+        top: 41px;
+        right: 25px;
+    }
   }
   .hero-section {
     flex-direction: column;
@@ -374,7 +346,7 @@
         flex-direction: column;
         gap: 10px;
         img {
-          width: 56px;
+          width: 130px;
         }
         p {
           font-size: 15px;
@@ -426,6 +398,13 @@
     }
   }
 }
+@media (max-width: 550px) {
+  .menu-image-overlay{
+    img{
+      width: 32vh;
+    }
+  }
+}
 @media (max-width: 480px) {
   .image-container{
     .person-img {
@@ -434,7 +413,7 @@
   }
   .menu-image-overlay {
     img{
-      width: 334px;
+      width: 30vh;
         height: 381px;
         top: 49%;
     }
@@ -449,12 +428,18 @@
     }
   }
 }
+@media (max-width: 390px) {
+  .menu-image-overlay {
+    img {
+      width: 28vh;
+    }
+  }
+}
 @media (max-width: 350px) {
   .menu-image-overlay{
     img {
-        width: 310px !important;
-          height: 354px !important;
-          top: 51% ;
+      width: 24vh;
+          top: 47% !important;
       }
   }
 }
@@ -473,8 +458,7 @@
   }
   .menu-image-overlay {
       img {
-        width: 310px !important;
-        height: 358px !important;
+        width: 22vh;
           top: 49%;
       }
     } 
