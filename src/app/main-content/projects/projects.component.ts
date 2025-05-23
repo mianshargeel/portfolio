@@ -67,7 +67,7 @@ export class ProjectsComponent {
       live: '#'
     },
     {
-      title: 'Ongoing Project',
+      title: 'El Polo Loco',
       duration: '3 weeks',
       team: 'Collaborated closely with a cross-functional team using Git and Agile methods, contributing to UI development, code reviews, and feature planning to ensure a smooth and efficient workflow.',
       description: 'Slack clone app...',

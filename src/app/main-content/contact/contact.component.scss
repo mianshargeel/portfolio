@@ -1,3 +1,8 @@
+.anchor-helper {
+  height: 1px;
+  margin-top: -180px; // shift it up so the section appears lower
+  padding-top: 180px; // create space for navbar
+}
 .contact-and-arrow{
   position: relative;
 }

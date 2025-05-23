@@ -60,32 +60,31 @@
      background-color: #262e34;
      border: none;
      color: #89BDC9;
-    //  transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, height 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
      padding: 5px 10px; // Added default padding for consistency
-
+      width: 180px; // <<< fixed width for all buttons
+      height: 97px;
      &:hover {
        color: #F8F5EC;
        cursor: pointer;
      }
 
-     &:active,
-     &.active {
-       // Combined active states
-       background-color: #2d3840;
-       height: 136px;
-       width: 180px;
-       color: #F8F5EC;
-      border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
-     }
+         &:active,
+         &.active {
+           background-color: #2d3840;
+           height: 136px;
+           width: 180px;
+           color: #F8F5EC;
+           border-top-right-radius: 30px;
+           border-top-left-radius: 30px;  }
 
      // This ensures the active state remains visible
      &.active {
        background-color: #2d3840;
        height: 136px;
        width: 180px;
-      border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
+      border-top-right-radius: 82px;
+        border-top-left-radius: 82px;
      }
    }
  }
