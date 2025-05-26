@@ -33,12 +33,18 @@ ngAfterViewInit() {
 }
 
 
-  handleNavClick(event: Event) {
-    if (this.isMobileView) {  // Now matches the @Input name
-      event.preventDefault();
-      this.menuClosed.emit();
-    }
+handleNavClick(event: Event, sectionId: string) {
+  event.preventDefault();
+
+  const el = document.getElementById(sectionId);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
   }
+
+  // Trigger menu close
+  this.menuClosed.emit();
+}
+
   closeMenu() {
   if (this.isMobileView) {
     // Emit event to header to close menu

@@ -4,31 +4,31 @@
    <!--  Top bar with logo and burger icon -->
     <div class="top-bar">
         <div class="logo-mobile">
-          <a href=" "><img src="./../../../assets/img/1-hero/logo.png" alt="Logo" /></a>
+          <img src="./../../../assets/img/1-hero/logo.png" alt="Logo" />
           <!-- <p>C.Fohrer <br><span>{{ currentTexts['developer'] }}</span></p> -->
         </div>
 
-        <div class="burger-menu" (click)="toggleMenu()">
+        <div class="burger-menu" (click)="toggleMenu(); $event.stopPropagation()">
           <img src="./../../../assets/img/1-hero/burger-menu.png" alt="Menu" />
         </div>
     </div>
 
       <!-- Burger Menu Overlay -->
-      <div class="menu-image-overlay" [class.show]="isMenuOpen">
-        <img src="./../../../assets/img/1-hero/burger-bg.png" alt="Navigation Menu" />
-
-        <!-- Mobile Navbar rendered inside the overlay -->
-        <div class="navbar-overlay">
-         <app-navbar 
-      [isMobileView]="true" 
-      (menuClosed)="isMenuOpen = false"> <!-- Add this event binding -->
-    </app-navbar>
+      <div class="menu-image-overlay" [class.show]="menuOpen$ | async">
+        <div class="menu-content" (click)="$event.stopPropagation()">
+          <img src="./../../../assets/img/1-hero/burger-bg.png" alt="Menu" />
+          
+          <button class="close-menu-btn" (click)="menuService.close()"> ✕ </button>
+          <div class="navbar-overlay">
+            <app-navbar [isMobileView]="true"  (menuClosed)="menuService.close()" ></app-navbar>
+          </div>
         </div>
       </div>
+      <!-- (menuClosed)="menuService.close()" -->
 
 
     <!-- Hero Layout: Left (Image), Right (Content) for large screen -->
-    <div class="hero-content" [class.hide-on-mobile]="isMenuOpen">
+    <div class="hero-content" [class.hide-on-mobile]="menuOpen$ | async">
       <div class="image-container">
         <img src="./../../../assets/img/1-hero/blue-bg2.png" class="blue-bg" alt="Background">
         <img src="./../../../assets/img/1-hero/subject 3.png" class="person-img" alt="Claudia Fohrer">

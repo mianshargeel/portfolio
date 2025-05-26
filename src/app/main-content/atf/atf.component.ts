@@ -1,8 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit, ChangeDetectorRef  } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { MenuService } from '../../services/menu.service';
+import { Observable, Subscription  } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 
 interface Media{
@@ -13,43 +16,52 @@ interface Media{
 @Component({
   selector: 'app-atf',
   standalone: true,
-  imports: [RouterModule, NavbarComponent],
+  imports: [RouterModule, NavbarComponent, AsyncPipe],
   templateUrl: './atf.component.html',
   styleUrl: './atf.component.scss'
 })
-export class AtfComponent {
+export class AtfComponent  implements OnInit {
 
   texts = TEXTS;
-  isMenuOpen = false;
+  // isMenuOpen = false;
   isMobileView = false;
+  menuOpen$!: Observable<boolean>;
+  private menuSubscription?: Subscription; // For cleanup
 
-    ngOnInit() {
-    this.checkScreenSize();
+  constructor(public languageService: LanguageService,  public menuService: MenuService, private cd: ChangeDetectorRef ) {}
+
+  ngOnInit() {
+    // console.log('[ATF] Component INITIALIZED!');
+      this.checkScreenSize();
+    this.menuOpen$ = this.menuService.menuOpen$;
   }
   checkScreenSize() {
-    this.isMobileView = window.innerWidth <= 830; // Your breakpoint
-    if (!this.isMobileView) {
-      this.isMenuOpen = false; // Close menu if resizing to desktop
+    this.isMobileView = window.innerWidth <= 830;
+    if (!this.isMobileView && this.menuService.isOpen()) {
+      // console.log('[checkScreenSize] Closing menu because screen is now desktop');
+      this.menuService.close();
     }
   }
-    constructor(public languageService: LanguageService) {}
   
+   
     get currentTexts() {
       const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
       return this.texts[lang];
   }
  
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    if (window.innerWidth > 830 && this.isMenuOpen) {
-      this.isMenuOpen = false;
-    }
+  @HostListener('window:resize')
+  onResize() {
+    this.isMobileView = window.innerWidth <= 830;
+    // Remove this auto-close unless absolutely necessary:
+    // if (!this.isMobileView && this.menuService.isOpen()) {
+    //   this.menuService.close();
+    // }
   }
   
-  
-toggleMenu() {
-  this.isMenuOpen = !this.isMenuOpen;
-}
+  toggleMenu() {
+    this.menuService.toggle();
+    this.cd.detectChanges();
+  }
 
   medialinks: Media[] = [
     {
@@ -73,6 +85,16 @@ toggleMenu() {
     const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  ngOnDestroy() {
+    // console.log('[ATF] Component DESTROYED!');
+    this.menuSubscription?.unsubscribe();
+  }
+  handleOverlayClick(event: MouseEvent) {
+    console.log('Clicked at:', event.target);
+    if (event.target === event.currentTarget) {
+      this.menuService.close();
     }
   }
 }

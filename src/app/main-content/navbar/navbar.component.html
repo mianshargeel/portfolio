@@ -4,7 +4,7 @@
     <nav #navbar class="desktop-nav" [class.sticky]="isSticky">
       <div class="navbar-container">
         <div class="navbar-logo">
-        <a href=" "><img src="./../../../assets/img/2-menu-bar/nav-logo.png" alt="Logo"></a>
+    <img src="./../../../assets/img/2-menu-bar/nav-logo.png" alt="Logo">
         <!-- <p>C.Fohrer <br><span>developer</span></p> -->
       </div>
       <div class="nav-menu-list">
@@ -36,11 +36,12 @@
         <p>C.Fohrer <br><span>developer</span></p>
       </div>
       <ul class="mobile-menu-list">
-        <li><a href="#whyme" (click)="closeMenu()">{{ currentTexts['whyMe'] }}</a></li>
-        <li><a href="#skills" (click)="closeMenu()">{{ currentTexts['skills'] }}</a></li>
-        <li><a href="#project" (click)="closeMenu()">{{ currentTexts['projects'] }}</a></li>
-        <li><a href="#contact" (click)="closeMenu()">{{ currentTexts['contact'] }}</a></li>
+        <li><a href="#" (click)="handleNavClick($event, 'whyme')">{{ currentTexts['whyMe'] }}</a></li>
+        <li><a href="#" (click)="handleNavClick($event, 'skills')">{{ currentTexts['skills'] }}</a></li>
+        <li><a href="#" (click)="handleNavClick($event, 'project')">{{ currentTexts['projects'] }}</a></li>
+        <li><a href="#" (click)="handleNavClick($event, 'contact')">{{ currentTexts['contact'] }}</a></li>
       </ul>
+      
       <div class="language-toggle mobile">
         <input type="radio" id="de-mobile" name="language-mobile" class="toggle-btn"
               [checked]="languageService.getCurrentLanguage() === 'de'"
