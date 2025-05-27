@@ -326,6 +326,7 @@
 
   .navbar-desktop {
     display: none;
+    height: 0px;
   }
 
   .logo {
@@ -550,4 +551,39 @@
           top: 46% !important;
       }
     }
+}
+//iphone SE
+@media only screen and (max-height: 668px) {
+  .hero-section {
+    height: 100vh;
+  }
+  .logo-mobile{
+    img{
+      width: 120px !important;
+    }
+  }
+    .burger-menu {
+      img {
+        position: absolute;
+        top: 23px !important;
+        right: 6px !important;
+      }
+    }
+    .hero-content{
+      padding-top: 0px !important;
+      .right-container {
+        display: flex;
+        gap: 5px;
+        padding: 0px;
+        .down-arrow{
+          margin-top: 0px;
+        }
+          .text-content {
+            margin-top: 0px;
+            h1 {
+              font-size: 24px !important;
+            }
+          } }
+    }
+    
 }

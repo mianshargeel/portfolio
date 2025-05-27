@@ -2,11 +2,12 @@ import { Component,Input,Output, EventEmitter, ElementRef, ViewChild, AfterViewI
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

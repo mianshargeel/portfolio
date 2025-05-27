@@ -67,18 +67,7 @@
             </div>
           </form>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Mobile screen version -->
         <div class="mobile-contact-form">
           <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <!-- <div class="input-fields"> -->
@@ -109,7 +98,7 @@
               <label for="privacy">
                 <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
-                <a href="#">{{ currentTexts['privacyLink'] }}</a>
+                <a routerLink="/privacy-policy">&nbsp;{{ currentTexts['privacyLink'] }}</a>&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[1] }}
                 
                 @if(isPrivacyChecked.invalid && (isPrivacyChecked.touched || isFormSubmitted)) {
