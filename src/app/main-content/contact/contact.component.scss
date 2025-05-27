@@ -371,7 +371,27 @@ button[disabled] { //to disable send message button by default
   }
  }
     @media (max-width: 470px){
-
+      .contact-section{
+        padding-bottom: 80px !important;
+      }
+      .contact-container{
+        padding: 0px 14px;
+        .mail{
+          font-size: 14px;
+          img {
+              width: 16px !important;
+            }
+        }
+        .phone{
+          font-size: 14px;
+        }
+        p{
+          font-size: 16px;
+        }
+          label{
+            font-size: 12px !important;
+          }
+      }
 
       .mobile-up-arrow{
         bottom: 20px;

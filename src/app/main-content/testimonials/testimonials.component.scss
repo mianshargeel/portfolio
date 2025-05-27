@@ -215,100 +215,22 @@
   }
 }
 
-// @media (max-width: 480px) {
-//   .teams-member {
-//     display: flex !important;
-//     flex-wrap: nowrap !important;
-//     overflow-x: auto !important;
-//     overflow-y: hidden !important;
-//     scroll-snap-type: x mandatory !important;
-//     scroll-padding-left: 0 !important;
-//     // padding: 0 !important;
-//     // margin: 0 !important;
-//     -webkit-overflow-scrolling: touch;
-//     width: 100%;
-//   }
+@media (max-width: 364px){
+  .teamplayer{
+    padding: 0px;
+  }
+  .my-colleages {
+    .quote{
+      font-size: 14px !important;
+        margin: 4px 0 !important;
+    }
+    .view-content{
+      margin-top: -29px !important;
+        gap: 0px !important;
+    }
+    .bg-img{
+      height: 82% !important;
+    }
+   }
+}
 
-//   .teams-member::-webkit-scrollbar {
-//     display: none;
-//   }
-
-//   .my-colleages {
-//     flex: 0 0 auto !important;
-//     // min-width: 280px !important;
-//     // max-width: 280px;
-//     scroll-snap-align: start;
-//     margin: 0 8px 0 0; // right spacing only
-//   }
-
-//   .my-colleages:first-child {
-//     margin-left: 0 !important;
-//   }
-
-//   .my-colleages:last-child {
-//     margin-right: 8px;
-//   }
-
-//   .teamplayer {
-//     padding: 0 !important;
-//     margin: 0 !important;
-//   }
-// }
-
-
-
-
-
-// @media (max-width: 900px) {
-//   .teams-member{
-//     overflow-x: visible !important;
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   .teamplayer {
-//     padding: 30px 15px;
-
-//     h3 {
-//       font-size: 24px;
-//       margin-bottom: 25px;
-//     }
-
-//     .teams-member {
-//       gap: 15px 10px;
-
-//       .my-colleages {
-//         width: calc(50% - 10px); // Two columns
-//         height: 320px;
-//         padding: 20px 15px;
-
-//         .view-content {
-//           margin-top: 20px;
-//           gap: 5px;
-//         }
-
-//         .quote {
-//           font-size: 15px;
-//           margin: 8px 0;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   .teamplayer {
-//     .teams-member {
-//       .my-colleages {
-//         width: 100%; // Single column on small screens
-//         max-width: 360px;
-//         height: 300px;
-//         margin: 0 auto 15px;
-
-//         .view-content {
-//           margin-top: 15px;
-//         }
-//       }
-//     }
-//   }
-// }

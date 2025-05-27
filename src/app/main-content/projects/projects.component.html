@@ -12,7 +12,8 @@
         </nav>
       </div>
 
-      <div class="mobile-project-info">
+      <div class="project-upper-part">
+        <div class="mobile-project-info">
           <h3 class="project-title">{{ projects[selectedIndex].title }}</h3>
           <strong>{{ currentTexts['technologiesLabel'] }}</strong>
           <div class="tech-stack">
@@ -22,6 +23,7 @@
       </div>
       
       <img class="project-screen-short" [src]="projects[selectedIndex].image" alt="Project screenshot" />
+      </div>
   </div>
 
 <!-- Large screen Project Component -->

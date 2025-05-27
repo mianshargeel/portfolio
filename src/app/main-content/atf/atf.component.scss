@@ -409,7 +409,8 @@
 
     .right-container {
       width: 100%;
-
+      display: flex;
+      gap: 16px;
       .media-icons {
         display: none;
       }
