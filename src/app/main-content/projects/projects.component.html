@@ -72,7 +72,7 @@
           </div>
           <img class="project-screen-short" [src]="projects[selectedIndex].image" alt="Project screenshot" />
           <div class="links-btn">
-            <button class="live-test-btn">{{ currentTexts['liveTestButton'] }}</button>
+            <a [href]="projects[selectedIndex].live" class="live-test-btn">{{ currentTexts['liveTestButton'] }}</a>
             <a class="github-btn" target="_blank" [href]="projects[selectedIndex].github" >{{ currentTexts['githubButton'] }}</a>
           </div>
         </div>

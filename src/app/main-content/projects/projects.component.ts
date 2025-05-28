@@ -57,7 +57,7 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/poke.jpeg',
       github: 'https://github.com/mianshargeel/PokemonApp.git',
-      live: '#'
+      live: 'https://shardzhil.com/join/'
     },
     {
       title: 'Join',
@@ -79,7 +79,7 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/Screenshot project (1).png',
       github: 'https://github.com/mianshargeel/El-pollo-loco-Junus.git',
-      live: '#'
+      live: 'https://shardzhil.com/'
     }
   ];
 // selected: any;
