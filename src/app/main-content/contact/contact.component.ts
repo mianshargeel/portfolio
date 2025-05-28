@@ -25,6 +25,7 @@ export class ContactComponent {
   texts = TEXTS;
   isFormSubmitted = false;
   mailTest = true;
+  showSuccessMessage: boolean = false;
   
   constructor(public languageService: LanguageService, private http: HttpClient) {}
 
@@ -51,24 +52,39 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
+  // 
+
+  onSubmit(form: NgForm) {
     this.isFormSubmitted = true;
     console.log(this.contactData);
-    
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+  
+    if (form.submitted && form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({ next: (response) => { ngForm.resetForm() },
+        .subscribe({
+          next: () => {
+            this.showSuccessMessage = true;
+            form.resetForm();                     // Reset  form
+            this.resetSuccessMessage();
+          },
           error: (error) => {
             console.error(error);
-            this.isFormSubmitted = false; // Reset flag on error
-          },
-          complete: () => console.info('send post complete'),
+            this.isFormSubmitted = false;
+          }
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
-      this.isFormSubmitted = false; // Reset flag on success
+    } else if (form.submitted && form.valid && this.mailTest) {
+      form.resetForm();                           // Reset form
+      this.showSuccessMessage = true;
+      this.resetSuccessMessage();
+      this.isFormSubmitted = false;
     }
+  }
+  
+
+  private resetSuccessMessage() {
+    setTimeout(() => {
+      this.showSuccessMessage = false;
+      this.isFormSubmitted = false;
+    }, 9000); // hide after 5s
   }
 
   scrollToTop() {

@@ -1,4 +1,9 @@
 <section id="contact">
+  @if(showSuccessMessage){
+    <div class="success-message">
+      {{ currentTexts['formSuccessMessage'] }}
+    </div>
+   }
   <div class="anchor-helper"></div>
   <div class="contact-and-arrow">
     <div class="up-arrow">
@@ -7,6 +12,7 @@
 
   <div class="contact-section">
     <div class="contact-container">
+      
       <h2>{{ currentTexts['contactTitle'] }}</h2>
         <div class="contact-info">
           <div class="text">
@@ -18,9 +24,9 @@
           </div>
         </div>
 
-      <!-- contact-form -->
+      <!--desktop contact-form -->
         <div class="contact-form">
-          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+          <form (ngSubmit)="onSubmit(desktopForm)" #desktopForm="ngForm">
             <div class="input-fields">
               <div class="field">
                 <label for="name">{{ currentTexts['formNameLabel'] }}</label><br>
@@ -63,13 +69,13 @@
             </div>
 
             <div class="submit-button" >
-              <button type="submit" [disabled]="!contactForm.valid">{{ currentTexts['submitButton'] }}</button>
+              <button type="submit" [disabled]="!desktopForm.valid">{{ currentTexts['submitButton'] }}</button>
             </div>
           </form>
         </div>
 <!-- Mobile screen version -->
         <div class="mobile-contact-form">
-          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+          <form (ngSubmit)="onSubmit(mobileForm)" #mobileForm="ngForm">
             <!-- <div class="input-fields"> -->
               <div class="field">
                 <input #name="ngModel" [(ngModel)] = "contactData.name" type="text" id="name" name="name" required placeholder="Your name">
@@ -108,13 +114,12 @@
             </div>
 
             <div class="submit-button" >
-              <button type="submit" [disabled]="!contactForm.valid">{{ currentTexts['submitButton'] }}</button>
+              <button type="submit" [disabled]="!mobileForm.valid">{{ currentTexts['submitButton'] }}</button>
             </div>
           </form>
         </div>
     </div>
    </div>
-
    <div class="mobile-up-arrow">
       <img (click)="scrollToTop()" src="./../../../assets/img/contact/arrow-up.png" alt="Scroll Down">
     </div>

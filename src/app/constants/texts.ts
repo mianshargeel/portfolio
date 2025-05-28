@@ -133,7 +133,7 @@ export interface TranslationKeys {
   economicId: string;
   generatorNote: string;
 
-
+  formSuccessMessage: string;
 
 }
 
@@ -284,6 +284,9 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     economicId: "Shardzhil",
     generatorNote:
       "Impressum from the <a href=\"https://www.impressum-generator.de\">Impressum Generator</a> of <a href=\"https://www.kanzlei-hasselbach.de/standorte/bonn/\" rel=\"nofollow\">Kanzlei Hasselbach, Bonn</a>",
+    
+    formSuccessMessage: 'Your message has been sent successfully!',
+      
 
   },
   de: {
@@ -432,5 +435,8 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     economicId: "Shardzhil",
     generatorNote:
       "Impressum vom <a href=\"https://www.impressum-generator.de\">Impressum Generator</a> der <a href=\"https://www.kanzlei-hasselbach.de/standorte/bonn/\" rel=\"nofollow\">Kanzlei Hasselbach, Bonn</a>",
+    
+      formSuccessMessage: 'Deine Nachricht wurde erfolgreich gesendet!',
+
   }
 };

@@ -28,7 +28,7 @@ export class AppComponent {
   constructor(public menuService: MenuService, private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        console.warn('[Router] NavigationStart to:', event.url);
+        // console.warn('[Router] NavigationStart to:', event.url);
       }
     });
   }
