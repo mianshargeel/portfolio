@@ -4,12 +4,14 @@ import { AtfComponent } from '../../main-content/atf/atf.component';
 import { NavbarComponent } from '../../main-content/navbar/navbar.component';
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
+import { RouterModule } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-privacy-policy',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [NavbarComponent, RouterModule],
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })

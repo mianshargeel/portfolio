@@ -64,7 +64,7 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/Screenshot project (1).png',
       github: 'whttps://github.com/mianshargeel',
-      live: '#'
+      live: 'https://shardzhil.com/join'
     },
     {
       title: 'El Polo Loco',

@@ -1,4 +1,7 @@
 <main class="impressum-page">
+  <nav class="mobile-nav">
+    <a [routerLink]="['/']"  ><img src="./../../../assets/img/2-menu-bar/nav-logo.png" alt="Logo"></a>
+  </nav>
   <app-navbar></app-navbar>
 
   <div class="impressum-body">
@@ -8,7 +11,7 @@
         <p>{{ currentTexts.legalNotice }}</p>
 
         <p>
-          {{ currentTexts.addressName }}<br>
+          {{ currentTexts.addressName }}<br>  
           {{ currentTexts.addressStreet }}<br>
           {{ currentTexts.addressCity }}<br>
         </p>

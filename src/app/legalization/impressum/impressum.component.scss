@@ -26,18 +26,31 @@
 
 .main-content {
   font-family: "Josefin Sans", sans-serif;
-  padding: 20px;
+  padding: 0px 20px;
   text-align: center;
   // border: 1px solid white;
 }
-
+.mobile-nav{
+  display: none; //desktop-screen
+}
 app-footer {
   flex-shrink: 0;
 }
 
-@media (max-width: 830px) {
-  
-  // .mobile-nav {
-  //     display: block;
-  //   }
+@media (max-width: 830px){
+  :host {
+      display: block;
+      height: calc(100vh - 244px); }
+  .mobile-nav {
+      display: block; //mobile-screen 
+      height: 104px;
+      background-color: #89bcd9;
+      position: relative;
+      img{
+        width: 176px;
+          position: absolute;
+          top: -36px;
+          left: 10;
+      }
+  }
 }

@@ -3,21 +3,24 @@ import { NavbarComponent } from '../../main-content/navbar/navbar.component';
 import { TEXTS } from '../../constants/texts';
 import { LanguageService } from '../../services/language.service';
 import { FooterComponent } from '../../shared/footer/footer.component';
+import { RouterModule } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-impressum',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent],
+  imports: [NavbarComponent, FooterComponent, RouterModule],
   templateUrl: './impressum.component.html',
   styleUrl: './impressum.component.scss'
 })
 export class ImpressumComponent {
-   texts = TEXTS;
+  texts = TEXTS;
       
       constructor(public languageService: LanguageService) {}
     
       get currentTexts() {
         const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
         return this.texts[lang];
-      }
+  }
 }

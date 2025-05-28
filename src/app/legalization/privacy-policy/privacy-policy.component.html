@@ -1,106 +1,112 @@
-<app-navbar></app-navbar>
-<section id="privacy">
-  <div class="content">
-    <p><strong>{{ currentTexts.privacyPolicyTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.privacyPolicyIntro1 }}</p>
-  <p><br></p>
-  <p>{{ currentTexts.privacyPolicyIntro2 }}</p>
-  <p><br></p>
-  <p>{{ currentTexts.privacyPolicyIntro3 }}</p>
+<div>
+  <nav class="mobile-nav">
+    <a [routerLink]="['/']"  ><img src="./../../../assets/img/2-menu-bar/nav-logo.png" alt="Logo"></a>
+  </nav>
+  <app-navbar></app-navbar>
+  <section id="privacy">
+    <div class="content">
+      <h2><strong>{{ currentTexts.privacyPolicyTitle }}</strong></h2>
+    <p><br></p>
+    <p>{{ currentTexts.privacyPolicyIntro1 }}</p>
+    <p><br></p>
+    <p>{{ currentTexts.privacyPolicyIntro2 }}</p>
+    <p><br></p>
+    <p>{{ currentTexts.privacyPolicyIntro3 }}</p>
 
-  <p><strong>{{ currentTexts.privacyPolicyConsent }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.privacyPolicyConsentText }}</p>
+    <p><strong>{{ currentTexts.privacyPolicyConsent }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.privacyPolicyConsentText }}</p>
 
-  <p><strong>{{ currentTexts.informationWeCollectTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.informationWeCollectText1 }}</p>
-  <p><br></p>
-  <p>{{ currentTexts.informationWeCollectText2 }}</p>
-  <p><br></p>
-  <p>{{ currentTexts.informationWeCollectText3 }}</p>
+    <p><strong>{{ currentTexts.informationWeCollectTitle }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.informationWeCollectText1 }}</p>
+    <p><br></p>
+    <p>{{ currentTexts.informationWeCollectText2 }}</p>
+    <p><br></p>
+    <p>{{ currentTexts.informationWeCollectText3 }}</p>
 
-  <p><strong>{{ currentTexts.howWeUseTitle }}</strong></p>
-  <p><br></p>
-  <ul>
-    <li>{{ currentTexts.howWeUseList1 }}</li>
-    <li>{{ currentTexts.howWeUseList2 }}</li>
-    <li>{{ currentTexts.howWeUseList3 }}</li>
-    <li>{{ currentTexts.howWeUseList4 }}</li>
-    <li>{{ currentTexts.howWeUseList5 }}</li>
-    <li>{{ currentTexts.howWeUseList6 }}</li>
-    <li>{{ currentTexts.howWeUseList7 }}</li>
-    <li>{{ currentTexts.howWeUseList8 }}</li>
-  </ul>
+    <p><strong>{{ currentTexts.howWeUseTitle }}</strong></p>
+    <p><br></p>
+    <ul>
+      <li>{{ currentTexts.howWeUseList1 }}</li>
+      <li>{{ currentTexts.howWeUseList2 }}</li>
+      <li>{{ currentTexts.howWeUseList3 }}</li>
+      <li>{{ currentTexts.howWeUseList4 }}</li>
+      <li>{{ currentTexts.howWeUseList5 }}</li>
+      <li>{{ currentTexts.howWeUseList6 }}</li>
+      <li>{{ currentTexts.howWeUseList7 }}</li>
+      <li>{{ currentTexts.howWeUseList8 }}</li>
+    </ul>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.logFilesTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.logFilesText }}</p>
+    <p><br></p>
+    <p><strong>{{ currentTexts.logFilesTitle }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.logFilesText }}</p>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.cookiesTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.cookiesText }}</p>
+    <p><br></p>
+    <p><strong>{{ currentTexts.cookiesTitle }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.cookiesText }}</p>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.doubleClickTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.doubleClickText }}</p>
+    <p><br></p>
+    <p><strong>{{ currentTexts.doubleClickTitle }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.doubleClickText }}</p>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.advertisingPartnersTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.advertisingPartnersText }}</p>
-  <ul>
-    <li>{{ currentTexts.googlePolicy }}</li>
-  </ul>
+    <p><br></p>
+    <p><strong>{{ currentTexts.advertisingPartnersTitle }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.advertisingPartnersText }}</p>
+    <ul>
+      <li>{{ currentTexts.googlePolicy }}</li>
+    </ul>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.thirdPartyPrivacyTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.thirdPartyPrivacyText1 }}</p>
-  <p><br></p>
-  <p>{{ currentTexts.thirdPartyPrivacyText2 }}</p>
+    <p><br></p>
+    <p><strong>{{ currentTexts.thirdPartyPrivacyTitle }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.thirdPartyPrivacyText1 }}</p>
+    <p><br></p>
+    <p>{{ currentTexts.thirdPartyPrivacyText2 }}</p>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.ccpaTitle }}</strong></p>
-  <p><br></p>
-  <ul>
-    <li>{{ currentTexts.ccpaList1 }}</li>
-    <li>{{ currentTexts.ccpaList2 }}</li>
-    <li>{{ currentTexts.ccpaList3 }}</li>
-  </ul>
-  <p><br></p>
-  <p>{{ currentTexts.ccpaText }}</p>
+    <p><br></p>
+    <p><strong>{{ currentTexts.ccpaTitle }}</strong></p>
+    <p><br></p>
+    <ul>
+      <li>{{ currentTexts.ccpaList1 }}</li>
+      <li>{{ currentTexts.ccpaList2 }}</li>
+      <li>{{ currentTexts.ccpaList3 }}</li>
+    </ul>
+    <p><br></p>
+    <p>{{ currentTexts.ccpaText }}</p>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.gdprTitle }}</strong></p>
-  <p><br></p>
-  <ul>
-    <li>{{ currentTexts.gdprList1 }}</li>
-    <li>{{ currentTexts.gdprList2 }}</li>
-    <li>{{ currentTexts.gdprList3 }}</li>
-    <li>{{ currentTexts.gdprList4 }}</li>
-    <li>{{ currentTexts.gdprList5 }}</li>
-    <li>{{ currentTexts.gdprList6 }}</li>
-  </ul>
-  <p><br></p>
-  <p>{{ currentTexts.gdprText }}</p>
+    <p><br></p>
+    <p><strong>{{ currentTexts.gdprTitle }}</strong></p>
+    <p><br></p>
+    <ul>
+      <li>{{ currentTexts.gdprList1 }}</li>
+      <li>{{ currentTexts.gdprList2 }}</li>
+      <li>{{ currentTexts.gdprList3 }}</li>
+      <li>{{ currentTexts.gdprList4 }}</li>
+      <li>{{ currentTexts.gdprList5 }}</li>
+      <li>{{ currentTexts.gdprList6 }}</li>
+    </ul>
+    <p><br></p>
+    <p>{{ currentTexts.gdprText }}</p>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.childrenInfoTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.childrenInfoText1 }}</p>
-  <p><br></p>
-  <p>{{ currentTexts.childrenInfoText2 }}</p>
+    <p><br></p>
+    <p><strong>{{ currentTexts.childrenInfoTitle }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.childrenInfoText1 }}</p>
+    <p><br></p>
+    <p>{{ currentTexts.childrenInfoText2 }}</p>
 
-  <p><br></p>
-  <p><strong>{{ currentTexts.questionsTitle }}</strong></p>
-  <p><br></p>
-  <p>{{ currentTexts.privacyPolicyIntro2 }}</p>
-  </div>
-</section>
+    <p><br></p>
+    <p><strong>{{ currentTexts.questionsTitle }}</strong></p>
+    <p><br></p>
+    <p>{{ currentTexts.privacyPolicyIntro2 }}</p>
+    </div>
+  </section>
+</div>
+
 
 
