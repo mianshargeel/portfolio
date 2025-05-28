@@ -44,7 +44,7 @@ export class TestimonialsComponent {
     link: 'https://www.linkedin.com/in/mukhammad-shardzhil-a2565213a/'
     },
     {
-    name: 'Adeel Khan',
+    name: 'Taher Mehany',
     bgImg: './../../../assets/img/5-refferences/bg-img.png',
     project: 'Join',
     views: 'Shardzhil had to develop, format and liver content in collaboration with the team members. He is a reliable and friendly person.',

@@ -41,18 +41,18 @@
         <div class="project-content-width">
             <div class="right-content">
           <div class="about-text">
-            <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts['aboutProject'] }} <span class="project-duration">{{ currentTexts['projectDuration'] }}: {{ projects[selectedIndex].duration }}</span></h3> 
-            <p>{{ projects[selectedIndex].about }}</p>
+            <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts.aboutProject }} <span class="project-duration">{{ currentTexts.projectDuration }}: {{ projects[selectedIndex].duration }}</span></h3> 
+            <p>{{ currentProjectContent.about }}</p>
           </div>
         
           <div class="work-process">
               <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts['workProcess'] }} </h3> 
-              <p>{{ projects[selectedIndex].workProcess }}</p>
+              <p>{{ currentProjectContent.workProcess }}</p>
           </div>
 
           <div class="team-work">
-              <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts['groupWorkExperience'] }} </h3> 
-              <p>{{ projects[selectedIndex].team }}</p>
+              <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts.groupWorkExperience }} </h3> 
+              <p>{{ currentProjectContent.team }}</p>
           </div>
 
           <div class="btn-small-screen">
@@ -78,5 +78,6 @@
         </div>
         </div>
     </div>
+
   </div>
 </section>

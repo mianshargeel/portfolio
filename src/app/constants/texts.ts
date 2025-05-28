@@ -1,5 +1,19 @@
+interface ProjectTranslation {
+  about: string;
+  workProcess: string;
+  team: string;
+  description: string;
+}
+
+interface ProjectsTranslations {
+  daBubble: ProjectTranslation;
+  pokedex: ProjectTranslation;
+  join: ProjectTranslation;
+  elPoloLoco: ProjectTranslation;
+}
+
 // src/app/constants/texts.ts
-interface TranslationKeys {
+export interface TranslationKeys {
   //atf component
   frontendDeveloper: string;
   developer: string;
@@ -20,6 +34,7 @@ interface TranslationKeys {
   mySkillsTitle: string;
   currentlyLearning: string;
   learningDescription: string;
+
   // Projects Section
   myProjectsTitle: string;
   aboutProject: string;
@@ -29,6 +44,9 @@ interface TranslationKeys {
   technologiesLabel: string;
   liveTestButton: string;
   githubButton: string;
+  // Projects Content Translations
+  projectsContent: ProjectsTranslations;
+
   //testimomials component
   teamplayerTitle: string;
   projectLabel: string;
@@ -141,6 +159,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     mySkillsTitle: "My Skills",
     currentlyLearning: "I am currently learning",
     learningDescription: "Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies.",
+
     // Projects Section
     myProjectsTitle: "My Projects",
     aboutProject: "About the project",
@@ -150,6 +169,34 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     technologiesLabel: "Technologies",
     liveTestButton: "Live Test",
     githubButton: "GitHub",
+
+    projectsContent: {
+      daBubble: {
+        about: 'This is Slack clone App. It revolutionizes team communication...',
+        workProcess: 'Divide projects into micro-tasks...',
+        team: 'Worked as part of an agile team...',
+        description: 'Slack clone app...'
+      },
+      pokedex: {
+        about: 'A comprehensive Pokédex application...',
+        workProcess: 'Organized using Agile methodology...',
+        team: 'Collaborated with cross-functional team...',
+        description: 'Pokémon database application'
+      },
+      join: {
+        about: 'Task management application...',
+        workProcess: 'Followed component-based architecture...',
+        team: 'Worked in Scrum team...',
+        description: 'Project management tool'
+      },
+      elPoloLoco: {
+        about: 'Jump and run game...',
+        workProcess: 'Used object-oriented principles...',
+        team: 'Pair-programmed with colleagues...',
+        description: 'Browser-based game'
+      }
+    },
+
     // Team Players Section
     teamplayerTitle: "Need a teamplayer? Here's what my colleagues said about me",
     projectLabel: "Project",
@@ -260,6 +307,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     mySkillsTitle: "Meine Fähigkeiten",
     currentlyLearning: "Ich lerne derzeit",
     learningDescription: "Zeigen Sie, dass Sie motiviert sind, Ihre Fähigkeiten kontinuierlich zu verbessern, innovative Lösungen zu implementieren und mit neuen Technologien Schritt zu halten.",
+
     // Projects Section
     myProjectsTitle: "Meine Projekte",
     aboutProject: "Über das Projekt",
@@ -269,6 +317,35 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     technologiesLabel: "Technologien",
     liveTestButton: "Live Test",
     githubButton: "GitHub",
+
+    projectsContent: {
+      daBubble: {
+        about: 'Dies ist eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation...',
+        workProcess: 'Projekte wurden in Mikroaufgaben unterteilt...',
+        team: 'Arbeitete als Teil eines agilen Teams...',
+        description: 'Slack-Klon-App...'
+      },
+      pokedex: {
+        about: 'Eine umfassende Pokédex-Anwendung...',
+        workProcess: 'Organisiert nach der agilen Methodik...',
+        team: 'Zusammenarbeit mit einem funktionsübergreifenden Team...',
+        description: 'Pokémon-Datenbank-Anwendung'
+      },
+      join: {
+        about: 'Aufgabenverwaltungs-Anwendung...',
+        workProcess: 'Komponentenbasierte Architektur verwendet...',
+        team: 'Arbeitete in einem Scrum-Team...',
+        description: 'Projektmanagement-Tool'
+      },
+      elPoloLoco: {
+        about: 'Jump-and-Run-Spiel...',
+        workProcess: 'Verwendete objektorientierte Prinzipien...',
+        team: 'Pair-Programming mit Kolleg:innen...',
+        description: 'Browserbasiertes Spiel'
+      }
+    },
+    
+    //teamplayer
     teamplayerTitle: "Brauchen Sie einen Teamplayer? Das sagen meine Kollegen über mich",
     projectLabel: "Projekt",
     linkedinProfile: "LinkedIn-Profil",

@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
-import { Project } from '../../interfaces/project';
+// import { Project } from '../../interfaces/project';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
-import { TEXTS } from '../../constants/texts';
+import { TEXTS, TranslationKeys  } from '../../constants/texts';
 
+interface Project {
+  title: string;
+  key: keyof TranslationKeys['projectsContent']; // Ensures only valid project keys
+  duration: string;
+  technologies: string[];
+  image: string;
+  github: string;
+  live: string;
+}
 
 @Component({
   selector: 'app-projects',
@@ -18,19 +27,20 @@ export class ProjectsComponent {
   
   constructor(public languageService: LanguageService) {}
 
-  get currentTexts() {
+  get currentTexts(): TranslationKeys {
     const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
     return this.texts[lang];
+  }
+
+  get currentProjectContent() {
+    return this.currentTexts.projectsContent[this.projects[this.selectedIndex].key];
   }
 
   projects: Project[] = [
     {
       title: 'DA Bubble',
+      key: 'daBubble',
       duration: '3 weeks',
-      team: 'Worked as part of an agile team, focusing on clean code structure, smooth UI interactions, and consistent design systems.',
-      description: 'Slack clone app...',
-      about: 'This is Slack clone App. It is revolutionizes team communication and collaboration with its intuitive interface, real-time messaging and robust channel organization.',
-      workProcess: 'Divide projects into micro-tasks, complete them in focused sprints, and track progress with Kanban.',
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
@@ -40,11 +50,8 @@ export class ProjectsComponent {
     },
     {
       title: 'Pokedex',
+      key: 'pokedex',
       duration: '2 weeks',
-      team: 'Collaborated closely with a cross-functional team using Git and Agile methods, contributing to UI development, code reviews, and feature planning to ensure a smooth and efficient workflow.',
-      description: 'Web Browser Objectoriented Programming App',
-      about: 'This is Slack clone App. It is revolutionizes team communication and collaboration with its intuitive interface, real-time messaging and robust channel organization.',
-      workProcess: 'I organized my work process using Trello for task management, broke the project into weekly milestones, and followed Agile principles to ensure steady progress and flexibility.',
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
@@ -54,25 +61,19 @@ export class ProjectsComponent {
     },
     {
       title: 'Join',
+      key: 'join',
       duration: '1 Month',
-      team: 'Collaborated closely within a cross-functional team to build responsive, component-based UIs with scalable architecture.',
-      description: 'Slack clone app...',
-      about: 'This is Slack clone App. It is revolutionizes team communication and collaboration with its intuitive interface, real-time messaging and robust channel organization.',
-      workProcess: 'I kept the styling responsive and scoped, with clear breakpoints and max-width containers for consistent layout across devices.',
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/Screenshot project (1).png',
       github: 'whttps://github.com/mianshargeel',
-      live: 'https://shardzhil.com/join'
+      live: '#'
     },
     {
       title: 'El Polo Loco',
+      key: 'elPoloLoco',
       duration: '3 weeks',
-      team: 'Collaborated closely with a cross-functional team using Git and Agile methods, contributing to UI development, code reviews, and feature planning to ensure a smooth and efficient workflow.',
-      description: 'Slack clone app...',
-      about: 'This is Slack clone App. It is revolutionizes team communication and collaboration with its intuitive interface, real-time messaging and robust channel organization.',
-      workProcess: 'I organized my work process using Trello for task management, broke the project into weekly milestones, and followed Agile principles to ensure steady progress and flexibility.',
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
