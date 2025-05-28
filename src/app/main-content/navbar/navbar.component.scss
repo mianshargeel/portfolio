@@ -254,9 +254,13 @@
 @media (max-width: 480px){
   .mobile-menu-list{
     gap: 20px !important;
+    margin: 16px 0px !important;
   }
     .mobile-nav{
       width: 87% !important;
+    }
+    .language-toggle.mobile{
+      margin-top: 0px !important;
     }
 }
 @keyframes bounce {

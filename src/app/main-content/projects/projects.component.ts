@@ -56,7 +56,7 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/poke.jpeg',
-      github: 'https://github.com/mianshargeel',
+      github: 'https://github.com/mianshargeel/PokemonApp.git',
       live: '#'
     },
     {
@@ -67,8 +67,8 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/Screenshot project (1).png',
-      github: 'whttps://github.com/mianshargeel',
-      live: '#'
+      github: 'https://github.com/mianshargeel/Join-Project.git',
+      live: 'https://shardzhil.com/join/'
     },
     {
       title: 'El Polo Loco',
@@ -78,7 +78,7 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/Screenshot project (1).png',
-      github: 'https://github.com/mianshargeel',
+      github: 'https://github.com/mianshargeel/El-pollo-loco-Junus.git',
       live: '#'
     }
   ];

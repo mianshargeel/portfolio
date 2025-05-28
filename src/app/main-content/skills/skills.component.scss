@@ -117,6 +117,7 @@ section{
       height: auto;
       h2{
         font-size: 36px !important;
+        margin: 79px !important;
       }
     }
     
@@ -197,5 +198,11 @@ section{
           color: #89BCD9;
         }
     }
+  }
+}
+
+@media (max-width: 530px){
+  #skills{
+    scroll-margin-top: 90px;
   }
 }

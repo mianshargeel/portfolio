@@ -150,9 +150,9 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     contact: "Contact",
     //why me component
     whyMeTitle: "Why me",
-    iAmLocated: ' located in Köln...|',
-    iAmOpenToRemote: ' open to work remote...|',
-    iAmOpenToRelocate: ' open to relocate...|',
+    iAmLocated: 'I am located in Köln...|',
+    iAmOpenToRemote: 'I am open to work remote...|',
+    iAmOpenToRelocate: 'I am open to relocate...|',
     aboutMeDescription: "I bring a passion for crafting seamless, visually appealing, and user-friendly web experiences. With a keen eye for design and a strong foundation in modern web technologies, I specialize in building responsive, accessible, and high-performance applications.",
     letsTalkButton: "Let's talk",
     // Skills Section
@@ -301,9 +301,9 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     contact: "Kontakt",
     //why me component
     whyMeTitle: "Warum ich",
-    iAmLocated: 'Ich wohne in ...',
-    iAmOpenToRemote: 'Ich bin offen für Remote-Arbeit...',
-    iAmOpenToRelocate: 'Ich bin offen für Umzug...',
+    iAmLocated: 'Ich wohne in Köln...|',
+    iAmOpenToRemote: 'Ich bin offen für Remote-Arbeit...|',
+    iAmOpenToRelocate: 'Ich bin offen für Umzug...|',
     aboutMeDescription: "Ich bringe Leidenschaft für nahtlose, visuell ansprechende und benutzerfreundliche Web-Erlebnisse mit. Mit einem Auge für Design und einer soliden Grundlage in modernen Webtechnologien spezialisiere ich mich auf die Entwicklung von responsiven, barrierefreien und leistungsstarken Anwendungen.",
     letsTalkButton: "Lass uns reden",
     // Skills Section

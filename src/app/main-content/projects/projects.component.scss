@@ -392,6 +392,8 @@
   }
 }
 @media (max-width: 450px) {
+  #project {
+      scroll-margin-top: 150px; }
   nav {
     display: flex;
     gap: 8px;
