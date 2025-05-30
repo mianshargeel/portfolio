@@ -66,7 +66,7 @@ export class ProjectsComponent {
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
-      image: './../../../assets/img/4-projects/Screenshot project (1).png',
+      image: './../../../assets/img/4-projects/join.jpeg',
       github: 'https://github.com/mianshargeel/Join-Project.git',
       live: 'https://shardzhil.com/join/'
     },
@@ -77,7 +77,7 @@ export class ProjectsComponent {
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
-      image: './../../../assets/img/4-projects/Screenshot project (1).png',
+      image: './../../../assets/img/4-projects/polo-loco.jpeg',
       github: 'https://github.com/mianshargeel/El-pollo-loco-Junus.git',
       live: 'https://shardzhil.com/elPoloLoco/'
     }
