@@ -49,6 +49,8 @@ export interface TranslationKeys {
 
   //testimomials component
   teamplayerTitle: string;
+  teamplayerMobileTitle: string;
+  colleageMobileText: string;
   projectLabel: string;
   linkedinProfile: string;
   views: string;
@@ -198,7 +200,9 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     },
 
     // Team Players Section
-    teamplayerTitle: "Need a teamplayer? Here's what my colleagues said about me",
+    teamplayerTitle: "Need a teamplayer ? Here's what my colleagues said about me",
+    teamplayerMobileTitle: "Need a teamplayer ?",
+    colleageMobileText: "Here's what my colleagues said about me",
     projectLabel: "Project",
     linkedinProfile: "LinkedIn Profile",
     views: 'Shardzhil had to develop, format and liver content in collaboration with the team members. He is a reliable and friendly person.',
@@ -350,6 +354,8 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     
     //teamplayer
     teamplayerTitle: "Brauchen Sie einen Teamplayer? Das sagen meine Kollegen über mich",
+    teamplayerMobileTitle: "Brauchen Sie einen Teamplayer ?",
+    colleageMobileText: "Das sagen meine Kollegen über mich",
     projectLabel: "Projekt",
     linkedinProfile: "LinkedIn-Profil",
     views: 'Shardzhil musste in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und bereitstellen. Er ist eine zuverlässige und freundliche Person.',
