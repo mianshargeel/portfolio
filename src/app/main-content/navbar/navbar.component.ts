@@ -59,6 +59,7 @@ handleNavClick(event: Event, sectionId: string) {
 
   switchLanguage(lang: 'en' | 'de') {
     this.languageService.setLanguage(lang);
+    this.menuClosed.emit(); // to close menu when user chose a language
   }
 
 }
