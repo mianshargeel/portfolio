@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { TEXTS } from '../../constants/texts';
+import { Subscription } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
+
 
 interface TranslationKeys {
   iAmLocated: string;
@@ -34,13 +37,23 @@ export class AboutmeComponent {
     './../../../assets/img/whyme/remote.png',
     './../../../assets/img/whyme/relocate.png'
   ];
-  
+  private currentLanguage = new BehaviorSubject<'en' | 'de'>('en');
+  language$ = this.currentLanguage.asObservable();//is an Observable → components can subscribe.
+  langSubscription!: Subscription;
+
   constructor(public languageService: LanguageService) { }
   
   ngOnInit() {
     this.updateTextValues();
     this.typeLoop();
+  
+    // Subscribe to language change if LanguageService provides observable
+    this.langSubscription = this.languageService.language$.subscribe((lang: 'en' | 'de') => {
+      this.updateTextValues();
+      this.restartTyping();
+    });
   }
+  
 
   get currentImage(): string {
     return this.imageSources[this.currentIndex];
@@ -81,5 +94,14 @@ export class AboutmeComponent {
     const lang = this.languageService.getCurrentLanguage() as 'en' | 'de';
     return this.texts[lang];
   }
-  
+  restartTyping() {
+    this.currentIndex = 0;
+    this.charIndex = 0;
+    this.isDeleting = false;
+    this.typedText = '';
+    // typeLoop will continue, it will now use updated textValues
+  }
+  ngOnDestroy() {
+    this.langSubscription?.unsubscribe(); //will clean the subscription when the component is destroyed.
+  }
 }
