@@ -57,8 +57,8 @@
 
           <div class="btn-small-screen">
             <div class="d-flex">
-              <a class="live-test-btn">{{ currentTexts['liveTestButton'] }}</a>
-            <a class="github-btn" [href]="projects[selectedIndex].github" >{{ currentTexts['githubButton'] }}</a>
+              <a class="live-test-btn" target="_blank" [href]="projects[selectedIndex].live">{{ currentTexts['liveTestButton'] }}</a>
+            <a class="github-btn" target="_blank" [href]="projects[selectedIndex].github" >{{ currentTexts['githubButton'] }}</a>
             </div>
           </div>
         <!-- <img src="./../../../assets/img/4-projects/poke.jpeg" alt=""> -->
@@ -72,7 +72,7 @@
           </div>
           <img class="project-screen-short" [src]="projects[selectedIndex].image" alt="Project screenshot" />
           <div class="links-btn">
-            <a [href]="projects[selectedIndex].live" class="live-test-btn">{{ currentTexts['liveTestButton'] }}</a>
+            <a [href]="projects[selectedIndex].live" class="live-test-btn" target="_blank">{{ currentTexts['liveTestButton'] }}</a>
             <a class="github-btn" target="_blank" [href]="projects[selectedIndex].github" >{{ currentTexts['githubButton'] }}</a>
           </div>
         </div>
