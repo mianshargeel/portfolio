@@ -78,6 +78,12 @@
         z-index: 1;
         height: 100%; // Ensure content takes full height
         justify-content: center; // Center content vertically
+        .quote{
+          height: 100px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          scrollbar-width: none;
+        }
       }
 
       // Text content above background
@@ -163,6 +169,9 @@
         .quote {
           font-size: 16px;
           margin: 10px 0;
+          height: 80px !important;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
       }
     }
@@ -220,13 +229,22 @@
     padding: 0px;
   }
   .my-colleages {
-    .quote{
-      font-size: 14px !important;
-        margin: 4px 0 !important;
-    }
+   
     .view-content{
       margin-top: -29px !important;
         gap: 0px !important;
+        display: flex;
+          justify-content: center;
+          align-items: center;
+        .quote {
+            font-size: 14px !important;
+            margin: 4px 0 !important;
+            height: 80px !important;
+            max-width: 80%;
+            overflow-y: auto;
+            overflow-x: hidden;  
+            text-align: center !important; 
+          }
     }
     .bg-img{
       height: 82% !important;

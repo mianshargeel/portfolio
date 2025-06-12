@@ -53,7 +53,11 @@ export interface TranslationKeys {
   colleageMobileText: string;
   projectLabel: string;
   linkedinProfile: string;
-  views: string;
+  views: {
+    james: string;
+    sahre: string;
+    taher: string;
+  };
   // Contact Section
   contactTitle: string;
   contactDescription: string;
@@ -174,7 +178,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
 
     projectsContent: {
       daBubble: {
-        about: 'This is Slack clone App. It revolutionizes team communication...',
+        about: 'This business-Chat-app. Coming soon...',
         workProcess: 'I am approaching this project with a modular Angular structure, using services for state and data handling, and components for chat UI, authentication, and channel management. The backend will be powered by Firebase for real-time messaging, user management, and file storage. Project planning and task distribution are managed via Trello and SCRUM methods in a collaborative team setup.',
         team: 'As part of the development team, I am responsible for implementing chat UI components, managing real-time data flow, and ensuring a responsive user experience. I am actively involved in technical planning, API integration, and code collaboration via GitHub. This project gives me deeper experience in team communication, agile workflows, and building scalable web applications.',
         description: 'Slack clone app...'
@@ -205,7 +209,13 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     colleageMobileText: "Here's what my colleagues said about me",
     projectLabel: "Project",
     linkedinProfile: "LinkedIn Profile",
-    views: 'Shardzhil had to develop, format and liver content in collaboration with the team members. He is a reliable and friendly person.',
+
+    views: {
+      james: "Shardzhil was great to work with — focused, dependable, and always ready to support the team. A real team player.",
+      sahre: "Shardzhil had to develop, format and deliver content...",
+      taher: "Shardzhil was always reliable, communicated clearly, and contributed great ideas. A strong team player you can count on."
+    },
+
     // Contact Section
     contactTitle: "Contact me",
     contactDescription: "I'm interested in freelance opportunities and interesting projects. Feel free to reach out if you have any questions or just want to connect.",
@@ -327,7 +337,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
 
     projectsContent: {
       daBubble: {
-        about: 'Dies ist eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation...',
+        about: 'Diese Business-Chat-App. Demnächst verfügbar ...',
         workProcess: 'Ich gehe dieses Projekt mit einer modularen Angular-Struktur an und nutze Dienste für die Status- und Datenverarbeitung sowie Komponenten für die Chat-Benutzeroberfläche, Authentifizierung und Kanalverwaltung. Das Backend wird von Firebase für Echtzeit-Messaging, Benutzerverwaltung und Dateispeicherung unterstützt. Projektplanung und Aufgabenverteilung erfolgen über Trello- und SCRUM-Methoden in einem kollaborativen Team-Setup.',
         team: 'Als Teil des Entwicklungsteams bin ich für die Implementierung von Chat-UI-Komponenten, die Verwaltung des Echtzeit-Datenflusses und die Gewährleistung einer reaktionsschnellen Benutzererfahrung verantwortlich. Ich bin aktiv an der technischen Planung, der API-Integration und der Code-Zusammenarbeit über GitHub beteiligt. Dieses Projekt vermittelt mir umfassende Erfahrung in Teamkommunikation, agilen Workflows und der Entwicklung skalierbarer Webanwendungen.',
         description: 'Slack-Klon-App...'
@@ -358,7 +368,13 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     colleageMobileText: "Das sagen meine Kollegen über mich",
     projectLabel: "Projekt",
     linkedinProfile: "LinkedIn-Profil",
-    views: 'Shardzhil musste in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und bereitstellen. Er ist eine zuverlässige und freundliche Person.',
+
+    views: {
+      james: "Die Zusammenarbeit mit Shardzhil war großartig – er war konzentriert, zuverlässig und immer bereit, das Team zu unterstützen. Ein echter Teamplayer.",
+      sahre: "Shardzhil musste Inhalte entwickeln, formatieren...",
+      taher: "Shardzhil war stets zuverlässig, kommunizierte klar und brachte tolle Ideen ein. Ein starker Teamplayer, auf den man zählen kann."
+    },
+
     // Contact Section
     contactTitle: "Kontakt",
     contactDescription: "Ich bin an freiberuflichen Möglichkeiten und interessanten Projekten interessiert. Zögern Sie nicht, mich bei Fragen oder einfach zum Austausch zu kontaktieren.",

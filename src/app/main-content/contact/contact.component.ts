@@ -56,7 +56,7 @@ export class ContactComponent {
 
   onSubmit(form: NgForm) {
     this.isFormSubmitted = true;
-    console.log(this.contactData);
+    // console.log(this.contactData);
   
     if (form.submitted && form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
