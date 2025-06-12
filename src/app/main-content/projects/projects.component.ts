@@ -37,28 +37,7 @@ export class ProjectsComponent {
   }
 
   projects: Project[] = [
-    {
-      title: 'DA Bubble',
-      key: 'daBubble',
-      duration: '3 weeks',
-      technologies: ['./../../../assets/img/4-projects/Angular.png',
-        './../../../assets/img/4-projects/Frame 499.png',
-        './../../../assets/img/4-projects/Frame 500.png'],
-      image: './../../../assets/img/4-projects/Screenshot project (2).png',
-      github: 'https://github.com/mianshargeel',
-      live: '#'
-    },
-    {
-      title: 'Pokedex',
-      key: 'pokedex',
-      duration: '2 weeks',
-      technologies: ['./../../../assets/img/4-projects/Angular.png',
-        './../../../assets/img/4-projects/Frame 499.png',
-        './../../../assets/img/4-projects/Frame 500.png'],
-      image: './../../../assets/img/4-projects/poke.jpeg',
-      github: 'https://github.com/mianshargeel/PokemonApp.git',
-      live: 'https://shardzhil.com/pokedex/'
-    },
+  
     {
       title: 'Join',
       key: 'join',
@@ -70,6 +49,19 @@ export class ProjectsComponent {
       github: 'https://github.com/mianshargeel/Join-Project.git',
       live: 'https://shardzhil.com/join/'
     },
+   
+    {
+      title: 'Pokedex',
+      key: 'pokedex',
+      duration: '2 weeks',
+      technologies: ['./../../../assets/img/4-projects/Angular.png',
+        './../../../assets/img/4-projects/Frame 499.png',
+        './../../../assets/img/4-projects/Frame 500.png'],
+      image: './../../../assets/img/4-projects/poke.jpeg',
+      github: 'https://github.com/mianshargeel/PokemonApp.git',
+      live: 'https://shardzhil.com/pokedex/'
+    },
+  
     {
       title: 'El Polo Loco',
       key: 'elPoloLoco',
@@ -80,7 +72,18 @@ export class ProjectsComponent {
       image: './../../../assets/img/4-projects/polo-loco.jpeg',
       github: 'https://github.com/mianshargeel/El-pollo-loco-Junus.git',
       live: 'https://shardzhil.com/elPoloLoco/'
-    }
+    },
+    {
+      title: 'DA Bubble',
+      key: 'daBubble',
+      duration: '3 weeks',
+      technologies: ['./../../../assets/img/4-projects/Angular.png',
+        './../../../assets/img/4-projects/Frame 499.png',
+        './../../../assets/img/4-projects/Frame 500.png'],
+      image: './../../../assets/img/4-projects/Screenshot project (2).png',
+      github: 'https://github.com/mianshargeel',
+      live: '#'
+    },
   ];
 // selected: any;
 

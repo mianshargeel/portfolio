@@ -68,7 +68,7 @@ export interface TranslationKeys {
   privacyError: string;
   submitButton: string;
   //privacy-policy-component
-   privacyPolicyTitle: string;
+  privacyPolicyTitle: string;
   privacyPolicyIntro1: string;
   privacyPolicyIntro2: string;
   privacyPolicyIntro3: string;
@@ -175,26 +175,26 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     projectsContent: {
       daBubble: {
         about: 'This is Slack clone App. It revolutionizes team communication...',
-        workProcess: 'Divide projects into micro-tasks...',
-        team: 'Worked as part of an agile team...',
+        workProcess: 'I am approaching this project with a modular Angular structure, using services for state and data handling, and components for chat UI, authentication, and channel management. The backend will be powered by Firebase for real-time messaging, user management, and file storage. Project planning and task distribution are managed via Trello and SCRUM methods in a collaborative team setup.',
+        team: 'As part of the development team, I am responsible for implementing chat UI components, managing real-time data flow, and ensuring a responsive user experience. I am actively involved in technical planning, API integration, and code collaboration via GitHub. This project gives me deeper experience in team communication, agile workflows, and building scalable web applications.',
         description: 'Slack clone app...'
       },
       pokedex: {
         about: 'A comprehensive Pokédex application...',
-        workProcess: 'Organized using Agile methodology...',
-        team: 'Collaborated with cross-functional team...',
+        workProcess: 'I structured the Pokedex project using modular JavaScript, separating API logic, DOM manipulation, and UI rendering into different files for clarity and maintainability. I used the PokéAPI to fetch real-time Pokémon data and implemented asynchronous functions (async/await) to handle loading states and dynamic content. The layout was designed to be responsive and user-friendly, with features like search, filters, and detailed Pokémon views.',
+        team: 'In this project, I worked extensively with REST APIs, learning how to fetch, process, and display real-time data from the PokéAPI. I implemented asynchronous JavaScript using async/await, managed dynamic DOM updates, and built interactive UI components. This experience helped me strengthen my skills in API integration, data handling, and creating responsive, user-focused web interfaces.',
         description: 'Pokémon database application'
       },
       join: {
         about: 'Task management application...',
-        workProcess: 'Followed component-based architecture...',
-        team: 'Worked in Scrum team...',
+        workProcess: 'I structured the Join project in a modular way using Angular, with clearly separated components, services, and models to ensure maintainability and scalability. The data is managed via Firebase, using a tasks collection and a subtasks subcollection. I implemented real-time updates with Firestore and handled state management using BehaviorSubject. The app is fully responsive, and I added drag-and-drop functionality for desktop as well as an adaptive UI for mobile devices.',
+        team: 'Throughout the Join project, I collaborated closely with team members using Trello for task planning and GitHub for version control and code reviews. We followed an agile workflow, held regular stand-ups, and communicated actively to align on features, bugs, and UI/UX decisions. I contributed both individually and as part of the team, focusing on clean code, shared standards, and helpful feedback during code reviews.',
         description: 'Project management tool'
       },
       elPoloLoco: {
         about: 'Jump and run game...',
-        workProcess: 'Used object-oriented principles...',
-        team: 'Pair-programmed with colleagues...',
+        workProcess: 'I built the El Pollo Loco game using object-oriented JavaScript, structuring the project into clear and reusable classes such as Character, Enemy, World, ThrowableObject, and UIManager. I used a central game loop to manage updates and animations, and implemented collision detection, game states, and audio handling in a clean, event-driven way.',
+        team: 'In this project, I gained hands-on experience with object-oriented programming (OOP) using vanilla JavaScript. I planned and structured the game logic through modular class design and implemented core gameplay features like movement, jumping, enemy behavior, item collection, and game-over states. I also handled canvas rendering, animation timing, and responsive scaling to ensure the game worked smoothly across devices. This project strengthened my understanding of code architecture, browser performance, and real-time user interaction.',
         description: 'Browser-based game'
       }
     },
@@ -328,26 +328,26 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     projectsContent: {
       daBubble: {
         about: 'Dies ist eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation...',
-        workProcess: 'Projekte wurden in Mikroaufgaben unterteilt...',
-        team: 'Arbeitete als Teil eines agilen Teams...',
+        workProcess: 'Ich gehe dieses Projekt mit einer modularen Angular-Struktur an und nutze Dienste für die Status- und Datenverarbeitung sowie Komponenten für die Chat-Benutzeroberfläche, Authentifizierung und Kanalverwaltung. Das Backend wird von Firebase für Echtzeit-Messaging, Benutzerverwaltung und Dateispeicherung unterstützt. Projektplanung und Aufgabenverteilung erfolgen über Trello- und SCRUM-Methoden in einem kollaborativen Team-Setup.',
+        team: 'Als Teil des Entwicklungsteams bin ich für die Implementierung von Chat-UI-Komponenten, die Verwaltung des Echtzeit-Datenflusses und die Gewährleistung einer reaktionsschnellen Benutzererfahrung verantwortlich. Ich bin aktiv an der technischen Planung, der API-Integration und der Code-Zusammenarbeit über GitHub beteiligt. Dieses Projekt vermittelt mir umfassende Erfahrung in Teamkommunikation, agilen Workflows und der Entwicklung skalierbarer Webanwendungen.',
         description: 'Slack-Klon-App...'
       },
       pokedex: {
         about: 'Eine umfassende Pokédex-Anwendung...',
-        workProcess: 'Organisiert nach der agilen Methodik...',
-        team: 'Zusammenarbeit mit einem funktionsübergreifenden Team...',
+        workProcess: 'Ich habe das Pokedex-Projekt mit modularem JavaScript strukturiert und API-Logik, DOM-Manipulation und UI-Rendering aus Gründen der Übersichtlichkeit und Wartbarkeit in separate Dateien aufgeteilt. Ich nutzte die PokéAPI, um Pokémon-Daten in Echtzeit abzurufen, und implementierte asynchrone Funktionen (async/await), um Ladezustände und dynamische Inhalte zu verarbeiten. Das Layout wurde responsiv und benutzerfreundlich gestaltet und bietet Funktionen wie Suche, Filter und detaillierte Pokémon-Ansichten.',
+        team: 'In diesem Projekt habe ich intensiv mit REST-APIs gearbeitet und gelernt, wie man Echtzeitdaten aus der PokéAPI abruft, verarbeitet und anzeigt. Ich habe asynchrones JavaScript mit async/await implementiert, dynamische DOM-Updates verwaltet und interaktive UI-Komponenten erstellt. Diese Erfahrung hat mir geholfen, meine Fähigkeiten in API-Integration, Datenverarbeitung und der Erstellung responsiver, benutzerorientierter Weboberflächen zu stärken.',
         description: 'Pokémon-Datenbank-Anwendung'
       },
       join: {
         about: 'Aufgabenverwaltungs-Anwendung...',
-        workProcess: 'Komponentenbasierte Architektur verwendet...',
-        team: 'Arbeitete in einem Scrum-Team...',
+        workProcess: 'Ich habe das Join-Projekt modular mit Angular strukturiert und dabei Komponenten, Dienste und Modelle klar getrennt, um Wartbarkeit und Skalierbarkeit zu gewährleisten. Die Datenverwaltung erfolgt über Firebase mithilfe einer Aufgabensammlung und einer Unteraufgabensammlung. Echtzeit-Updates habe ich mit Firestore implementiert und die Statusverwaltung mit BehaviorSubject übernommen. Die App ist vollständig responsive und ich habe Drag-and-Drop-Funktionen für Desktop-Computer sowie eine adaptive Benutzeroberfläche für Mobilgeräte hinzugefügt.',
+        team: 'Während des gesamten Join-Projekts arbeitete ich eng mit Teammitgliedern zusammen und nutzte Trello für die Aufgabenplanung und GitHub für die Versionskontrolle und Code-Reviews. Wir folgten einem agilen Workflow, hielten regelmäßige Stand-up-Meetings ab und kommunizierten aktiv, um uns über Funktionen, Bugs und UI/UX-Entscheidungen abzustimmen. Ich leistete sowohl individuelle als auch Teamarbeit und konzentrierte mich auf sauberen Code, gemeinsame Standards und hilfreiches Feedback bei Code-Reviews.',
         description: 'Projektmanagement-Tool'
       },
       elPoloLoco: {
         about: 'Jump-and-Run-Spiel...',
-        workProcess: 'Verwendete objektorientierte Prinzipien...',
-        team: 'Pair-Programming mit Kolleg:innen...',
+        workProcess: 'Ich habe das Spiel El Pollo Loco mit objektorientiertem JavaScript entwickelt und das Projekt in klare und wiederverwendbare Klassen wie Charakter, Feind, Welt, ThrowableObject und UIManager strukturiert. Eine zentrale Spielschleife verwaltete Updates und Animationen und implementierte Kollisionserkennung, Spielzustände und Audioverarbeitung sauber und ereignisgesteuert.',
+        team: 'In diesem Projekt sammelte ich praktische Erfahrung mit objektorientierter Programmierung (OOP) und Vanilla JavaScript. Ich plante und strukturierte die Spiellogik mithilfe modularen Klassendesigns und implementierte zentrale Gameplay-Funktionen wie Bewegung, Springen, Gegnerverhalten, Item-Sammlung und Game-Over-Zustände. Außerdem kümmerte ich mich um Canvas-Rendering, Animations-Timing und Responsive Scaling, um einen reibungslosen Spielablauf auf allen Geräten sicherzustellen. Dieses Projekt stärkte mein Verständnis von Code-Architektur, Browser-Performance und Echtzeit-Benutzerinteraktion.',
         description: 'Browserbasiertes Spiel'
       }
     },

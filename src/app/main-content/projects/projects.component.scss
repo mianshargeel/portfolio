@@ -133,6 +133,9 @@
       
           .work-process {
             @include d-flex-gap();
+            max-height: 150px;
+              overflow-y: auto;
+              overflow-x: hidden;
       
             h3 {
               @include h3-project-description-style();
@@ -145,6 +148,9 @@
       
           .team-work {
             @include d-flex-gap();
+            max-height: 150px;
+            overflow-y: auto;
+            overflow-x: hidden;
       
             h3 {
               @include h3-project-description-style();
@@ -152,6 +158,7 @@
       
             p {
               margin-left: 45px;
+              overflow-y: auto;
             }
           }
           .btn-small-screen {
