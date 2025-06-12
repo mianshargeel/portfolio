@@ -24,7 +24,7 @@ export class ContactComponent {
 
   texts = TEXTS;
   isFormSubmitted = false;
-  mailTest = true;
+  mailTest = false;
   showSuccessMessage: boolean = false;
   
   constructor(public languageService: LanguageService, private http: HttpClient) {}
@@ -42,7 +42,7 @@ export class ContactComponent {
   };
   
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://shardzhil.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -59,8 +59,10 @@ export class ContactComponent {
     // console.log(this.contactData);
   
     if (form.submitted && form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), {
+        headers: { 'Content-Type': 'text/plain' },
+        responseType: 'text'
+      }).subscribe({
           next: () => {
             this.showSuccessMessage = true;
             form.resetForm();                     // Reset  form

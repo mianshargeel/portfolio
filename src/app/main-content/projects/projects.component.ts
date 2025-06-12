@@ -76,7 +76,7 @@ export class ProjectsComponent {
     {
       title: 'DA Bubble',
       key: 'daBubble',
-      duration: '3 weeks',
+      duration: '4 weeks',
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
