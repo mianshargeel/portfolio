@@ -47,7 +47,7 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/join.jpeg',
       github: 'https://github.com/mianshargeel/Join-Project.git',
-      live: 'https://shardzhil.com/join/'
+      live: 'https://join.shardzhil.com/'
     },
    
     {
@@ -59,7 +59,7 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/poke.jpeg',
       github: 'https://github.com/mianshargeel/PokemonApp.git',
-      live: 'https://shardzhil.com/pokedex/'
+      live: 'https://pokedex.shardzhil.com/'
     },
   
     {
@@ -71,19 +71,19 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/polo-loco.jpeg',
       github: 'https://github.com/mianshargeel/El-pollo-loco-Junus.git',
-      live: 'https://shardzhil.com/elPoloLoco/'
+      live: 'https://elpolloloco.shardzhil.com/'
     },
-    {
-      title: 'DA Bubble',
-      key: 'daBubble',
-      duration: '4 weeks',
-      technologies: ['./../../../assets/img/4-projects/Angular.png',
-        './../../../assets/img/4-projects/Frame 499.png',
-        './../../../assets/img/4-projects/Frame 500.png'],
-      image: './../../../assets/img/4-projects/Screenshot project (2).png',
-      github: 'https://github.com/mianshargeel',
-      live: '#'
-    },
+    // {
+    //   title: 'DA Bubble',
+    //   key: 'daBubble',
+    //   duration: '4 weeks',
+    //   technologies: ['./../../../assets/img/4-projects/Angular.png',
+    //     './../../../assets/img/4-projects/Frame 499.png',
+    //     './../../../assets/img/4-projects/Frame 500.png'],
+    //   image: './../../../assets/img/4-projects/Screenshot project (2).png',
+    //   github: 'https://github.com/mianshargeel',
+    //   live: '#'
+    // },
   ];
 // selected: any;
 
