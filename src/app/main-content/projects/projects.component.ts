@@ -63,7 +63,7 @@ export class ProjectsComponent {
     },
   
     {
-      title: 'El Polo Loco',
+      title: 'El Pollo Loco',
       key: 'elPoloLoco',
       duration: '3 weeks',
       technologies: ['./../../../assets/img/4-projects/Angular.png',

@@ -16,9 +16,9 @@
       <h2>{{ currentTexts['contactTitle'] }}</h2>
         <div class="contact-info">
           <div class="text">
-            <p>{{ currentTexts['contactDescription'] }}</p>
+            <p class="globalFont-size">{{ currentTexts['contactDescription'] }}</p>
           </div>
-          <div class="mail-num">
+          <div class="mail-num globalFont-size">
             <p class="mail"><img src="./../../../assets/img/contact/email.png" alt="">Email: contact&#64;shardzhil.com</p> 
             <p class="phone"><img src="./../../../assets/img/contact/phone.png" alt="">Tel: 0151 26015827</p>
           </div>
@@ -56,10 +56,10 @@
 
             <div class="privacy">
               <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
-              <label for="privacy">
+              <label class="globalFont-size" for="privacy">
                 <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
-                <a  routerLink="/privacy-policy">&nbsp;{{ currentTexts['privacyLink'] }}</a>&nbsp;
+                <a  routerLink="/privacy-policy" >&nbsp;{{ currentTexts['privacyLink'] }}</a>&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[1] }}
                 
                 @if(isPrivacyChecked.invalid && (isPrivacyChecked.touched || isFormSubmitted)) {
@@ -101,10 +101,10 @@
 
             <div class="privacy">
               <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
-              <label for="privacy">
+              <label class="globalFont-size" for="privacy">
                 <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
-                <a routerLink="/privacy-policy">&nbsp;{{ currentTexts['privacyLink'] }}</a>&nbsp;
+                <a routerLink="/privacy-policy" >&nbsp;{{ currentTexts['privacyLink'] }}</a>&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[1] }}
                 
                 @if(isPrivacyChecked.invalid && (isPrivacyChecked.touched || isFormSubmitted)) {

@@ -163,8 +163,8 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     letsTalkButton: "Let's talk",
     // Skills Section
     mySkillsTitle: "My Skills",
-    currentlyLearning: "I am currently learning",
-    learningDescription: "Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies.",
+    currentlyLearning: "I am currently Working",
+    learningDescription: "Working with Angular and TypeScript to build responsive web apps and deepen my frontend skills.",
 
     // Projects Section
     myProjectsTitle: "My Projects",
@@ -322,8 +322,8 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     letsTalkButton: "Lass uns reden",
     // Skills Section
     mySkillsTitle: "Meine Fähigkeiten",
-    currentlyLearning: "Ich lerne derzeit",
-    learningDescription: "Zeigen Sie, dass Sie motiviert sind, Ihre Fähigkeiten kontinuierlich zu verbessern, innovative Lösungen zu implementieren und mit neuen Technologien Schritt zu halten.",
+    currentlyLearning: "Ich arbeite derzeit",
+    learningDescription: "Arbeite ich mit Angular und TypeScript, um reaktionsfähige Web-Apps zu erstellen und meine Frontend-Kenntnisse zu vertiefen.",
 
     // Projects Section
     myProjectsTitle: "Meine Projekte",

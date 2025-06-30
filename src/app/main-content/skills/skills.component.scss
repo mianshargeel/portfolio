@@ -32,10 +32,9 @@ section{
           height: 100%;
           display: flex;
           flex-wrap: wrap;
-          align-content: flex-start; // Align items to the top
-          gap: 36px;
+          align-content: flex-start; 
           padding: 20px 0px;
-          overflow-y: auto; // Add scroll if needed
+          overflow-y: auto; 
       
           .skill-item {
             display: flex;
@@ -70,7 +69,7 @@ section{
           background-size: 380px 390px;
           font-family: "Josefin Sans", sans-serif;
           font-weight: 400;
-          font-size: 18px;
+          // font-size: 18px;
           &:hover {
               filter: brightness(2.9);
             }
@@ -91,7 +90,9 @@ section{
             p {
               margin: 0; 
               line-height: 1.5;
-              font-size: 16px;
+              height: 100px;
+              width: 68%;
+              overflow-y: auto;
             }
           }
         }
