@@ -19,7 +19,7 @@
           <div class="tech-stack">
               <p>Angular, Typescript, Firebase</p>
           </div>
-          <span class="project-duration">{{ currentTexts['projectDuration'] }}: {{ projects[selectedIndex].duration }}</span>
+          <span class="project-duration">{{ currentTexts['projectDuration'] }}: {{ currentTexts.durations[projects[selectedIndex].durationKey] }}</span>
       </div>
       
       <img class="project-screen-short" [src]="projects[selectedIndex].image" alt="Project screenshot" />
@@ -41,7 +41,7 @@
         <div class="project-content-width">
             <div class="right-content">
           <div class="about-text">
-            <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts.aboutProject }} <span class="project-duration">{{ currentTexts.projectDuration }}: {{ projects[selectedIndex].duration }}</span></h3> 
+            <h3><img src="./../../../assets/img/4-projects/Ellipse 8.png" alt="">{{ currentTexts.aboutProject }} <span class="project-duration">{{ currentTexts.projectDuration }}: {{ currentTexts.durations[projects[selectedIndex].durationKey] }}</span></h3> 
             <p class="globalFont-size">{{ currentProjectContent.about }}</p>
           </div>
         

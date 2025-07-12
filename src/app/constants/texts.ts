@@ -46,6 +46,12 @@ export interface TranslationKeys {
   githubButton: string;
   // Projects Content Translations
   projectsContent: ProjectsTranslations;
+   durations: {
+    join: string;
+    pokedex: string;
+    elPoloLoco: string;
+    // daBubble: string; // uncomment when needed
+  };
 
   //testimomials component
   teamplayerTitle: string;
@@ -175,6 +181,13 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     technologiesLabel: "Technologies",
     liveTestButton: "Live Test",
     githubButton: "GitHub",
+
+    durations: {
+      join: '1 Month',
+      pokedex: '2 weeks',
+      elPoloLoco: '3 weeks',
+      // daBubble: '4 weeks' // uncomment when needed
+    },
 
     projectsContent: {
       daBubble: {
@@ -334,6 +347,13 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     technologiesLabel: "Technologien",
     liveTestButton: "Live Test",
     githubButton: "GitHub",
+
+    durations: {
+      join: '1 Monat',
+      pokedex: '2 Wochen',
+      elPoloLoco: '3 Wochen',
+      // daBubble: '4 Wochen' // uncomment when needed
+    },
 
     projectsContent: {
       daBubble: {

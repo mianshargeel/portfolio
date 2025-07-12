@@ -6,8 +6,8 @@ import { TEXTS, TranslationKeys  } from '../../constants/texts';
 
 interface Project {
   title: string;
-  key: keyof TranslationKeys['projectsContent']; // Ensures only valid project keys
-  duration: string;
+  key: keyof TranslationKeys['projectsContent']; 
+  durationKey: keyof TranslationKeys['durations'];
   technologies: string[];
   image: string;
   github: string;
@@ -41,7 +41,7 @@ export class ProjectsComponent {
     {
       title: 'Join',
       key: 'join',
-      duration: '1 Month',
+      durationKey: 'join',
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
@@ -53,7 +53,7 @@ export class ProjectsComponent {
     {
       title: 'Pokedex',
       key: 'pokedex',
-      duration: '2 weeks',
+      durationKey: 'pokedex',
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
@@ -65,7 +65,7 @@ export class ProjectsComponent {
     {
       title: 'El Pollo Loco',
       key: 'elPoloLoco',
-      duration: '3 weeks',
+      durationKey: 'elPoloLoco',
       technologies: ['./../../../assets/img/4-projects/Angular.png',
         './../../../assets/img/4-projects/Frame 499.png',
         './../../../assets/img/4-projects/Frame 500.png'],
@@ -76,7 +76,7 @@ export class ProjectsComponent {
     // {
     //   title: 'DA Bubble',
     //   key: 'daBubble',
-    //   duration: '4 weeks',
+    //   durationKey: '4 weeks',
     //   technologies: ['./../../../assets/img/4-projects/Angular.png',
     //     './../../../assets/img/4-projects/Frame 499.png',
     //     './../../../assets/img/4-projects/Frame 500.png'],
