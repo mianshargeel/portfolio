@@ -15,6 +15,7 @@ section{
     height: 556px;
     display: flex;
     flex-direction: column;
+    margin-top: 56px;
     margin-bottom: 40px;
     h2{
       font-family: "Anta", sans-serif;
@@ -32,7 +33,7 @@ section{
           height: 100%;
           display: flex;
           flex-wrap: wrap;
-          align-content: flex-start; 
+          align-content: space-evenly; 
           padding: 20px 0px;
           overflow-y: auto; 
       
@@ -44,7 +45,7 @@ section{
       
             img {
               width: 55.8px;
-              height: 60px;
+              height: 90px;
               object-fit: contain;
               margin-bottom: 5px;
               transition: all 0.3s ease-in-out;
@@ -66,7 +67,7 @@ section{
           background-image: url('./../../../assets/img/3-skils/currently-lerning.png');
           background-position: center;
           background-repeat: no-repeat;
-          background-size: 380px 390px;
+          background-size: 406px 406px;
           font-family: "Josefin Sans", sans-serif;
           font-weight: 400;
           // font-size: 18px;
@@ -79,10 +80,10 @@ section{
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 20px;
             div{
               display: flex;
-              gap: 36px;
+              gap: 20px;
               img {
                   width: 52px;
                 }
@@ -90,23 +91,10 @@ section{
             p {
               margin: 0; 
               line-height: 1.5;
-              height: 100px;
-              width: 68%;
+              height: 60px;
+              width: 80%;
               overflow-y: auto;
-              scrollbar-color: #888 transparent;/* Firefox */
-                
-                &::-webkit-scrollbar {
-                  width: 6px;
-                }
-              
-                &::-webkit-scrollbar-track {
-                  background: transparent;
-                }
-              
-                &::-webkit-scrollbar-thumb {
-                  background-color: rgba(255, 255, 255, 0.3);
-                  border-radius: 3px;
-                }
+              scrollbar-width: none;
             }
           }
         }

@@ -164,7 +164,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     // Skills Section
     mySkillsTitle: "My Skills",
     currentlyLearning: "I am currently Working",
-    learningDescription: "Working with Angular and TypeScript to build responsive web apps and deepen my frontend skills.",
+    learningDescription: "Looking for other Skills?",
 
     // Projects Section
     myProjectsTitle: "My Projects",
@@ -319,11 +319,11 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     iAmOpenToRemote: 'Ich bin offen für Remote-Arbeit...|',
     iAmOpenToRelocate: 'Ich bin offen für Umzug...|',
     aboutMeDescription: "Ich bringe Leidenschaft für nahtlose, visuell ansprechende und benutzerfreundliche Web-Erlebnisse mit. Mit einem Auge für Design und einer soliden Grundlage in modernen Webtechnologien spezialisiere ich mich auf die Entwicklung von responsiven, barrierefreien und leistungsstarken Anwendungen.",
-    letsTalkButton: "Lass uns reden",
+    letsTalkButton: "Los geht's",
     // Skills Section
     mySkillsTitle: "Meine Fähigkeiten",
     currentlyLearning: "Ich arbeite derzeit",
-    learningDescription: "Arbeite ich mit Angular und TypeScript, um reaktionsfähige Web-Apps zu erstellen und meine Frontend-Kenntnisse zu vertiefen.",
+    learningDescription: "Interesse an weiteren Fähigkeiten?",
 
     // Projects Section
     myProjectsTitle: "Meine Projekte",
