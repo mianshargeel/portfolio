@@ -44,8 +44,8 @@ section{
             width: 80px; // Fixed width for each item
       
             img {
-              width: 55.8px;
-              height: 90px;
+              width: 75.8px;
+              height: 111px;
               object-fit: contain;
               margin-bottom: 5px;
               transition: all 0.3s ease-in-out;
@@ -79,6 +79,7 @@ section{
             width: 307px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             gap: 20px;
             div{
@@ -90,12 +91,31 @@ section{
             }
             p {
               margin: 0; 
+              font-size: 20px;
               line-height: 1.5;
               height: 60px;
               width: 80%;
               overflow-y: auto;
               scrollbar-width: none;
             }
+            .talk-btn {
+              margin: 0 auto;
+              font-family: "Josefin Sans", sans-serif;
+              font-size: 16px;
+              background-color: #262e34;
+              border: 1px solid #89BCD9;
+              color: #89BCD9;
+              padding: 13px 24px;
+              border-radius: 24px;
+              width: 159px;
+              text-decoration: none;
+              text-align: center;
+              &:hover {
+                cursor: pointer;
+                background-color: #3f4244;
+              }
+            }
+
           }
         }
     }

@@ -56,7 +56,7 @@
 
             <div class="privacy">
               <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
-              <label class="globalFont-size" for="privacy">
+              <label  for="privacy">
                 <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
                 <a  routerLink="/privacy-policy" >&nbsp;{{ currentTexts['privacyLink'] }}</a>&nbsp;
@@ -101,7 +101,7 @@
 
             <div class="privacy">
               <input type="checkbox" id="privacy" name="privacy" required #isPrivacyChecked="ngModel" [(ngModel)]="contactData.isPrivacyChecked"/>
-              <label class="globalFont-size" for="privacy">
+              <label  for="privacy">
                 <img class="checkbox-img" [src]="contactData.isPrivacyChecked ? './../../../assets/img/contact/clicked.png' : './../../../assets/img/contact/check-box.png'" alt="checkbox" />&nbsp;
                 {{ currentTexts['privacyText'].split('privacy policy')[0] }}
                 <a routerLink="/privacy-policy" >&nbsp;{{ currentTexts['privacyLink'] }}</a>&nbsp;

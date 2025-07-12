@@ -34,6 +34,7 @@ export interface TranslationKeys {
   mySkillsTitle: string;
   currentlyLearning: string;
   learningDescription: string;
+  letsTalk: string;
 
   // Projects Section
   myProjectsTitle: string;
@@ -171,6 +172,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     mySkillsTitle: "My Skills",
     currentlyLearning: "I am currently Working",
     learningDescription: "Looking for other Skills?",
+    letsTalk: "Let's Talk",
 
     // Projects Section
     myProjectsTitle: "My Projects",
@@ -337,6 +339,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     mySkillsTitle: "Meine Fähigkeiten",
     currentlyLearning: "Ich arbeite derzeit",
     learningDescription: "Interesse an weiteren Fähigkeiten?",
+    letsTalk: "Lass uns reden",
 
     // Projects Section
     myProjectsTitle: "Meine Projekte",
@@ -404,7 +407,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
     formEmailError: "Gültige E-Mail ist erforderlich",
     formMessageLabel: "Ihre Nachricht",
     formMessageError: "Bitte geben Sie eine Nachricht ein (mind. 4 Zeichen)",
-    privacyText: "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    privacyText: "Ich habe die Datenschutzerklärung gelesen und stimme ihr zu.",
     privacyLink: "Datenschutzerklärung",
     privacyError: "Bitte akzeptieren Sie unsere Datenschutzerklärung",
     submitButton: "Nachricht senden",

@@ -42,7 +42,7 @@ export class TestimonialsComponent {
     bgImg: './../../../assets/img/5-refferences/bg-img.png',
     project: 'DABubble',
     testimonialKey: 'sahre',
-    link: 'https://www.linkedin.com/in/mukhammad-shardzhil-a2565213a/'
+    link: 'https://www.linkedin.com/in/muzammal-anwar-06968b2ab/'
     },
     {
     name: 'Taher Mehany',
