@@ -31,14 +31,14 @@ export class TestimonialsComponent {
 
   teamPlayers: Teamplayer[] = [
     {
-    name: 'James Rugman',
+    name: 'Patrick Frey',
     bgImg: './../../../assets/img/5-refferences/bg-img.png',
     project: 'Kochwelt',
     testimonialKey: 'james',
-    link: 'https://www.linkedin.com/in/mukhammad-shardzhil-a2565213a/'
+    link: 'https://www.linkedin.com/in/patrick-frey-690000164/'
     },
     {
-    name: 'Sahre Mueller',
+    name: 'Muzammal Anwar',
     bgImg: './../../../assets/img/5-refferences/bg-img.png',
     project: 'DABubble',
     testimonialKey: 'sahre',

@@ -225,7 +225,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
 
     views: {
       james: "Shardzhil was great to work with — focused, dependable, and always ready to support the team. A real team player.",
-      sahre: "Shardzhil had to develop, format and deliver content...",
+      sahre: "Shardzhil played a key role in developing the DABubble project, contributing to both the Angular frontend and Firebase backend with reliability and precision.",
       taher: "Shardzhil was always reliable, communicated clearly, and contributed great ideas. A strong team player you can count on."
     },
 
@@ -391,7 +391,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
 
     views: {
       james: "Die Zusammenarbeit mit Shardzhil war großartig – er war konzentriert, zuverlässig und immer bereit, das Team zu unterstützen. Ein echter Teamplayer.",
-      sahre: "Shardzhil musste Inhalte entwickeln, formatieren...",
+      sahre: "Shardzhil spielte eine Schlüsselrolle bei der Entwicklung des DABubble-Projekts und leistete mit Zuverlässigkeit und Präzision sowohl zum Angular-Frontend als auch zum Firebase-Backend seinen Beitrag.",
       taher: "Shardzhil war stets zuverlässig, kommunizierte klar und brachte tolle Ideen ein. Ein starker Teamplayer, auf den man zählen kann."
     },
 
