@@ -49,7 +49,7 @@ export class TestimonialsComponent {
     bgImg: './../../../assets/img/5-refferences/bg-img.png',
     project: 'Join',
     testimonialKey: 'taher',
-    link: 'https://www.linkedin.com/in/mukhammad-shardzhil-a2565213a/'
+    link: 'https://www.linkedin.com/in/taher-abdel-megid-44974836a/'
     }
   ];
 }
