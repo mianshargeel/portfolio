@@ -73,17 +73,17 @@ export class ProjectsComponent {
       github: 'https://github.com/mianshargeel/El-pollo-loco-Junus.git',
       live: 'https://elpolloloco.shardzhil.com/'
     },
-    // {
-    //   title: 'DA Bubble',
-    //   key: 'daBubble',
-    //   durationKey: '4 weeks',
-    //   technologies: ['./../../../assets/img/4-projects/Angular.png',
-    //     './../../../assets/img/4-projects/Frame 499.png',
-    //     './../../../assets/img/4-projects/Frame 500.png'],
-    //   image: './../../../assets/img/4-projects/Screenshot project (2).png',
-    //   github: 'https://github.com/mianshargeel',
-    //   live: '#'
-    // },
+    {
+      title: 'DA Bubble',
+      key: 'daBubble',
+      durationKey: 'daBubble',
+      technologies: ['./../../../assets/img/4-projects/Angular.png',
+        './../../../assets/img/4-projects/Frame 499.png',
+        './../../../assets/img/4-projects/Frame 500.png'],
+      image: './../../../assets/img/4-projects/Screenshot project (2).png',
+      github: 'https://github.com/D-Aldin/DABubble',
+      live: '#'
+    },
   ];
 // selected: any;
 

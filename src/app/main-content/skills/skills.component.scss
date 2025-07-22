@@ -36,15 +36,17 @@ section{
           align-content: space-evenly; 
           padding: 20px 0px;
           overflow-y: auto; 
+          gap: 15px;
       
           .skill-item {
             display: flex;
+            gap: 5px;
             flex-direction: column;
             align-items: center;
             width: 80px; // Fixed width for each item
       
             img {
-              width: 75.8px;
+              width: 96.8px;
               height: 111px;
               object-fit: contain;
               margin-bottom: 5px;
@@ -128,6 +130,15 @@ section{
  @media (max-width: 900px) {
   .skills-Info{
     padding: 0px 36px 0px 36px
+  }
+  .skills-details{
+    display: flex;
+    gap: 5px !important;
+    .skill-item {
+        img {
+          width: 80px !important;
+        }
+      }
   }
 }
 

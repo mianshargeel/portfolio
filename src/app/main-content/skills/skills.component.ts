@@ -31,8 +31,8 @@ export class SkillsComponent {
     img: './../../../assets/img/3-skils/angular.png'
     },
     {
-    name: 'Typescript',
-      img: './../../../assets/img/3-skils/typescript.png'
+    name: 'CSS',
+      img: '/assets/img/3-skils/css.png'
     },
     {
     name: 'Javascript',
@@ -45,8 +45,8 @@ export class SkillsComponent {
     }
     ,
     {
-    name: 'CSS',
-    img: './../../../assets/img/3-skils/css.png'
+    name: 'GIT',
+    img: '/assets/img/3-skils/git.png'
     }
     ,
     {
@@ -59,8 +59,8 @@ export class SkillsComponent {
     img: './../../../assets/img/3-skils/fire-base.png'
     },
     {
-    name: 'GIT',
-    img: './../../../assets/img/3-skils/git.png'
+    name: 'Typescript',
+    img: '/assets/img/3-skils/Property 1=TypeScript.png'
     },
     {
     name: 'Angular Material',

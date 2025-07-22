@@ -51,7 +51,7 @@ export interface TranslationKeys {
     join: string;
     pokedex: string;
     elPoloLoco: string;
-    // daBubble: string; // uncomment when needed
+    daBubble: string; // uncomment when needed
   };
 
   //testimomials component
@@ -188,7 +188,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
       join: '1 Month',
       pokedex: '2 weeks',
       elPoloLoco: '3 weeks',
-      // daBubble: '4 weeks' // uncomment when needed
+      daBubble: '4 weeks' // uncomment when needed
     },
 
     projectsContent: {
@@ -355,7 +355,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
       join: '1 Monat',
       pokedex: '2 Wochen',
       elPoloLoco: '3 Wochen',
-      // daBubble: '4 Wochen' // uncomment when needed
+      daBubble: '4 Wochen' // uncomment when needed
     },
 
     projectsContent: {
