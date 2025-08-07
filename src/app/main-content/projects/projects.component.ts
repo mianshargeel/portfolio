@@ -82,7 +82,7 @@ export class ProjectsComponent {
         './../../../assets/img/4-projects/Frame 500.png'],
       image: './../../../assets/img/4-projects/Screenshot project (2).png',
       github: 'https://github.com/D-Aldin/DABubble',
-      live: '#'
+      live: 'http://dabubble.shardzhil.com/login'
     },
   ];
 // selected: any;

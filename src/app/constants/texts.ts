@@ -193,7 +193,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
 
     projectsContent: {
       daBubble: {
-        about: 'This business-Chat-app. Coming soon...',
+        about: 'DABubble is a real-time messaging platform inspired by Slack and Discord, built with Angular and Firebase.',
         workProcess: 'I am approaching this project with a modular Angular structure, using services for state and data handling, and components for chat UI, authentication, and channel management. The backend will be powered by Firebase for real-time messaging, user management, and file storage. Project planning and task distribution are managed via Trello and SCRUM methods in a collaborative team setup.',
         team: 'As part of the development team, I am responsible for implementing chat UI components, managing real-time data flow, and ensuring a responsive user experience. I am actively involved in technical planning, API integration, and code collaboration via GitHub. This project gives me deeper experience in team communication, agile workflows, and building scalable web applications.',
         description: 'Slack clone app...'
@@ -360,7 +360,7 @@ export const TEXTS: { en: TranslationKeys; de: TranslationKeys } = {
 
     projectsContent: {
       daBubble: {
-        about: 'Diese Business-Chat-App. Demnächst verfügbar ...',
+        about: 'DABubble ist eine von Slack und Discord inspirierte Echtzeit-Messaging-Plattform, die mit Angular und Firebase erstellt wurde.',
         workProcess: 'Ich gehe dieses Projekt mit einer modularen Angular-Struktur an und nutze Dienste für die Status- und Datenverarbeitung sowie Komponenten für die Chat-Benutzeroberfläche, Authentifizierung und Kanalverwaltung. Das Backend wird von Firebase für Echtzeit-Messaging, Benutzerverwaltung und Dateispeicherung unterstützt. Projektplanung und Aufgabenverteilung erfolgen über Trello- und SCRUM-Methoden in einem kollaborativen Team-Setup.',
         team: 'Als Teil des Entwicklungsteams bin ich für die Implementierung von Chat-UI-Komponenten, die Verwaltung des Echtzeit-Datenflusses und die Gewährleistung einer reaktionsschnellen Benutzererfahrung verantwortlich. Ich bin aktiv an der technischen Planung, der API-Integration und der Code-Zusammenarbeit über GitHub beteiligt. Dieses Projekt vermittelt mir umfassende Erfahrung in Teamkommunikation, agilen Workflows und der Entwicklung skalierbarer Webanwendungen.',
         description: 'Slack-Klon-App...'
