@@ -33,7 +33,7 @@
       <nav>
         @for (project of projects; track project.title; let i = $index) {
           <button  [class.active]="selectedIndex === i" 
-          (click)="selectedIndex = i">{{ i + 1 }}. {{ project.title }}</button>
+          (click)="selectedIndex = i"> {{ project.title }}</button>
         }
       </nav>
     </div>
